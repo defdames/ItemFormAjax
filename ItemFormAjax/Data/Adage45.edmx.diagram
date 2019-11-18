@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="f266a4bf35ae4b909cb900b8e5567bec" Name="Diagram1" ZoomLevel="78">
+        <EntityTypeShape EntityType="adage_45Model.pmap_Characteristic" Width="2.75" PointX="3.375" PointY="0.75" />
+        <EntityTypeShape EntityType="adage_45Model.pmap_Geometry" Width="1.5" PointX="3.375" PointY="2.75" />
+        <EntityTypeShape EntityType="adage_45Model.pmap_Micron" Width="1.5" PointX="3.375" PointY="4.75" />
+        <EntityTypeShape EntityType="adage_45Model.pmap_PhysicalForm" Width="1.5" PointX="9.375" PointY="0.875" />
+        <EntityTypeShape EntityType="adage_45Model.pmap_Solvent" Width="1.5" PointX="5.375" PointY="2.75" />
+        <EntityTypeShape EntityType="adage_45Model.pmap_SurfaceTreatment" Width="1.5" PointX="5.375" PointY="4.75" />
+        <EntityTypeShape EntityType="adage_45Model.pmap_System" Width="1.5" PointX="3.375" PointY="6.75" />
+        <EntityTypeShape EntityType="adage_45Model.pmap_Type_Application" Width="1.5" PointX="5.375" PointY="6.75" />
+        <EntityTypeShape EntityType="adage_45Model.item_class_ext" Width="1.5" PointX="1" PointY="9.5" />
+        <EntityTypeShape EntityType="adage_45Model.xxItemHeader" Width="1.5" PointX="0.75" PointY="0.75" />
+        <EntityTypeShape EntityType="adage_45Model.xxItemForm" Width="1.5" PointX="7.375" PointY="3.75" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

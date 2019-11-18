@@ -1,0 +1,402 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="adage_45Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="item_class_ext">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Type" Type="varchar(max)" Nullable="false" />
+          <Property Name="Description" Type="varchar(max)" />
+        </EntityType>
+        <EntityType Name="pmap_Characteristic">
+          <Key>
+            <PropertyRef Name="pmap_Characteristic" />
+          </Key>
+          <Property Name="pmap_Characteristic" Type="varchar" MaxLength="60" Nullable="false" />
+        </EntityType>
+        <EntityType Name="pmap_Geometry">
+          <Key>
+            <PropertyRef Name="pmap_Geometry" />
+          </Key>
+          <Property Name="pmap_Geometry" Type="varchar" MaxLength="60" Nullable="false" />
+        </EntityType>
+        <EntityType Name="pmap_Micron">
+          <Key>
+            <PropertyRef Name="pmap_Micron" />
+          </Key>
+          <Property Name="pmap_Micron" Type="varchar" MaxLength="60" Nullable="false" />
+        </EntityType>
+        <EntityType Name="pmap_PhysicalForm">
+          <Key>
+            <PropertyRef Name="pmap_PhysicalForm" />
+          </Key>
+          <Property Name="pmap_PhysicalForm" Type="varchar" MaxLength="60" Nullable="false" />
+        </EntityType>
+        <EntityType Name="pmap_Solvent">
+          <Key>
+            <PropertyRef Name="pmap_Solvent" />
+          </Key>
+          <Property Name="pmap_Solvent" Type="varchar" MaxLength="60" Nullable="false" />
+        </EntityType>
+        <EntityType Name="pmap_SurfaceTreatment">
+          <Key>
+            <PropertyRef Name="pmap_SurfaceTreatment" />
+          </Key>
+          <Property Name="pmap_SurfaceTreatment" Type="varchar" MaxLength="60" Nullable="false" />
+        </EntityType>
+        <EntityType Name="pmap_System">
+          <Key>
+            <PropertyRef Name="pmap_System" />
+          </Key>
+          <Property Name="pmap_System" Type="varchar" MaxLength="60" Nullable="false" />
+        </EntityType>
+        <EntityType Name="pmap_Type_Application">
+          <Key>
+            <PropertyRef Name="pmap_Type_Application" />
+          </Key>
+          <Property Name="pmap_Type_Application" Type="varchar" MaxLength="60" Nullable="false" />
+        </EntityType>
+        <EntityType Name="xxItemForm">
+          <Key>
+            <PropertyRef Name="ItemID" />
+          </Key>
+          <Property Name="ItemID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="HeaderID" Type="int" Nullable="false" />
+          <Property Name="Formula" Type="varchar" MaxLength="50" />
+          <Property Name="Lnumber" Type="varchar" MaxLength="50" />
+          <Property Name="PostTreated" Type="varchar" MaxLength="50" />
+          <Property Name="Purity" Type="varchar" MaxLength="50" />
+          <Property Name="Metal" Type="varchar" MaxLength="50" />
+          <Property Name="StaticLiner" Type="varchar" MaxLength="50" />
+          <Property Name="UOM" Type="varchar" MaxLength="50" />
+          <Property Name="QTYPERPKG" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="xxItemHeader">
+          <Key>
+            <PropertyRef Name="ItemID" />
+          </Key>
+          <Property Name="ItemID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="CreatedBy" Type="varchar" MaxLength="500" />
+          <Property Name="CreatedDate" Type="date" />
+          <Property Name="ProductDesription" Type="varchar(max)" />
+          <Property Name="NewOrExisting" Type="varchar" MaxLength="500" />
+          <Property Name="ShelfLife" Type="varchar" MaxLength="500" />
+          <Property Name="ProductStatus" Type="varchar" MaxLength="500" />
+          <Property Name="Lnumber" Type="varchar" MaxLength="500" />
+          <Property Name="Company" Type="varchar" MaxLength="500" />
+          <Property Name="Waterborne" Type="varchar" MaxLength="500" />
+          <Property Name="Characteristics" Type="varchar" MaxLength="500" />
+          <Property Name="Geometry" Type="varchar" MaxLength="500" />
+          <Property Name="Micron" Type="varchar" MaxLength="500" />
+          <Property Name="PhysicalForm" Type="varchar" MaxLength="500" />
+          <Property Name="Solvent" Type="varchar" MaxLength="500" />
+          <Property Name="SurfaceTreatment" Type="varchar" MaxLength="500" />
+          <Property Name="System" Type="varchar" MaxLength="500" />
+          <Property Name="TypeApplication" Type="varchar" MaxLength="500" />
+          <Property Name="SMCTruckPricePerLB" Type="varchar" MaxLength="500" />
+          <Property Name="Packages" Type="varchar" MaxLength="500" />
+          <Property Name="StaticDissipativeLiner" Type="varchar" MaxLength="500" />
+          <Property Name="WhereWillProductBeUsed" Type="varchar" MaxLength="500" />
+          <Property Name="ProductClass" Type="varchar" MaxLength="500" />
+          <Property Name="Market" Type="varchar" MaxLength="500" />
+          <Property Name="MarketSegment" Type="varchar" MaxLength="500" />
+          <Property Name="TradeNameFirst" Type="varchar" MaxLength="500" />
+          <Property Name="TradeNameSecond" Type="varchar" MaxLength="500" />
+          <Property Name="ProductClassLeaf" Type="varchar" MaxLength="500" />
+          <Property Name="ProductClassCharacteristic" Type="varchar" MaxLength="500" />
+          <Property Name="Carrier" Type="varchar" MaxLength="500" />
+          <Property Name="Status" Type="varchar" MaxLength="500" />
+          <Property Name="RequestedDate" Type="datetime" />
+        </EntityType>
+        <EntityContainer Name="adage_45ModelStoreContainer">
+          <EntitySet Name="item_class_ext" EntityType="Self.item_class_ext" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="pmap_Characteristic" EntityType="Self.pmap_Characteristic" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="pmap_Geometry" EntityType="Self.pmap_Geometry" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="pmap_Micron" EntityType="Self.pmap_Micron" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="pmap_PhysicalForm" EntityType="Self.pmap_PhysicalForm" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="pmap_Solvent" EntityType="Self.pmap_Solvent" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="pmap_SurfaceTreatment" EntityType="Self.pmap_SurfaceTreatment" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="pmap_System" EntityType="Self.pmap_System" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="pmap_Type_Application" EntityType="Self.pmap_Type_Application" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="xxItemForm" EntityType="Self.xxItemForm" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="xxItemHeader" EntityType="Self.xxItemHeader" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="adage_45Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="adage_45Entities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="pmap_Characteristic" EntityType="adage_45Model.pmap_Characteristic" />
+          <EntitySet Name="pmap_Geometry" EntityType="adage_45Model.pmap_Geometry" />
+          <EntitySet Name="pmap_Micron" EntityType="adage_45Model.pmap_Micron" />
+          <EntitySet Name="pmap_PhysicalForm" EntityType="adage_45Model.pmap_PhysicalForm" />
+          <EntitySet Name="pmap_Solvent" EntityType="adage_45Model.pmap_Solvent" />
+          <EntitySet Name="pmap_SurfaceTreatment" EntityType="adage_45Model.pmap_SurfaceTreatment" />
+          <EntitySet Name="pmap_System" EntityType="adage_45Model.pmap_System" />
+          <EntitySet Name="pmap_Type_Application" EntityType="adage_45Model.pmap_Type_Application" />
+          <EntitySet Name="item_class_ext" EntityType="adage_45Model.item_class_ext" />
+          <EntitySet Name="xxItemHeaders" EntityType="adage_45Model.xxItemHeader" />
+          <EntitySet Name="xxItemForms" EntityType="adage_45Model.xxItemForm" />
+        </EntityContainer>
+        <EntityType Name="pmap_Characteristic">
+          <Key>
+            <PropertyRef Name="pmap_Characteristic1" />
+          </Key>
+          <Property Name="pmap_Characteristic1" Type="String" Nullable="false" MaxLength="60" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="pmap_Geometry">
+          <Key>
+            <PropertyRef Name="pmap_Geometry1" />
+          </Key>
+          <Property Name="pmap_Geometry1" Type="String" Nullable="false" MaxLength="60" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="pmap_Micron">
+          <Key>
+            <PropertyRef Name="pmap_Micron1" />
+          </Key>
+          <Property Name="pmap_Micron1" Type="String" Nullable="false" MaxLength="60" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="pmap_PhysicalForm">
+          <Key>
+            <PropertyRef Name="pmap_PhysicalForm1" />
+          </Key>
+          <Property Name="pmap_PhysicalForm1" Type="String" Nullable="false" MaxLength="60" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="pmap_Solvent">
+          <Key>
+            <PropertyRef Name="pmap_Solvent1" />
+          </Key>
+          <Property Name="pmap_Solvent1" Type="String" Nullable="false" MaxLength="60" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="pmap_SurfaceTreatment">
+          <Key>
+            <PropertyRef Name="pmap_SurfaceTreatment1" />
+          </Key>
+          <Property Name="pmap_SurfaceTreatment1" Type="String" Nullable="false" MaxLength="60" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="pmap_System">
+          <Key>
+            <PropertyRef Name="pmap_System1" />
+          </Key>
+          <Property Name="pmap_System1" Type="String" Nullable="false" MaxLength="60" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="pmap_Type_Application">
+          <Key>
+            <PropertyRef Name="pmap_Type_Application1" />
+          </Key>
+          <Property Name="pmap_Type_Application1" Type="String" Nullable="false" MaxLength="60" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="item_class_ext">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Type" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="xxItemHeader">
+          <Key>
+            <PropertyRef Name="ItemID" />
+          </Key>
+          <Property Name="ItemID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CreatedBy" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="CreatedDate" Type="DateTime" Precision="0" />
+          <Property Name="ProductDesription" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="NewOrExisting" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="ShelfLife" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="ProductStatus" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="Lnumber" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="Company" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="Waterborne" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="Characteristics" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="Geometry" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="Micron" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="PhysicalForm" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="Solvent" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="SurfaceTreatment" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="System" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="TypeApplication" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="SMCTruckPricePerLB" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="Packages" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="StaticDissipativeLiner" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="WhereWillProductBeUsed" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="ProductClass" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="Market" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="MarketSegment" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="TradeNameFirst" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="TradeNameSecond" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="ProductClassLeaf" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="ProductClassCharacteristic" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="Carrier" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="Status" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="RequestedDate" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="xxItemForm">
+          <Key>
+            <PropertyRef Name="ItemID" />
+          </Key>
+          <Property Name="ItemID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="HeaderID" Type="Int32" Nullable="false" />
+          <Property Name="Formula" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Lnumber" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="PostTreated" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Purity" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Metal" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="StaticLiner" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="UOM" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="QTYPERPKG" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="adage_45ModelStoreContainer" CdmEntityContainer="adage_45Entities">
+          <EntitySetMapping Name="pmap_Characteristic">
+            <EntityTypeMapping TypeName="adage_45Model.pmap_Characteristic">
+              <MappingFragment StoreEntitySet="pmap_Characteristic">
+                <ScalarProperty Name="pmap_Characteristic1" ColumnName="pmap_Characteristic" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="pmap_Geometry">
+            <EntityTypeMapping TypeName="adage_45Model.pmap_Geometry">
+              <MappingFragment StoreEntitySet="pmap_Geometry">
+                <ScalarProperty Name="pmap_Geometry1" ColumnName="pmap_Geometry" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="pmap_Micron">
+            <EntityTypeMapping TypeName="adage_45Model.pmap_Micron">
+              <MappingFragment StoreEntitySet="pmap_Micron">
+                <ScalarProperty Name="pmap_Micron1" ColumnName="pmap_Micron" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="pmap_PhysicalForm">
+            <EntityTypeMapping TypeName="adage_45Model.pmap_PhysicalForm">
+              <MappingFragment StoreEntitySet="pmap_PhysicalForm">
+                <ScalarProperty Name="pmap_PhysicalForm1" ColumnName="pmap_PhysicalForm" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="pmap_Solvent">
+            <EntityTypeMapping TypeName="adage_45Model.pmap_Solvent">
+              <MappingFragment StoreEntitySet="pmap_Solvent">
+                <ScalarProperty Name="pmap_Solvent1" ColumnName="pmap_Solvent" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="pmap_SurfaceTreatment">
+            <EntityTypeMapping TypeName="adage_45Model.pmap_SurfaceTreatment">
+              <MappingFragment StoreEntitySet="pmap_SurfaceTreatment">
+                <ScalarProperty Name="pmap_SurfaceTreatment1" ColumnName="pmap_SurfaceTreatment" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="pmap_System">
+            <EntityTypeMapping TypeName="adage_45Model.pmap_System">
+              <MappingFragment StoreEntitySet="pmap_System">
+                <ScalarProperty Name="pmap_System1" ColumnName="pmap_System" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="pmap_Type_Application">
+            <EntityTypeMapping TypeName="adage_45Model.pmap_Type_Application">
+              <MappingFragment StoreEntitySet="pmap_Type_Application">
+                <ScalarProperty Name="pmap_Type_Application1" ColumnName="pmap_Type_Application" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="item_class_ext">
+            <EntityTypeMapping TypeName="adage_45Model.item_class_ext">
+              <MappingFragment StoreEntitySet="item_class_ext">
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Type" ColumnName="Type" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="xxItemHeaders">
+            <EntityTypeMapping TypeName="adage_45Model.xxItemHeader">
+              <MappingFragment StoreEntitySet="xxItemHeader">
+                <ScalarProperty Name="RequestedDate" ColumnName="RequestedDate" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="Carrier" ColumnName="Carrier" />
+                <ScalarProperty Name="ProductClassCharacteristic" ColumnName="ProductClassCharacteristic" />
+                <ScalarProperty Name="ProductClassLeaf" ColumnName="ProductClassLeaf" />
+                <ScalarProperty Name="TradeNameSecond" ColumnName="TradeNameSecond" />
+                <ScalarProperty Name="TradeNameFirst" ColumnName="TradeNameFirst" />
+                <ScalarProperty Name="MarketSegment" ColumnName="MarketSegment" />
+                <ScalarProperty Name="Market" ColumnName="Market" />
+                <ScalarProperty Name="ProductClass" ColumnName="ProductClass" />
+                <ScalarProperty Name="WhereWillProductBeUsed" ColumnName="WhereWillProductBeUsed" />
+                <ScalarProperty Name="StaticDissipativeLiner" ColumnName="StaticDissipativeLiner" />
+                <ScalarProperty Name="Packages" ColumnName="Packages" />
+                <ScalarProperty Name="SMCTruckPricePerLB" ColumnName="SMCTruckPricePerLB" />
+                <ScalarProperty Name="TypeApplication" ColumnName="TypeApplication" />
+                <ScalarProperty Name="System" ColumnName="System" />
+                <ScalarProperty Name="SurfaceTreatment" ColumnName="SurfaceTreatment" />
+                <ScalarProperty Name="Solvent" ColumnName="Solvent" />
+                <ScalarProperty Name="PhysicalForm" ColumnName="PhysicalForm" />
+                <ScalarProperty Name="Micron" ColumnName="Micron" />
+                <ScalarProperty Name="Geometry" ColumnName="Geometry" />
+                <ScalarProperty Name="Characteristics" ColumnName="Characteristics" />
+                <ScalarProperty Name="Waterborne" ColumnName="Waterborne" />
+                <ScalarProperty Name="Company" ColumnName="Company" />
+                <ScalarProperty Name="Lnumber" ColumnName="Lnumber" />
+                <ScalarProperty Name="ProductStatus" ColumnName="ProductStatus" />
+                <ScalarProperty Name="ShelfLife" ColumnName="ShelfLife" />
+                <ScalarProperty Name="NewOrExisting" ColumnName="NewOrExisting" />
+                <ScalarProperty Name="ProductDesription" ColumnName="ProductDesription" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="ItemID" ColumnName="ItemID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="xxItemForms">
+            <EntityTypeMapping TypeName="adage_45Model.xxItemForm">
+              <MappingFragment StoreEntitySet="xxItemForm">
+                <ScalarProperty Name="QTYPERPKG" ColumnName="QTYPERPKG" />
+                <ScalarProperty Name="UOM" ColumnName="UOM" />
+                <ScalarProperty Name="StaticLiner" ColumnName="StaticLiner" />
+                <ScalarProperty Name="Metal" ColumnName="Metal" />
+                <ScalarProperty Name="Purity" ColumnName="Purity" />
+                <ScalarProperty Name="PostTreated" ColumnName="PostTreated" />
+                <ScalarProperty Name="Lnumber" ColumnName="Lnumber" />
+                <ScalarProperty Name="Formula" ColumnName="Formula" />
+                <ScalarProperty Name="HeaderID" ColumnName="HeaderID" />
+                <ScalarProperty Name="ItemID" ColumnName="ItemID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
