@@ -30,14 +30,7 @@ namespace ItemFormAjax
 
         }
 
-        protected void RadGrid1_PreRender(object sender, System.EventArgs e)
-        {
-            if (!this.IsPostBack && this.RadGrid1.MasterTableView.Items.Count > 1)
-            {
-                this.RadGrid1.MasterTableView.Items[1].Edit = true;
-                this.RadGrid1.MasterTableView.Rebind();
-            }
-        }
+        
         protected void Page_Load(object sender, EventArgs e)
 
         {
@@ -52,19 +45,33 @@ namespace ItemFormAjax
                              select g).FirstOrDefault();
 
 
-
-
                 if (SItem.Company == "SMC")
                 { lblCountryAnswer.Text = "Yes"; }
                 else
                 { lblCountryAnswer.Text = "No"; }
 
             }
-            
-
-
 
         }
+
+
+        private DataTable GetAllItems()
+        {
+
+            object obj = this.Session["Items"];
+            if ((obj != null))
+            {
+                return ((DataTable)(obj));
+            }
+
+
+            DataTable myDataTable = ToDataTable(AFORM());
+            this.Session["Items"] = myDataTable;
+            return myDataTable;
+        }
+
+
+
         private DataTable NewGetItems()
         {
 
@@ -74,12 +81,14 @@ namespace ItemFormAjax
                 return ((DataTable)(obj));
             }
 
-            DataTable myDataTable = new DataTable();
-            myDataTable = ToDataTable(IFORM(0));
+            
+            DataTable myDataTable = ToDataTable(IFORM(0));
             this.Session["Items"] = myDataTable;
             return myDataTable;
         }
-        private DataTable GetItems(int itemindex)
+
+
+        private DataTable UpdateGetItems(int itemindex)
         {
 
             object obj = this.Session["Items"];
@@ -88,8 +97,8 @@ namespace ItemFormAjax
                 return ((DataTable)(obj));
             }
 
-            DataTable myDataTable = new DataTable();
-            myDataTable = ToDataTable(IFORM(itemindex));
+            
+            DataTable myDataTable = ToDataTable(IFORM(itemindex));
             this.Session["Items"] = myDataTable;
             return myDataTable;
         }
@@ -101,7 +110,24 @@ namespace ItemFormAjax
             {
                 var grid = (from g in a.xxItemForms
                             where g.ItemID == IID
-                            select new ItemFormula { ItemID = g.ItemID, Formula = g.Formula, HeaderID = g.HeaderID }).ToList();
+                            select new ItemFormula { ItemID = g.ItemID, Formula = g.Formula, HeaderID = g.HeaderID, PostTreated = g.PostTreated }).ToList();
+
+                return grid;
+
+
+            }
+
+
+        }
+        public List<ItemFormula> AFORM()
+        {
+            string LiD = Request.QueryString["id"];
+            txtLnumber.Text = LiD.ToString();
+            using (adage_45Entities a = new adage_45Entities())
+            {
+                var grid = (from g in a.xxItemForms
+                            where g.Lnumber== LiD
+                            select new ItemFormula { ItemID = g.ItemID, Formula = g.Formula, HeaderID = g.HeaderID, PostTreated = g.PostTreated }).ToList();
 
                 return grid;
 
@@ -157,7 +183,7 @@ namespace ItemFormAjax
             int iindex = (int)editedItem.GetDataKeyValue("ItemID");
 
             //Prepare new row to add it in the DataSource
-            DataRow[] changedRows = this.GetItems(iindex).Select("ItemID= " + editedItem.OwnerTableView.DataKeyValues[editedItem.ItemIndex]["ItemID"]);
+            DataRow[] changedRows = this.UpdateGetItems(iindex).Select("ItemID= " + editedItem.OwnerTableView.DataKeyValues[editedItem.ItemIndex]["ItemID"]);
 
             if (changedRows.Length != 1)
             {
@@ -171,7 +197,7 @@ namespace ItemFormAjax
 
             newValues["Formula"] = (userControl.FindControl("ddlTOC") as DropDownList).SelectedItem.Value;
 
-            int ellValue = Int32.Parse(GetItems(iindex).Rows[0]["ItemID"].ToString());
+            int ellValue = Int32.Parse(UpdateGetItems(iindex).Rows[0]["ItemID"].ToString());
             string Uformula = newValues["Formula"].ToString();
             changedRows[0].BeginEdit();
             try
@@ -182,14 +208,12 @@ namespace ItemFormAjax
                 }
 
                 changedRows[0].EndEdit();
-                this.GetItems(iindex).AcceptChanges();
+                this.UpdateGetItems(iindex).AcceptChanges();
                 using (adage_45Entities a = new adage_45Entities())
                 {
 
 
-                    string fr = (from DataRow dr in GetItems(iindex).Rows
-                                 where (int)dr["ItemID"] == ellValue
-                                 select (string)dr["Formula"]).FirstOrDefault();
+                   
                     var grid = (from g in a.xxItemForms
                                 where g.ItemID == ellValue
                                 select g).SingleOrDefault();
@@ -231,60 +255,64 @@ namespace ItemFormAjax
             Hashtable newValues = new Hashtable();
 
             newValues["Formula"] = (userControl.FindControl("ddlTOC") as DropDownList).SelectedItem.Value;
-
-
-
-            //make sure that unique primary key value is generated for the inserted row 
-            if (NewGetItems().Rows.Count == 0)
+            newValues["PostTreated"] = (userControl.FindControl("ddPostTreated") as DropDownList).SelectedItem.Value;
+            try
             {
-                newValues["ItemID"] = 1;
-            }
-            else
-            {
-                newValues["ItemID"] = (int)this.NewGetItems().Rows[this.NewGetItems().Rows.Count - 1]["ItemID"] + 1;
-            }
-           
 
-
-            foreach (DictionaryEntry entry in newValues)
-            {
-                newRow[(string)entry.Key] = entry.Value;
-            }
-            this.NewGetItems().Rows.Add(newRow);
-            this.NewGetItems().AcceptChanges();
-
-            string formula = newValues["Formula"].ToString();
-            using (adage_45Entities a = new adage_45Entities())
-            {
-                var headerinfo = (from g in a.xxItemHeaders
-                                  where g.Lnumber == LiD
-                                  select g).FirstOrDefault();
-
-
-                string fr = (from DataRow dr in NewGetItems().Rows
-
-                             select (string)dr["Formula"]).First();
-
-                var grid = (from g in a.xxItemForms
-
-                            select g).FirstOrDefault();
-                xxItemForm newformula = new xxItemForm();
+                //make sure that unique primary key value is generated for the inserted row 
+                if (NewGetItems().Rows.Count == 0)
                 {
+                    newValues["ItemID"] = 1;
+                }
+                else
+                {
+                    newValues["ItemID"] = (int)this.NewGetItems().Rows[this.NewGetItems().Rows.Count - 1]["ItemID"] + 1;
+                }
 
 
+
+                foreach (DictionaryEntry entry in newValues)
+                {
+                    newRow[(string)entry.Key] = entry.Value;
+                }
+                this.NewGetItems().Rows.Add(newRow);
+                this.NewGetItems().AcceptChanges();
+
+                string formula = newValues["Formula"].ToString();
+                string posttreated = newValues["PostTreated"].ToString();
+                using (adage_45Entities a = new adage_45Entities())
+                {
+                    var headerinfo = (from g in a.xxItemHeaders
+                                      where g.Lnumber == LiD
+                                      select g).FirstOrDefault();
+
+
+
+                    var grid = (from g in a.xxItemForms
+
+                                select g).FirstOrDefault();
 
                     grid.HeaderID = headerinfo.ItemID;
                     grid.Lnumber = LiD;
                     grid.Formula = formula;
+                    grid.PostTreated = posttreated;
 
+                    a.xxItemForms.Add(grid);
+                    a.SaveChanges();
+                    RadGrid1.Rebind();
+                }
+            }
+            catch (Exception ex)
+            {
+                Label lblError = new Label();
+                lblError.Text = "Unable to insert Employees. Reason: " + ex.Message;
+                lblError.ForeColor = System.Drawing.Color.Red;
+                RadGrid1.Controls.Add(lblError);
 
-                };
-                a.xxItemForms.Add(grid);
-                a.SaveChanges();
-
-            };
-
+                e.Canceled = true;
+            }
            
+
         }
 
 
@@ -308,6 +336,7 @@ namespace ItemFormAjax
 
 
             }
+            
 
         }
 
@@ -319,13 +348,8 @@ namespace ItemFormAjax
 
 
 
-
-            //this.RadGrid1.DataSource = this.Items;
-            //this.Items.PrimaryKey = new DataColumn[] { this.Items.Columns["HeaderID"] };
-
-
-
-            Load_Grid();
+            this.RadGrid1.DataSource = this.GetAllItems();
+            this.GetAllItems().PrimaryKey = new DataColumn[] { this.GetAllItems().Columns["ItemID"] };
         }
 
 
@@ -341,6 +365,7 @@ namespace ItemFormAjax
         public int ItemID { get; set; }
         public int HeaderID { get; set; }
         public string Formula { get; set; }
+        public string PostTreated { get; set; }
 
     }
 }

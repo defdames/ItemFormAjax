@@ -14,10 +14,11 @@
             Formula:
         </td>
         <td>
-            <asp:DropDownList ID="ddlTOC" AppendDataBoundItems="true" runat="server">
-                <asp:ListItem Text="FDB" Value="FDB" />
-                <asp:ListItem Text="FBL" Value="FBL" />
-                <asp:ListItem Text="FLA" Value="FLA" />
+            <asp:DropDownList ID="ddlTOC" runat="server" SelectedValue='<%# DataBinder.Eval(Container, "DataItem.Formula") %>'
+                DataSource='<%# (new string[] { "FBL", "FDB", "FLA",}) %>'
+                AppendDataBoundItems="True">
+                <asp:ListItem Selected="True" Text="Select Formula" Value="">
+                </asp:ListItem>
             </asp:DropDownList>
         </td>
     </tr>

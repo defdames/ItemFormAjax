@@ -62,26 +62,34 @@
         <table>
             <tr>
                 <td>
-                    <telerik:RadGrid ID="RadGrid1" runat="server" AllowPaging="True" AllowAutomaticUpdates="True" AllowSorting="True" OnNeedDataSource="RadGrid1_NeedDataSource"
-                        RenderMode="Lightweight" AllowAutomaticInserts="True" OnUpdateCommand="RadGrid1_UpdateCommand" OnInsertCommand="RadGrid1_InsertCommand" >
+                    <telerik:RadGrid RenderMode="Lightweight" ID="RadGrid1" runat="server" AllowPaging="True" ShowFooter="true"
+                        AllowSorting="True" AutoGenerateColumns="False" ShowStatusBar="true"
+                        OnNeedDataSource="RadGrid1_NeedDataSource" OnUpdateCommand="RadGrid1_UpdateCommand"
+                        OnInsertCommand="RadGrid1_InsertCommand" >
 
                         <MasterTableView CommandItemDisplay="Top" DataKeyNames="ItemID">
                             <Columns>
-                                <telerik:GridEditCommandColumn UniqueName="ItemCommandColumn">
+                                <telerik:GridEditCommandColumn UniqueName="EditCommandColumn">
                                 </telerik:GridEditCommandColumn>
-                          
-                                <telerik:GridButtonColumn CommandName="Delete" Text="Delete" />
+                                <telerik:GridBoundColumn UniqueName="Formula" HeaderText="Formula" DataField="Formula">
+                                </telerik:GridBoundColumn>
+                                <telerik:GridBoundColumn UniqueName="HeaderID" HeaderText="Header ID" DataField="HeaderID">
+                                </telerik:GridBoundColumn>
+                                <telerik:GridBoundColumn UniqueName="PostTreated" HeaderText="Post Treated" DataField="PostTreated">
+                                </telerik:GridBoundColumn>
+
+                                <telerik:GridButtonColumn CommandName="Delete" Text="Delete" UniqueName="DeleteColumn" />
 
 
                             </Columns>
-                             <EditFormSettings UserControlName="ItemControl.ascx" EditFormType="WebUserControl">
-                                 <EditColumn UniqueName="ItemCommandColumn1">
-                                 </EditColumn>
-                </EditFormSettings>
-                           
-                       
+                            <EditFormSettings UserControlName="ItemControl.ascx" EditFormType="WebUserControl">
+                                <EditColumn UniqueName="ItemCommandColumn1">
+                                </EditColumn>
+                            </EditFormSettings>
+
+
                         </MasterTableView>
-                        
+
 
 
                     </telerik:RadGrid>
@@ -91,17 +99,12 @@
         <table>
             <tr>
             <td>
-                <telerik:RadButton runat="server" ID="btnUpdate" Text="update">
-
-                </telerik:RadButton>
+               
             </td>
                 </tr>
         </table>
 
         
         </div>
-    <asp:EntityDataSource ID="EntityDataSourceItems" runat="server" ConnectionString="name=adage_45Entities"
-        DefaultContainerName="adage_45Entities" EntitySetName="xxItemForms" 
-         EnableDelete="True" EnableFlattening="False" EnableInsert="True" EnableUpdate="True">
-    </asp:EntityDataSource>
+
     </asp:Content>

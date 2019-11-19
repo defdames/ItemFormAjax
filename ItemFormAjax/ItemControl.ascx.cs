@@ -7,12 +7,25 @@ namespace ItemFormAjax
 {
     public partial class ItemControl : System.Web.UI.UserControl
     {
+
+        private object _dataItem = null;
         protected void Page_Load(object sender, EventArgs e)
         {
-            tblMGMT.Visible = false;
-            tblMarketing.Visible = true;
+            //empty on purpose
+                    }
+
+        public object DataItem
+        {
+            get
+            {
+                return this._dataItem;
+            }
+            set
+            {
+                this._dataItem = value;
+            }
         }
 
-        
+
     }
 }

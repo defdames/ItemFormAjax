@@ -320,7 +320,7 @@
     <Compile Include="Data\xxItemHeader.cs">
       <DependentUpon>Adage45.tt</DependentUpon>
     </Compile>
-    <Compile Include="Default.aspx.cs">
+    <Compile Include="_Default.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>

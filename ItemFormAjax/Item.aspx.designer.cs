@@ -7,11 +7,13 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace ItemFormAjax {
-    
-    
-    public partial class Item {
-        
+namespace ItemFormAjax
+{
+
+
+    public partial class Item
+    {
+
         /// <summary>
         /// RadCodeBlock1 control.
         /// </summary>
@@ -20,7 +22,7 @@ namespace ItemFormAjax {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::Telerik.Web.UI.RadCodeBlock RadCodeBlock1;
-        
+
         /// <summary>
         /// cbCopyDown control.
         /// </summary>
@@ -29,7 +31,7 @@ namespace ItemFormAjax {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::Telerik.Web.UI.RadComboBox cbCopyDown;
-        
+
         /// <summary>
         /// txtLnumber control.
         /// </summary>
@@ -38,7 +40,7 @@ namespace ItemFormAjax {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::Telerik.Web.UI.RadTextBox txtLnumber;
-        
+
         /// <summary>
         /// lblCountryofManufactuer control.
         /// </summary>
@@ -47,7 +49,7 @@ namespace ItemFormAjax {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::Telerik.Web.UI.RadLabel lblCountryofManufactuer;
-        
+
         /// <summary>
         /// lblCountryAnswer control.
         /// </summary>
@@ -56,7 +58,7 @@ namespace ItemFormAjax {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::Telerik.Web.UI.RadLabel lblCountryAnswer;
-        
+
         /// <summary>
         /// cbPlantManufactuer control.
         /// </summary>
@@ -65,7 +67,7 @@ namespace ItemFormAjax {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::Telerik.Web.UI.RadComboBox cbPlantManufactuer;
-        
+
         /// <summary>
         /// RadGrid1 control.
         /// </summary>
@@ -74,23 +76,5 @@ namespace ItemFormAjax {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::Telerik.Web.UI.RadGrid RadGrid1;
-        
-        /// <summary>
-        /// btnUpdate control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::Telerik.Web.UI.RadButton btnUpdate;
-        
-        /// <summary>
-        /// EntityDataSourceItems control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.EntityDataSource EntityDataSourceItems;
     }
 }

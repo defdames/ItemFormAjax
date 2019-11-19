@@ -7,11 +7,13 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace ItemFormAjax {
-    
-    
-    public partial class ItemControl {
-        
+namespace ItemFormAjax
+{
+
+
+    public partial class ItemControl
+    {
+
         /// <summary>
         /// tblMGMT control.
         /// </summary>
@@ -20,7 +22,7 @@ namespace ItemFormAjax {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlTable tblMGMT;
-        
+
         /// <summary>
         /// ddlTOC control.
         /// </summary>
@@ -29,7 +31,7 @@ namespace ItemFormAjax {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList ddlTOC;
-        
+
         /// <summary>
         /// ddPostTreated control.
         /// </summary>
@@ -38,7 +40,7 @@ namespace ItemFormAjax {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList ddPostTreated;
-        
+
         /// <summary>
         /// ddHiReg control.
         /// </summary>
@@ -47,7 +49,7 @@ namespace ItemFormAjax {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList ddHiReg;
-        
+
         /// <summary>
         /// txtMetal control.
         /// </summary>
@@ -56,7 +58,7 @@ namespace ItemFormAjax {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtMetal;
-        
+
         /// <summary>
         /// tblMarketing control.
         /// </summary>
@@ -65,7 +67,7 @@ namespace ItemFormAjax {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlTable tblMarketing;
-        
+
         /// <summary>
         /// ddStaticLiner control.
         /// </summary>
@@ -74,7 +76,7 @@ namespace ItemFormAjax {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList ddStaticLiner;
-        
+
         /// <summary>
         /// txtFrmlaUOM control.
         /// </summary>
@@ -83,7 +85,7 @@ namespace ItemFormAjax {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtFrmlaUOM;
-        
+
         /// <summary>
         /// txtQTYUOM control.
         /// </summary>
@@ -92,7 +94,7 @@ namespace ItemFormAjax {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtQTYUOM;
-        
+
         /// <summary>
         /// btnUpdate control.
         /// </summary>
@@ -101,7 +103,7 @@ namespace ItemFormAjax {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnUpdate;
-        
+
         /// <summary>
         /// btnCancel control.
         /// </summary>
