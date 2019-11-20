@@ -10,7 +10,7 @@
 namespace ItemFormAjax {
     
     
-    public partial class _Default {
+    public partial class Default {
         
         /// <summary>
         /// dplabel control.
