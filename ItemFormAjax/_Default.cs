@@ -20,9 +20,11 @@ namespace ItemFormAjax
                 Control_Load();
             }
 
+            string userName = System.Security.Principal.WindowsIdentity.GetCurrent().Name;
+
            
         }
-       
+
 
         public void Submit_Header(object sender, EventArgs e)
         {
@@ -101,6 +103,9 @@ namespace ItemFormAjax
                 cbMicron.DataValueField = "pmap_Micron1";
                 cbMicron.DataTextField = "pmap_Micron1";
                 cbMicron.DataBind();
+
+                
+
 
                 cbGeometry.DataSource = a.pmap_Geometry.ToList();
                 cbGeometry.DataValueField = "pmap_Geometry1";
@@ -184,10 +189,13 @@ namespace ItemFormAjax
                 #endregion
                 Load_Grid();
 
+               
+
 
                
 
             }
+
             
         }
 

@@ -362,8 +362,7 @@
             </tr>
         </table>
         <telerik:RadButton ID="btnSubmit" runat="server" Text="Submit" OnClick="Submit_Header" CausesValidation="true" ValidationGroup="NewItemInput"></telerik:RadButton>
-        
-
+     <telerik:RadTextBox ID="txtsample" runat ="server"></telerik:RadTextBox>
 
         <table class="Itable">
 
