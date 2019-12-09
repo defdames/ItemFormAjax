@@ -1,4 +1,5 @@
-﻿<%@ Page Title="Home Page" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="~/_Default.cs" Inherits="ItemFormAjax.Default" %>
+﻿<%@ Page Title="Home Page" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="True" CodeBehind="~/_Default.cs" Inherits="ItemFormAjax.Default" %>
+
 <%@ Register assembly="Telerik.Web.UI" namespace="Telerik.Web.UI" tagprefix="telerik" %>
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
    
@@ -362,8 +363,9 @@
             </tr>
         </table>
         <telerik:RadButton ID="btnSubmit" runat="server" Text="Submit" OnClick="Submit_Header" CausesValidation="true" ValidationGroup="NewItemInput"></telerik:RadButton>
-     <telerik:RadTextBox ID="txtsample" runat ="server"></telerik:RadTextBox>
-
+        <telerik:RadTextBox ID="txtsample" runat ="server"></telerik:RadTextBox>
+        <telerik:RadTextBox ID="RadTextBox1" runat="server"></telerik:RadTextBox>
+        <asp:TextBox ID="txtasp" runat="server"></asp:TextBox>
         <table class="Itable">
 
             <tr>

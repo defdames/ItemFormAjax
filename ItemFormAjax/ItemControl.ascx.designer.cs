@@ -24,13 +24,13 @@ namespace ItemFormAjax
         protected global::System.Web.UI.HtmlControls.HtmlTable tblMGMT;
 
         /// <summary>
-        /// ddlTOC control.
+        /// ddFormula control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlTOC;
+        protected global::System.Web.UI.WebControls.DropDownList ddFormula;
 
         /// <summary>
         /// ddPostTreated control.
@@ -42,13 +42,13 @@ namespace ItemFormAjax
         protected global::System.Web.UI.WebControls.DropDownList ddPostTreated;
 
         /// <summary>
-        /// ddHiReg control.
+        /// ddPurity control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddHiReg;
+        protected global::System.Web.UI.WebControls.DropDownList ddPurity;
 
         /// <summary>
         /// txtMetal control.
@@ -78,22 +78,76 @@ namespace ItemFormAjax
         protected global::System.Web.UI.WebControls.DropDownList ddStaticLiner;
 
         /// <summary>
-        /// txtFrmlaUOM control.
+        /// txtUOM control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtFrmlaUOM;
+        protected global::System.Web.UI.WebControls.TextBox txtUOM;
 
         /// <summary>
-        /// txtQTYUOM control.
+        /// txtQTYPERKG control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtQTYUOM;
+        protected global::System.Web.UI.WebControls.TextBox txtQTYPERKG;
+
+        /// <summary>
+        /// tblRegulatory control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlTable tblRegulatory;
+
+        /// <summary>
+        /// txtFreightItem control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtFreightItem;
+
+        /// <summary>
+        /// txtSampleHMIS control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtSampleHMIS;
+
+        /// <summary>
+        /// txtMSDS control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtMSDS;
+
+        /// <summary>
+        /// Table1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlTable Table1;
+
+        /// <summary>
+        /// txtGLAcct control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtGLAcct;
 
         /// <summary>
         /// btnUpdate control.

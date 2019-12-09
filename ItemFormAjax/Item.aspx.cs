@@ -52,6 +52,7 @@ namespace ItemFormAjax
 
             }
             
+            
         }
 
 
@@ -110,7 +111,7 @@ namespace ItemFormAjax
             {
                 var grid = (from g in a.xxItemForms
                             where g.ItemID == IID
-                            select new ItemFormula { ItemID = g.ItemID, Formula = g.Formula, HeaderID = g.HeaderID, PostTreated = g.PostTreated }).ToList();
+                            select new ItemFormula { ItemID = g.ItemID, Formula = g.Formula, HeaderID = g.HeaderID, PostTreated = g.PostTreated,  }).ToList();
 
                 return grid;
 
@@ -127,7 +128,8 @@ namespace ItemFormAjax
             {
                 var grid = (from g in a.xxItemForms
                             where g.Lnumber== LiD
-                            select new ItemFormula { ItemID = g.ItemID, Formula = g.Formula, HeaderID = g.HeaderID, PostTreated = g.PostTreated }).ToList();
+                            select new ItemFormula { ItemID = g.ItemID, Formula = g.Formula, HeaderID = g.HeaderID, 
+                                                     PostTreated = g.PostTreated, Purity = g.Purity, Metal= g.Metal, StaticLiner = g.StaticLiner, UOM = g.UOM, QtyPerKG = g.QTYPERPKG  }).ToList();
 
                 return grid;
 
@@ -195,10 +197,32 @@ namespace ItemFormAjax
             //Update new values
             Hashtable newValues = new Hashtable();
 
-            newValues["Formula"] = (userControl.FindControl("ddlTOC") as DropDownList).SelectedItem.Value;
+            newValues["Formula"] = (userControl.FindControl("ddFormula") as DropDownList).SelectedItem.Value;
+            newValues["PostTreated"] = (userControl.FindControl("ddPostTreated") as DropDownList).SelectedItem.Value;
+            newValues["Purity"] = (userControl.FindControl("ddPurity") as DropDownList).SelectedItem.Value;
+            newValues["Metal"] = (userControl.FindControl("txtMetal") as TextBox).Text;
+            newValues["StaticLiner"] = (userControl.FindControl("ddStaticLiner") as DropDownList).SelectedItem.Value;
+            newValues["UOM"] = (userControl.FindControl("txtUOM") as TextBox).Text;
+            newValues["QtyPerKG"] = (userControl.FindControl("txtQTYPERKG") as TextBox).Text;
+
+
+
+
+
+
 
             int ellValue = Int32.Parse(UpdateGetItems(iindex).Rows[0]["ItemID"].ToString());
+            
+            
             string Uformula = newValues["Formula"].ToString();
+            string UPostTreated = newValues["PostTreated"].ToString();
+            string UPurity = newValues["Purity"].ToString();
+            string UMetal = newValues["Metal"].ToString();
+            string UStaticLiner = newValues["StaticLiner"].ToString();
+            string UUOM = newValues["UOM"].ToString();
+            string UQtyPerKG= newValues["QtyPerKG"].ToString();
+
+
             changedRows[0].BeginEdit();
             try
             {
@@ -218,6 +242,14 @@ namespace ItemFormAjax
                                 where g.ItemID == ellValue
                                 select g).SingleOrDefault();
                     grid.Formula = Uformula;
+                    grid.PostTreated = UPostTreated;
+                    grid.Purity = UPurity;
+                    grid.Metal = UMetal;
+                    grid.StaticLiner = UStaticLiner;
+                    grid.UOM = UUOM;
+                    grid.QTYPERPKG = UQtyPerKG;
+                    
+
 
                     a.SaveChanges();
                 }
@@ -232,7 +264,7 @@ namespace ItemFormAjax
                 changedRows[0].CancelEdit();
 
                 Label lblError = new Label();
-                lblError.Text = "Unable to update Employees. Reason: " + ex.Message;
+                lblError.Text = "Unable to update Item. Reason: " + ex.Message;
                 lblError.ForeColor = System.Drawing.Color.Red;
                 RadGrid1.Controls.Add(lblError);
 
@@ -305,7 +337,7 @@ namespace ItemFormAjax
             catch (Exception ex)
             {
                 Label lblError = new Label();
-                lblError.Text = "Unable to insert Employees. Reason: " + ex.Message;
+                lblError.Text = "Unable to insert Item. Reason: " + ex.Message;
                 lblError.ForeColor = System.Drawing.Color.Red;
                 RadGrid1.Controls.Add(lblError);
 
@@ -366,6 +398,12 @@ namespace ItemFormAjax
         public int HeaderID { get; set; }
         public string Formula { get; set; }
         public string PostTreated { get; set; }
-
+        public string Purity { get; set; }
+        public string Metal { get; set; }
+        public string StaticLiner { get; set; }
+        public string UOM { get; set; }
+        public string QtyPerKG { get; set; }
     }
 }
+
+

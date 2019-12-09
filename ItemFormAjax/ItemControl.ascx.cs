@@ -11,6 +11,7 @@ namespace ItemFormAjax
         private object _dataItem = null;
         protected void Page_Load(object sender, EventArgs e)
         {
+            
             //empty on purpose
                     }
 
@@ -25,6 +26,7 @@ namespace ItemFormAjax
                 this._dataItem = value;
             }
         }
+        
 
 
     }

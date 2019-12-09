@@ -20,16 +20,27 @@ namespace ItemFormAjax
                 Control_Load();
             }
 
+
+            var user = System.Security.Principal.WindowsIdentity.GetCurrent().Groups;
             string userName = System.Security.Principal.WindowsIdentity.GetCurrent().Name;
 
-           
+            
+            StringBuilder grouplist = new StringBuilder ("");
+            foreach (var u in System.Security.Principal.WindowsIdentity.GetCurrent().Groups)
+            {
+
+                 grouplist.Append (u.Value); 
+     
+            }
+
+            RadTextBox1.Text = grouplist.ToString();
         }
 
 
         public void Submit_Header(object sender, EventArgs e)
         {
             if (Page.IsValid)
-
+                
             {
                 var ps = new StringBuilder();
                 var collection = cbPackage.CheckedItems;

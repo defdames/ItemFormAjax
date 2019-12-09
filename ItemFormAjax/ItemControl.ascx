@@ -14,7 +14,7 @@
             Formula:
         </td>
         <td>
-            <asp:DropDownList ID="ddlTOC" runat="server" SelectedValue='<%# DataBinder.Eval(Container, "DataItem.Formula") %>'
+            <asp:DropDownList ID="ddFormula" runat="server" SelectedValue='<%# DataBinder.Eval(Container, "DataItem.Formula") %>'
                 DataSource='<%# (new string[] { "FBL", "FDB", "FLA",}) %>'
                 AppendDataBoundItems="True">
                 <asp:ListItem Selected="True" Text="Select Formula" Value="">
@@ -27,20 +27,25 @@
             Post Treated:
         </td>
         <td>
-            <asp:DropDownList ID="ddPostTreated" runat="server" AppendDataBoundItems="true">
-                <asp:ListItem Text="Yes" Value="Yes" />
-                <asp:ListItem Text="No" Value="No" />
+            <asp:DropDownList ID="ddPostTreated" runat="server"  SelectedValue='<%# DataBinder.Eval(Container, "DataItem.PostTreated") %>'
+                 DataSource='<%# (new string[] { "Yes", "No",}) %>'
+                AppendDataBoundItems="True">
+                <asp:ListItem Selected="True" Text="Yes/No" Value="">
+                </asp:ListItem>
             </asp:DropDownList>
         </td>
+      
     </tr>
     <tr>
         <td>
             Hi or Regular Purity:
         </td>
         <td>
-            <asp:DropDownList ID="ddHiReg" runat="server" AppendDataBoundItems="true">
-                <asp:ListItem Text="Regular" Value="Regular" />
-                <asp:ListItem Text="High" Value="High" />
+            <asp:DropDownList ID="ddPurity" runat="server" SelectedValue='<%# DataBinder.Eval(Container, "DataItem.Purity") %>'
+                 DataSource='<%# (new string[] { "Regular", "High",}) %>'
+                AppendDataBoundItems="True">
+                <asp:ListItem Selected="True" Text="Select Purity" Value="">
+                </asp:ListItem>
             </asp:DropDownList>
 
         </td>
@@ -50,14 +55,13 @@
             % Metal:
         </td>
         <td>
-            <asp:TextBox ID="txtMetal" runat="server" >
+            <asp:TextBox ID="txtMetal" runat="server" Text='<%# DataBinder.Eval(Container, "DataItem.Metal") %>'>' >
                 
             </asp:TextBox>
         </td>
     </tr>
     </table>
-<br />
-<br />
+<p />
 
 <table id="tblMarketing" class="redTable" runat="server">
     <tr>
@@ -65,9 +69,11 @@
             Static Disp Liner:
         </td>
         <td>
-            <asp:DropDownList ID="ddStaticLiner" runat="server" AppendDataBoundItems="true">
-                <asp:ListItem Text="Yes" Value="Yes" />
-                <asp:ListItem Text="No" Value="No" />
+            <asp:DropDownList ID="ddStaticLiner" runat="server" SelectedValue='<%# DataBinder.Eval(Container, "DataItem.StaticLiner") %>'
+                 DataSource='<%# (new string[] { "Yes", "No",}) %>'
+                AppendDataBoundItems="True">
+                <asp:ListItem Selected="True" Text="Yes/No" Value="">
+                </asp:ListItem>
             </asp:DropDownList>
         </td>
     </tr>
@@ -76,7 +82,7 @@
             UOM:
         </td>
         <td>
-            <asp:TextBox ID="txtFrmlaUOM" runat="server">
+            <asp:TextBox ID="txtUOM" runat="server" Text='<%# DataBinder.Eval(Container, "DataItem.UOM") %>'>' >
 
             </asp:TextBox>
         </td>
@@ -86,15 +92,62 @@
             QTY PER PKG:
         </td>
         <td>
-            <asp:TextBox ID="txtQTYUOM" runat="server">
+            <asp:TextBox ID="txtQTYPERKG" runat="server" Text='<%# DataBinder.Eval(Container, "DataItem.QtyPerKG") %>'>' >
 
             </asp:TextBox>
         </td>
     </tr>
-
-
-
 </table>
+
+<p/>
+<table id="tblRegulatory" class="redTable" runat="server">
+    <tr>
+        <td class="auto-style1">
+            FRIGHT ITEM:
+        </td>
+        <td>
+            <asp:TextBox ID="txtFreightItem" runat="server">
+
+            </asp:TextBox>
+        </td>
+    </tr>
+    <tr>
+        <td class="auto-style1">
+            SAMPLE HMIS:
+        </td>
+        <td>
+            <asp:TextBox ID="txtSampleHMIS" runat="server">
+
+            </asp:TextBox>
+        </td>
+    </tr>
+    <tr>
+        <td class="auto-style1">
+            MSDS CODE:
+        </td>
+        <td>
+            <asp:TextBox ID="txtMSDS" runat="server">
+
+            </asp:TextBox>
+        </td>
+    </tr>
+</table>
+
+<p />
+<table id="Table1" class="redTable" runat="server">
+    <tr>
+        <td class="auto-style1">
+            GL ACCOUNT:
+        </td>
+        <td>
+            <asp:TextBox ID="txtGLAcct" runat="server">
+
+            </asp:TextBox>
+        </td>
+    </tr>
+   
+</table>
+
 
 <br />
 <table>
