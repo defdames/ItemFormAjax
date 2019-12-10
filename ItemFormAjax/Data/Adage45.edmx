@@ -75,6 +75,13 @@
           <Property Name="StaticLiner" Type="varchar" MaxLength="50" />
           <Property Name="UOM" Type="varchar" MaxLength="50" />
           <Property Name="QTYPERPKG" Type="varchar" MaxLength="50" />
+          <Property Name="FreightItem" Type="varchar" MaxLength="50" />
+          <Property Name="sampleHMIS" Type="varchar" MaxLength="50" />
+          <Property Name="MSDSCode" Type="varchar" MaxLength="50" />
+          <Property Name="GLAcct" Type="varchar" MaxLength="50" />
+          <Property Name="HMIS" Type="varchar" MaxLength="50" />
+          <Property Name="HarmonizedCode" Type="varchar" MaxLength="50" />
+          <Property Name="ExportLicenseNo" Type="varchar" MaxLength="50" />
         </EntityType>
         <EntityType Name="xxItemHeader">
           <Key>
@@ -250,6 +257,13 @@
           <Property Name="StaticLiner" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="UOM" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="QTYPERPKG" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="FreightItem" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="sampleHMIS" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="MSDSCode" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="GLAcct" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="HMIS" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="HarmonizedCode" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ExportLicenseNo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
         </EntityType>
       </Schema>
     </edmx:ConceptualModels>
@@ -363,6 +377,13 @@
           <EntitySetMapping Name="xxItemForms">
             <EntityTypeMapping TypeName="adage_45Model.xxItemForm">
               <MappingFragment StoreEntitySet="xxItemForm">
+                <ScalarProperty Name="ExportLicenseNo" ColumnName="ExportLicenseNo" />
+                <ScalarProperty Name="HarmonizedCode" ColumnName="HarmonizedCode" />
+                <ScalarProperty Name="HMIS" ColumnName="HMIS" />
+                <ScalarProperty Name="GLAcct" ColumnName="GLAcct" />
+                <ScalarProperty Name="MSDSCode" ColumnName="MSDSCode" />
+                <ScalarProperty Name="sampleHMIS" ColumnName="sampleHMIS" />
+                <ScalarProperty Name="FreightItem" ColumnName="FreightItem" />
                 <ScalarProperty Name="QTYPERPKG" ColumnName="QTYPERPKG" />
                 <ScalarProperty Name="UOM" ColumnName="UOM" />
                 <ScalarProperty Name="StaticLiner" ColumnName="StaticLiner" />

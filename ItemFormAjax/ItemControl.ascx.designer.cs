@@ -123,13 +123,22 @@ namespace ItemFormAjax
         protected global::System.Web.UI.WebControls.TextBox txtSampleHMIS;
 
         /// <summary>
-        /// txtMSDS control.
+        /// txtMSDSCode control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtMSDS;
+        protected global::System.Web.UI.WebControls.TextBox txtMSDSCode;
+
+        /// <summary>
+        /// txtHMIS control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtHMIS;
 
         /// <summary>
         /// Table1 control.

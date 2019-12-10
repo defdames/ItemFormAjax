@@ -208,3 +208,9 @@ table.minimalistBlack {
         table.minimalistBlack tfoot td {
             font-size: 14px;
         }
+
+.radInput .riLabel {
+    display: inline-block;
+    width: 50%;
+    overflow: hidden;
+}

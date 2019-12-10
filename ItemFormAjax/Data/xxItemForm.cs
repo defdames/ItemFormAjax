@@ -24,5 +24,12 @@ namespace ItemFormAjax.Data
         public string StaticLiner { get; set; }
         public string UOM { get; set; }
         public string QTYPERPKG { get; set; }
+        public string FreightItem { get; set; }
+        public string sampleHMIS { get; set; }
+        public string MSDSCode { get; set; }
+        public string GLAcct { get; set; }
+        public string HMIS { get; set; }
+        public string HarmonizedCode { get; set; }
+        public string ExportLicenseNo { get; set; }
     }
 }

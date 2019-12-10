@@ -129,7 +129,8 @@ namespace ItemFormAjax
                 var grid = (from g in a.xxItemForms
                             where g.Lnumber== LiD
                             select new ItemFormula { ItemID = g.ItemID, Formula = g.Formula, HeaderID = g.HeaderID, 
-                                                     PostTreated = g.PostTreated, Purity = g.Purity, Metal= g.Metal, StaticLiner = g.StaticLiner, UOM = g.UOM, QtyPerKG = g.QTYPERPKG  }).ToList();
+                                                     PostTreated = g.PostTreated, Purity = g.Purity, Metal= g.Metal, StaticLiner = g.StaticLiner, UOM = g.UOM, QtyPerKG = g.QTYPERPKG ,
+                                                    FreightItem = g.FreightItem, SampleHMIS = g.sampleHMIS, MSDSCode = g.MSDSCode, HMIS = g.HMIS, GLAcct = g.GLAcct}).ToList();
 
                 return grid;
 
@@ -204,6 +205,15 @@ namespace ItemFormAjax
             newValues["StaticLiner"] = (userControl.FindControl("ddStaticLiner") as DropDownList).SelectedItem.Value;
             newValues["UOM"] = (userControl.FindControl("txtUOM") as TextBox).Text;
             newValues["QtyPerKG"] = (userControl.FindControl("txtQTYPERKG") as TextBox).Text;
+            newValues["FreightItem"] = (userControl.FindControl("txtFreightItem") as TextBox).Text;
+            newValues["SampleHMIS"] = (userControl.FindControl("txtSampleHMIS") as TextBox).Text;
+            newValues["MSDSCode"] = (userControl.FindControl("txtMSDSCode") as TextBox).Text;
+            newValues["GLAcct"] = (userControl.FindControl("txtGLAcct") as TextBox).Text;
+            newValues["HMIS"] = (userControl.FindControl("txtHMIS") as TextBox).Text;
+
+
+
+
 
 
 
@@ -221,7 +231,11 @@ namespace ItemFormAjax
             string UStaticLiner = newValues["StaticLiner"].ToString();
             string UUOM = newValues["UOM"].ToString();
             string UQtyPerKG= newValues["QtyPerKG"].ToString();
-
+            string UFreightItem = newValues["FreightItem"].ToString();
+            string USampleHMIS = newValues["SampleHMIS"].ToString();
+            string UMSDSCode = newValues["MSDSCode"].ToString();
+            string UGLAcct= newValues["GLAcct"].ToString();
+            string UHMIS = newValues["HMIS"].ToString();
 
             changedRows[0].BeginEdit();
             try
@@ -248,6 +262,11 @@ namespace ItemFormAjax
                     grid.StaticLiner = UStaticLiner;
                     grid.UOM = UUOM;
                     grid.QTYPERPKG = UQtyPerKG;
+                    grid.FreightItem = UFreightItem;
+                    grid.sampleHMIS = USampleHMIS;
+                    grid.MSDSCode = UMSDSCode;
+                    grid.GLAcct = UGLAcct;
+                    grid.HMIS = UHMIS;
                     
 
 
@@ -286,8 +305,19 @@ namespace ItemFormAjax
             //Insert new values
             Hashtable newValues = new Hashtable();
 
-            newValues["Formula"] = (userControl.FindControl("ddlTOC") as DropDownList).SelectedItem.Value;
+            newValues["Formula"] = (userControl.FindControl("ddFormula") as DropDownList).SelectedItem.Value;
             newValues["PostTreated"] = (userControl.FindControl("ddPostTreated") as DropDownList).SelectedItem.Value;
+            newValues["Purity"] = (userControl.FindControl("ddPurity") as DropDownList).SelectedItem.Value;
+            newValues["Metal"] = (userControl.FindControl("txtMetal") as TextBox).Text;
+            newValues["StaticLiner"] = (userControl.FindControl("ddStaticLiner") as DropDownList).SelectedItem.Value;
+            newValues["UOM"] = (userControl.FindControl("txtUOM") as TextBox).Text;
+            newValues["QtyPerKG"] = (userControl.FindControl("txtQTYPERKG") as TextBox).Text;
+            newValues["FreightItem"] = (userControl.FindControl("txtFreightItem") as TextBox).Text;
+            newValues["SampleHMIS"] = (userControl.FindControl("txtSampleHMIS") as TextBox).Text;
+            newValues["MSDSCode"] = (userControl.FindControl("txtMSDSCode") as TextBox).Text;
+            newValues["GLAcct"] = (userControl.FindControl("txtGLAcct") as TextBox).Text;
+            newValues["HMIS"] = (userControl.FindControl("txtHMIS") as TextBox).Text;
+
             try
             {
 
@@ -310,8 +340,18 @@ namespace ItemFormAjax
                 this.NewGetItems().Rows.Add(newRow);
                 this.NewGetItems().AcceptChanges();
 
-                string formula = newValues["Formula"].ToString();
-                string posttreated = newValues["PostTreated"].ToString();
+                string Iformula = newValues["Formula"].ToString();
+                string Iposttreated = newValues["PostTreated"].ToString();
+                string IPurity = newValues["Purity"].ToString();
+                string IMetal = newValues["Metal"].ToString();
+                string IStaticLiner = newValues["StaticLiner"].ToString();
+                string IUOM = newValues["UOM"].ToString();
+                string IQtyPerKG = newValues["QtyPerKG"].ToString();
+                string IFreightItem = newValues["FreightItem"].ToString();
+                string ISampleHMIS = newValues["SampleHMIS"].ToString();
+                string IMSDSCode = newValues["MSDSCode"].ToString();
+                string IGLAcct = newValues["GLAcct"].ToString();
+                string IHMIS = newValues["HMIS"].ToString();
                 using (adage_45Entities a = new adage_45Entities())
                 {
                     var headerinfo = (from g in a.xxItemHeaders
@@ -326,8 +366,20 @@ namespace ItemFormAjax
 
                     grid.HeaderID = headerinfo.ItemID;
                     grid.Lnumber = LiD;
-                    grid.Formula = formula;
-                    grid.PostTreated = posttreated;
+                    grid.Formula = Iformula;
+                    grid.PostTreated = Iposttreated;
+                    grid.Purity = IPurity;
+                    grid.Metal = IMetal;
+                    grid.StaticLiner = IStaticLiner;
+                    grid.UOM = IUOM;
+                    grid.QTYPERPKG = IQtyPerKG;
+                    grid.FreightItem = IFreightItem;
+                    grid.sampleHMIS = ISampleHMIS;
+                    grid.MSDSCode = IMSDSCode;
+                    grid.GLAcct = IGLAcct;
+                    grid.HMIS = IHMIS;
+
+
 
                     a.xxItemForms.Add(grid);
                     a.SaveChanges();
@@ -337,7 +389,7 @@ namespace ItemFormAjax
             catch (Exception ex)
             {
                 Label lblError = new Label();
-                lblError.Text = "Unable to insert Item. Reason: " + ex.Message;
+                lblError.Text = "Unable to insert Formula. Reason: " + ex.Message;
                 lblError.ForeColor = System.Drawing.Color.Red;
                 RadGrid1.Controls.Add(lblError);
 
@@ -403,6 +455,13 @@ namespace ItemFormAjax
         public string StaticLiner { get; set; }
         public string UOM { get; set; }
         public string QtyPerKG { get; set; }
+        public string FreightItem { get; set; }
+        public string SampleHMIS { get; set; }
+        public string MSDSCode { get; set; }
+        public string GLAcct { get; set; }
+        public string HMIS { get; set; }
+        public string HarmonizedCode { get; set; }
+        public string ExportLicenseNo { get; set; }
     }
 }
 

@@ -35,10 +35,9 @@
 
                 <td>
 
-                    <telerik:RadTextBox ID="txtLnumber" runat="server" Label="L Number Cross Reference"></telerik:RadTextBox>
+                   <telerik:RadLabel ID="lbllabel" runat="server" Text="L Number Cross Reference"></telerik:RadLabel> <telerik:RadTextBox ID="txtLnumber" runat="server" ></telerik:RadTextBox>
                 </td>
-                <td><<telerik:RadTextBox ID="RadTextBox1" runat="server" Label="L Number Cross Reference"></telerik:RadTextBox>
-                </td>
+              
 
             </tr>
             <tr>
@@ -77,7 +76,7 @@
                                 </telerik:GridEditCommandColumn>
                                 <telerik:GridBoundColumn UniqueName="Formula" HeaderText="Formula" DataField="Formula">
                                 </telerik:GridBoundColumn>
-                                <telerik:GridBoundColumn UniqueName="HeaderID" HeaderText="Header ID" DataField="HeaderID">
+                                <telerik:GridBoundColumn UniqueName="HeaderID" HeaderText="Header ID" DataField="HeaderID" Visible="false">
                                 </telerik:GridBoundColumn>
                                 <telerik:GridBoundColumn UniqueName="PostTreated" HeaderText="Post Treated" DataField="PostTreated">
                                 </telerik:GridBoundColumn>

@@ -15,7 +15,8 @@
         </td>
         <td>
             <asp:DropDownList ID="ddFormula" runat="server" SelectedValue='<%# DataBinder.Eval(Container, "DataItem.Formula") %>'
-                DataSource='<%# (new string[] { "FBL", "FDB", "FLA",}) %>'
+                DataSource='<%# (new string[] { "FBL", "FDB", "FLA","BD","FC","FD","FDSB","FDFS","FDX",
+                                                "Feed Blend","FCFD","BM","SOF","T-1 Byproduct","T-1 Byproduct Filter Cake","F-1 Byproduct","F-1 Byproduct Filter Cake","New Raw Material ?","WETTED POWDER",}) %>'
                 AppendDataBoundItems="True">
                 <asp:ListItem Selected="True" Text="Select Formula" Value="">
                 </asp:ListItem>
@@ -103,10 +104,10 @@
 <table id="tblRegulatory" class="redTable" runat="server">
     <tr>
         <td class="auto-style1">
-            FRIGHT ITEM:
+            FREIGHT ITEM:
         </td>
         <td>
-            <asp:TextBox ID="txtFreightItem" runat="server">
+            <asp:TextBox ID="txtFreightItem" runat="server" Text='<%# DataBinder.Eval(Container, "DataItem.FreightItem") %>'>' >
 
             </asp:TextBox>
         </td>
@@ -116,7 +117,7 @@
             SAMPLE HMIS:
         </td>
         <td>
-            <asp:TextBox ID="txtSampleHMIS" runat="server">
+            <asp:TextBox ID="txtSampleHMIS" runat="server"  Text='<%# DataBinder.Eval(Container, "DataItem.SampleHMIS") %>'>' >>
 
             </asp:TextBox>
         </td>
@@ -126,7 +127,17 @@
             MSDS CODE:
         </td>
         <td>
-            <asp:TextBox ID="txtMSDS" runat="server">
+            <asp:TextBox ID="txtMSDSCode" runat="server" Text='<%# DataBinder.Eval(Container, "DataItem.MSDSCode") %>'>' >
+
+            </asp:TextBox>
+        </td>
+    </tr>
+     <tr>
+        <td class="auto-style1">
+            HMIS:
+        </td>
+        <td>
+            <asp:TextBox ID="txtHMIS" runat="server" Text='<%# DataBinder.Eval(Container, "DataItem.HMIS") %>'>' >
 
             </asp:TextBox>
         </td>
@@ -140,7 +151,7 @@
             GL ACCOUNT:
         </td>
         <td>
-            <asp:TextBox ID="txtGLAcct" runat="server">
+            <asp:TextBox ID="txtGLAcct" runat="server" Text='<%# DataBinder.Eval(Container, "DataItem.GLAcct") %>'>' >
 
             </asp:TextBox>
         </td>
