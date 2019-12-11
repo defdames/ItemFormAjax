@@ -58,6 +58,11 @@
                     </telerik:RadComboBox>
                 </td>
             </tr>
+            <tr>
+                <td>
+                     <telerik:RadButton ID="btnSubmit" runat="server" Text="Submit" OnClick="Submit_ItemInfo"></telerik:RadButton>
+                </td>
+            </tr>
 
 
         </table>

@@ -46,5 +46,9 @@ namespace ItemFormAjax.Data
         public string Carrier { get; set; }
         public string Status { get; set; }
         public Nullable<System.DateTime> RequestedDate { get; set; }
+        public string CopyDownToCompanies { get; set; }
+        public string Purchased { get; set; }
+        public string PurchasedCountryOfMfg { get; set; }
+        public string Customers { get; set; }
     }
 }

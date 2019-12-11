@@ -82,6 +82,8 @@
           <Property Name="HMIS" Type="varchar" MaxLength="50" />
           <Property Name="HarmonizedCode" Type="varchar" MaxLength="50" />
           <Property Name="ExportLicenseNo" Type="varchar" MaxLength="50" />
+          <Property Name="Saleable" Type="varchar" MaxLength="50" />
+          <Property Name="WtToLiquid" Type="varchar" MaxLength="50" />
         </EntityType>
         <EntityType Name="xxItemHeader">
           <Key>
@@ -119,6 +121,10 @@
           <Property Name="Carrier" Type="varchar" MaxLength="500" />
           <Property Name="Status" Type="varchar" MaxLength="500" />
           <Property Name="RequestedDate" Type="datetime" />
+          <Property Name="CopyDownToCompanies" Type="varchar" MaxLength="500" />
+          <Property Name="Purchased" Type="varchar" MaxLength="50" />
+          <Property Name="PurchasedCountryOfMfg" Type="varchar" MaxLength="500" />
+          <Property Name="Customers" Type="varchar" MaxLength="500" />
         </EntityType>
         <EntityContainer Name="adage_45ModelStoreContainer">
           <EntitySet Name="item_class_ext" EntityType="Self.item_class_ext" Schema="dbo" store:Type="Tables" />
@@ -147,8 +153,8 @@
           <EntitySet Name="pmap_System" EntityType="adage_45Model.pmap_System" />
           <EntitySet Name="pmap_Type_Application" EntityType="adage_45Model.pmap_Type_Application" />
           <EntitySet Name="item_class_ext" EntityType="adage_45Model.item_class_ext" />
-          <EntitySet Name="xxItemHeaders" EntityType="adage_45Model.xxItemHeader" />
           <EntitySet Name="xxItemForms" EntityType="adage_45Model.xxItemForm" />
+          <EntitySet Name="xxItemHeaders" EntityType="adage_45Model.xxItemHeader" />
         </EntityContainer>
         <EntityType Name="pmap_Characteristic">
           <Key>
@@ -206,6 +212,30 @@
           <Property Name="Type" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
           <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
         </EntityType>
+        <EntityType Name="xxItemForm">
+          <Key>
+            <PropertyRef Name="ItemID" />
+          </Key>
+          <Property Name="ItemID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="HeaderID" Type="Int32" Nullable="false" />
+          <Property Name="Formula" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Lnumber" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="PostTreated" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Purity" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Metal" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="StaticLiner" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="UOM" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="QTYPERPKG" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="FreightItem" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="sampleHMIS" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="MSDSCode" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="GLAcct" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="HMIS" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="HarmonizedCode" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ExportLicenseNo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Saleable" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="WtToLiquid" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
         <EntityType Name="xxItemHeader">
           <Key>
             <PropertyRef Name="ItemID" />
@@ -242,28 +272,10 @@
           <Property Name="Carrier" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
           <Property Name="Status" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
           <Property Name="RequestedDate" Type="DateTime" Precision="3" />
-        </EntityType>
-        <EntityType Name="xxItemForm">
-          <Key>
-            <PropertyRef Name="ItemID" />
-          </Key>
-          <Property Name="ItemID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="HeaderID" Type="Int32" Nullable="false" />
-          <Property Name="Formula" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="Lnumber" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="PostTreated" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="Purity" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="Metal" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="StaticLiner" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="UOM" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="QTYPERPKG" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="FreightItem" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="sampleHMIS" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="MSDSCode" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="GLAcct" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="HMIS" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="HarmonizedCode" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="ExportLicenseNo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="CopyDownToCompanies" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="Purchased" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="PurchasedCountryOfMfg" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="Customers" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
         </EntityType>
       </Schema>
     </edmx:ConceptualModels>
@@ -336,9 +348,38 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
+          <EntitySetMapping Name="xxItemForms">
+            <EntityTypeMapping TypeName="adage_45Model.xxItemForm">
+              <MappingFragment StoreEntitySet="xxItemForm">
+                <ScalarProperty Name="WtToLiquid" ColumnName="WtToLiquid" />
+                <ScalarProperty Name="Saleable" ColumnName="Saleable" />
+                <ScalarProperty Name="ExportLicenseNo" ColumnName="ExportLicenseNo" />
+                <ScalarProperty Name="HarmonizedCode" ColumnName="HarmonizedCode" />
+                <ScalarProperty Name="HMIS" ColumnName="HMIS" />
+                <ScalarProperty Name="GLAcct" ColumnName="GLAcct" />
+                <ScalarProperty Name="MSDSCode" ColumnName="MSDSCode" />
+                <ScalarProperty Name="sampleHMIS" ColumnName="sampleHMIS" />
+                <ScalarProperty Name="FreightItem" ColumnName="FreightItem" />
+                <ScalarProperty Name="QTYPERPKG" ColumnName="QTYPERPKG" />
+                <ScalarProperty Name="UOM" ColumnName="UOM" />
+                <ScalarProperty Name="StaticLiner" ColumnName="StaticLiner" />
+                <ScalarProperty Name="Metal" ColumnName="Metal" />
+                <ScalarProperty Name="Purity" ColumnName="Purity" />
+                <ScalarProperty Name="PostTreated" ColumnName="PostTreated" />
+                <ScalarProperty Name="Lnumber" ColumnName="Lnumber" />
+                <ScalarProperty Name="Formula" ColumnName="Formula" />
+                <ScalarProperty Name="HeaderID" ColumnName="HeaderID" />
+                <ScalarProperty Name="ItemID" ColumnName="ItemID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
           <EntitySetMapping Name="xxItemHeaders">
             <EntityTypeMapping TypeName="adage_45Model.xxItemHeader">
               <MappingFragment StoreEntitySet="xxItemHeader">
+                <ScalarProperty Name="Customers" ColumnName="Customers" />
+                <ScalarProperty Name="PurchasedCountryOfMfg" ColumnName="PurchasedCountryOfMfg" />
+                <ScalarProperty Name="Purchased" ColumnName="Purchased" />
+                <ScalarProperty Name="CopyDownToCompanies" ColumnName="CopyDownToCompanies" />
                 <ScalarProperty Name="RequestedDate" ColumnName="RequestedDate" />
                 <ScalarProperty Name="Status" ColumnName="Status" />
                 <ScalarProperty Name="Carrier" ColumnName="Carrier" />
@@ -370,29 +411,6 @@
                 <ScalarProperty Name="ProductDesription" ColumnName="ProductDesription" />
                 <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
                 <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
-                <ScalarProperty Name="ItemID" ColumnName="ItemID" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="xxItemForms">
-            <EntityTypeMapping TypeName="adage_45Model.xxItemForm">
-              <MappingFragment StoreEntitySet="xxItemForm">
-                <ScalarProperty Name="ExportLicenseNo" ColumnName="ExportLicenseNo" />
-                <ScalarProperty Name="HarmonizedCode" ColumnName="HarmonizedCode" />
-                <ScalarProperty Name="HMIS" ColumnName="HMIS" />
-                <ScalarProperty Name="GLAcct" ColumnName="GLAcct" />
-                <ScalarProperty Name="MSDSCode" ColumnName="MSDSCode" />
-                <ScalarProperty Name="sampleHMIS" ColumnName="sampleHMIS" />
-                <ScalarProperty Name="FreightItem" ColumnName="FreightItem" />
-                <ScalarProperty Name="QTYPERPKG" ColumnName="QTYPERPKG" />
-                <ScalarProperty Name="UOM" ColumnName="UOM" />
-                <ScalarProperty Name="StaticLiner" ColumnName="StaticLiner" />
-                <ScalarProperty Name="Metal" ColumnName="Metal" />
-                <ScalarProperty Name="Purity" ColumnName="Purity" />
-                <ScalarProperty Name="PostTreated" ColumnName="PostTreated" />
-                <ScalarProperty Name="Lnumber" ColumnName="Lnumber" />
-                <ScalarProperty Name="Formula" ColumnName="Formula" />
-                <ScalarProperty Name="HeaderID" ColumnName="HeaderID" />
                 <ScalarProperty Name="ItemID" ColumnName="ItemID" />
               </MappingFragment>
             </EntityTypeMapping>

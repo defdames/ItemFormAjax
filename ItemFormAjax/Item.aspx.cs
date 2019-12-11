@@ -111,7 +111,23 @@ namespace ItemFormAjax
             {
                 var grid = (from g in a.xxItemForms
                             where g.ItemID == IID
-                            select new ItemFormula { ItemID = g.ItemID, Formula = g.Formula, HeaderID = g.HeaderID, PostTreated = g.PostTreated,  }).ToList();
+                            select new ItemFormula
+                            {
+                                ItemID = g.ItemID,
+                                Formula = g.Formula,
+                                HeaderID = g.HeaderID,
+                                PostTreated = g.PostTreated,
+                                Purity = g.Purity,
+                                Metal = g.Metal,
+                                StaticLiner = g.StaticLiner,
+                                UOM = g.UOM,
+                                QtyPerKG = g.QTYPERPKG,
+                                FreightItem = g.FreightItem,
+                                SampleHMIS = g.sampleHMIS,
+                                MSDSCode = g.MSDSCode,
+                                HMIS = g.HMIS,
+                                GLAcct = g.GLAcct
+                            }).ToList();
 
                 return grid;
 
@@ -128,9 +144,23 @@ namespace ItemFormAjax
             {
                 var grid = (from g in a.xxItemForms
                             where g.Lnumber== LiD
-                            select new ItemFormula { ItemID = g.ItemID, Formula = g.Formula, HeaderID = g.HeaderID, 
-                                                     PostTreated = g.PostTreated, Purity = g.Purity, Metal= g.Metal, StaticLiner = g.StaticLiner, UOM = g.UOM, QtyPerKG = g.QTYPERPKG ,
-                                                    FreightItem = g.FreightItem, SampleHMIS = g.sampleHMIS, MSDSCode = g.MSDSCode, HMIS = g.HMIS, GLAcct = g.GLAcct}).ToList();
+                            select new ItemFormula
+                            {
+                                ItemID = g.ItemID,
+                                Formula = g.Formula,
+                                HeaderID = g.HeaderID,
+                                PostTreated = g.PostTreated,
+                                Purity = g.Purity,
+                                Metal = g.Metal,
+                                StaticLiner = g.StaticLiner,
+                                UOM = g.UOM,
+                                QtyPerKG = g.QTYPERPKG,
+                                FreightItem = g.FreightItem,
+                                SampleHMIS = g.sampleHMIS,
+                                MSDSCode = g.MSDSCode,
+                                HMIS = g.HMIS,
+                                GLAcct = g.GLAcct
+                            }).ToList();
 
                 return grid;
 
@@ -436,7 +466,11 @@ namespace ItemFormAjax
             this.GetAllItems().PrimaryKey = new DataColumn[] { this.GetAllItems().Columns["ItemID"] };
         }
 
+        public void Submit_ItemInfo(object sender, EventArgs e)
+        {
 
+
+        }
 
 
 

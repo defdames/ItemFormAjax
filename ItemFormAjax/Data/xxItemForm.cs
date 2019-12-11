@@ -31,5 +31,7 @@ namespace ItemFormAjax.Data
         public string HMIS { get; set; }
         public string HarmonizedCode { get; set; }
         public string ExportLicenseNo { get; set; }
+        public string Saleable { get; set; }
+        public string WtToLiquid { get; set; }
     }
 }
