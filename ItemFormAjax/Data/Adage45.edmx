@@ -5,6 +5,82 @@
     <!-- SSDL content -->
     <edmx:StorageModels>
     <Schema Namespace="adage_45Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="gl_cmp_tbl">
+          <Key>
+            <PropertyRef Name="gl_cmp_key" />
+          </Key>
+          <Property Name="gl_cmp_key" Type="varchar" MaxLength="2" Nullable="false" />
+          <Property Name="gl_cmp_desc" Type="varchar" MaxLength="30" Nullable="false" />
+          <Property Name="gl_cmp_adr1" Type="varchar" MaxLength="30" Nullable="false" />
+          <Property Name="gl_cmp_adr2" Type="varchar" MaxLength="30" Nullable="false" />
+          <Property Name="gl_cmp_city" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="gl_cmp_state" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="gl_cmp_postc" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="en_cntry_key" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="gl_cmp_tel" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="gl_cmp_fax" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="gl_cmp_telex" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="gl_cmp_cont1" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="gl_cmp_posn1" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="gl_cmp_cont2" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="gl_cmp_posn2" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="gl_cmp_cont3" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="gl_cmp_posn3" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="gl_cmp_acnno" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="gl_crncy_key" Type="varchar" MaxLength="3" Nullable="false" />
+          <Property Name="gl_cmp_retac" Type="varchar" MaxLength="40" Nullable="false" />
+          <Property Name="gl_cmp_ppsac" Type="varchar" MaxLength="40" Nullable="false" />
+          <Property Name="gl_cmp_rndac" Type="varchar" MaxLength="40" Nullable="false" />
+          <Property Name="gl_cmp_taxfn" Type="varchar" MaxLength="15" Nullable="false" />
+          <Property Name="gl_cmp_defbr" Type="varchar" MaxLength="4" Nullable="false" />
+          <Property Name="gl_cmp_defpl" Type="varchar" MaxLength="4" Nullable="false" />
+          <Property Name="gl_cmp_onebr" Type="int" Nullable="false" />
+          <Property Name="gl_cmp_onepl" Type="int" Nullable="false" />
+          <Property Name="gl_cmp_parnt" Type="varchar" MaxLength="2" Nullable="false" />
+          <Property Name="gl_cmp_upcnt" Type="int" Nullable="false" />
+          <Property Name="sa_user_key" Type="varchar" MaxLength="8" Nullable="false" />
+          <Property Name="gl_cmp_chgdt" Type="datetime" Nullable="false" />
+          <Property Name="gl_cmp_crtdt" Type="datetime" Nullable="false" />
+          <Property Name="gl_cmp_wtmsf" Type="smallint" Nullable="false" />
+          <Property Name="gl_cmp_posttol" Type="float" Nullable="false" />
+          <Property Name="gl_cmp_taxenv" Type="smallint" Nullable="false" />
+          <Property Name="gl_cmp_opt3" Type="smallint" Nullable="false" />
+          <Property Name="gl_cmp_cur3" Type="varchar" MaxLength="3" Nullable="false" />
+          <Property Name="gl_cmp_taxcalc" Type="smallint" Nullable="false" />
+          <Property Name="gl_cmp_recalc" Type="smallint" Nullable="false" />
+          <Property Name="gl_cmp_taxincl" Type="smallint" Nullable="false" />
+          <Property Name="gl_cmp_vatreg" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="gl_cmp_exon" Type="varchar" MaxLength="25" Nullable="false" />
+          <Property Name="gl_vatcd_qlf" Type="smallint" Nullable="false" />
+          <Property Name="gl_vatcd_key" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="gl_cmp_lmtamtc" Type="float" Nullable="false" />
+          <Property Name="gl_cmp_lmtdt" Type="datetime" />
+          <Property Name="gl_cmp_ytdlmtc" Type="float" Nullable="false" />
+          <Property Name="en_mfrid_key" Type="varchar" MaxLength="10" />
+          <Property Name="gl_cmp_crdttol" Type="float" Nullable="false" />
+          <Property Name="gl_cmp_crdttolf" Type="smallint" Nullable="false" />
+          <Property Name="gl_bkcd_key" Type="varchar" MaxLength="2" Nullable="false" />
+          <Property Name="en_uom_wgt" Type="varchar" MaxLength="2" Nullable="false" />
+          <Property Name="en_uom_vol" Type="varchar" MaxLength="2" Nullable="false" />
+          <Property Name="gl_cmp_pctolbasis" Type="smallint" Nullable="false" />
+          <Property Name="gl_cmp_pcundtol" Type="float" />
+          <Property Name="gl_cmp_pcovrtol" Type="float" />
+          <Property Name="en_uom_key" Type="varchar" MaxLength="2" />
+          <Property Name="gl_cmp_enhprcf" Type="smallint" Nullable="false" />
+          <Property Name="gl_acct_susp" Type="varchar" MaxLength="40" Nullable="false" />
+          <Property Name="gl_acct_cdvadj" Type="varchar" MaxLength="40" Nullable="false" />
+          <Property Name="gl_cmp_adjlimit" Type="float" Nullable="false" />
+          <Property Name="gl_cmp_csttol" Type="float" />
+          <Property Name="gl_cmp_adjreason" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="gl_cmp_gln" Type="varchar" MaxLength="13" />
+          <Property Name="gl_cmp_csttoltyp" Type="smallint" Nullable="false" />
+          <Property Name="gl_cmp_hazmattel" Type="varchar" MaxLength="20" />
+          <Property Name="gl_cmp_hazmatshipername" Type="varchar" MaxLength="50" />
+          <Property Name="gl_cmp_hazmatshipertitle" Type="varchar" MaxLength="100" />
+          <Property Name="gl_cmp_dlotfrmt" Type="varchar" MaxLength="250" />
+          <Property Name="gl_cmp_plotfrmt" Type="varchar" MaxLength="250" />
+          <Property Name="gl_cmp_mlotfrmt" Type="varchar" MaxLength="250" />
+        </EntityType>
         <EntityType Name="item_class_ext">
           <Key>
             <PropertyRef Name="id" />
@@ -80,10 +156,9 @@
           <Property Name="MSDSCode" Type="varchar" MaxLength="50" />
           <Property Name="GLAcct" Type="varchar" MaxLength="50" />
           <Property Name="HMIS" Type="varchar" MaxLength="50" />
-          <Property Name="HarmonizedCode" Type="varchar" MaxLength="50" />
-          <Property Name="ExportLicenseNo" Type="varchar" MaxLength="50" />
-          <Property Name="Saleable" Type="varchar" MaxLength="50" />
           <Property Name="WtToLiquid" Type="varchar" MaxLength="50" />
+          <Property Name="MfgLocation" Type="varchar" MaxLength="50" />
+          <Property Name="PlanningFamily" Type="varchar(max)" />
         </EntityType>
         <EntityType Name="xxItemHeader">
           <Key>
@@ -125,8 +200,12 @@
           <Property Name="Purchased" Type="varchar" MaxLength="50" />
           <Property Name="PurchasedCountryOfMfg" Type="varchar" MaxLength="500" />
           <Property Name="Customers" Type="varchar" MaxLength="500" />
+          <Property Name="Saleable" Type="varchar" MaxLength="50" />
+          <Property Name="HarmonizedCode" Type="varchar(max)" />
+          <Property Name="ExportLicenseNo" Type="varchar(max)" />
         </EntityType>
         <EntityContainer Name="adage_45ModelStoreContainer">
+          <EntitySet Name="gl_cmp_tbl" EntityType="Self.gl_cmp_tbl" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="item_class_ext" EntityType="Self.item_class_ext" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="pmap_Characteristic" EntityType="Self.pmap_Characteristic" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="pmap_Geometry" EntityType="Self.pmap_Geometry" Schema="dbo" store:Type="Tables" />
@@ -153,6 +232,7 @@
           <EntitySet Name="pmap_System" EntityType="adage_45Model.pmap_System" />
           <EntitySet Name="pmap_Type_Application" EntityType="adage_45Model.pmap_Type_Application" />
           <EntitySet Name="item_class_ext" EntityType="adage_45Model.item_class_ext" />
+          <EntitySet Name="gl_cmp_tbl" EntityType="adage_45Model.gl_cmp_tbl" />
           <EntitySet Name="xxItemForms" EntityType="adage_45Model.xxItemForm" />
           <EntitySet Name="xxItemHeaders" EntityType="adage_45Model.xxItemHeader" />
         </EntityContainer>
@@ -212,6 +292,82 @@
           <Property Name="Type" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
           <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
         </EntityType>
+        <EntityType Name="gl_cmp_tbl">
+          <Key>
+            <PropertyRef Name="gl_cmp_key" />
+          </Key>
+          <Property Name="gl_cmp_key" Type="String" Nullable="false" MaxLength="2" FixedLength="false" Unicode="false" />
+          <Property Name="gl_cmp_desc" Type="String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="gl_cmp_adr1" Type="String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="gl_cmp_adr2" Type="String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="gl_cmp_city" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="gl_cmp_state" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="gl_cmp_postc" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="en_cntry_key" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="gl_cmp_tel" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="gl_cmp_fax" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="gl_cmp_telex" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="gl_cmp_cont1" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="gl_cmp_posn1" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="gl_cmp_cont2" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="gl_cmp_posn2" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="gl_cmp_cont3" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="gl_cmp_posn3" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="gl_cmp_acnno" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="gl_crncy_key" Type="String" Nullable="false" MaxLength="3" FixedLength="false" Unicode="false" />
+          <Property Name="gl_cmp_retac" Type="String" Nullable="false" MaxLength="40" FixedLength="false" Unicode="false" />
+          <Property Name="gl_cmp_ppsac" Type="String" Nullable="false" MaxLength="40" FixedLength="false" Unicode="false" />
+          <Property Name="gl_cmp_rndac" Type="String" Nullable="false" MaxLength="40" FixedLength="false" Unicode="false" />
+          <Property Name="gl_cmp_taxfn" Type="String" Nullable="false" MaxLength="15" FixedLength="false" Unicode="false" />
+          <Property Name="gl_cmp_defbr" Type="String" Nullable="false" MaxLength="4" FixedLength="false" Unicode="false" />
+          <Property Name="gl_cmp_defpl" Type="String" Nullable="false" MaxLength="4" FixedLength="false" Unicode="false" />
+          <Property Name="gl_cmp_onebr" Type="Int32" Nullable="false" />
+          <Property Name="gl_cmp_onepl" Type="Int32" Nullable="false" />
+          <Property Name="gl_cmp_parnt" Type="String" Nullable="false" MaxLength="2" FixedLength="false" Unicode="false" />
+          <Property Name="gl_cmp_upcnt" Type="Int32" Nullable="false" />
+          <Property Name="sa_user_key" Type="String" Nullable="false" MaxLength="8" FixedLength="false" Unicode="false" />
+          <Property Name="gl_cmp_chgdt" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="gl_cmp_crtdt" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="gl_cmp_wtmsf" Type="Int16" Nullable="false" />
+          <Property Name="gl_cmp_posttol" Type="Double" Nullable="false" />
+          <Property Name="gl_cmp_taxenv" Type="Int16" Nullable="false" />
+          <Property Name="gl_cmp_opt3" Type="Int16" Nullable="false" />
+          <Property Name="gl_cmp_cur3" Type="String" Nullable="false" MaxLength="3" FixedLength="false" Unicode="false" />
+          <Property Name="gl_cmp_taxcalc" Type="Int16" Nullable="false" />
+          <Property Name="gl_cmp_recalc" Type="Int16" Nullable="false" />
+          <Property Name="gl_cmp_taxincl" Type="Int16" Nullable="false" />
+          <Property Name="gl_cmp_vatreg" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="gl_cmp_exon" Type="String" Nullable="false" MaxLength="25" FixedLength="false" Unicode="false" />
+          <Property Name="gl_vatcd_qlf" Type="Int16" Nullable="false" />
+          <Property Name="gl_vatcd_key" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="gl_cmp_lmtamtc" Type="Double" Nullable="false" />
+          <Property Name="gl_cmp_lmtdt" Type="DateTime" Precision="3" />
+          <Property Name="gl_cmp_ytdlmtc" Type="Double" Nullable="false" />
+          <Property Name="en_mfrid_key" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="gl_cmp_crdttol" Type="Double" Nullable="false" />
+          <Property Name="gl_cmp_crdttolf" Type="Int16" Nullable="false" />
+          <Property Name="gl_bkcd_key" Type="String" Nullable="false" MaxLength="2" FixedLength="false" Unicode="false" />
+          <Property Name="en_uom_wgt" Type="String" Nullable="false" MaxLength="2" FixedLength="false" Unicode="false" />
+          <Property Name="en_uom_vol" Type="String" Nullable="false" MaxLength="2" FixedLength="false" Unicode="false" />
+          <Property Name="gl_cmp_pctolbasis" Type="Int16" Nullable="false" />
+          <Property Name="gl_cmp_pcundtol" Type="Double" />
+          <Property Name="gl_cmp_pcovrtol" Type="Double" />
+          <Property Name="en_uom_key" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+          <Property Name="gl_cmp_enhprcf" Type="Int16" Nullable="false" />
+          <Property Name="gl_acct_susp" Type="String" Nullable="false" MaxLength="40" FixedLength="false" Unicode="false" />
+          <Property Name="gl_acct_cdvadj" Type="String" Nullable="false" MaxLength="40" FixedLength="false" Unicode="false" />
+          <Property Name="gl_cmp_adjlimit" Type="Double" Nullable="false" />
+          <Property Name="gl_cmp_csttol" Type="Double" />
+          <Property Name="gl_cmp_adjreason" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="gl_cmp_gln" Type="String" MaxLength="13" FixedLength="false" Unicode="false" />
+          <Property Name="gl_cmp_csttoltyp" Type="Int16" Nullable="false" />
+          <Property Name="gl_cmp_hazmattel" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="gl_cmp_hazmatshipername" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="gl_cmp_hazmatshipertitle" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="gl_cmp_dlotfrmt" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+          <Property Name="gl_cmp_plotfrmt" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+          <Property Name="gl_cmp_mlotfrmt" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+        </EntityType>
         <EntityType Name="xxItemForm">
           <Key>
             <PropertyRef Name="ItemID" />
@@ -231,10 +387,9 @@
           <Property Name="MSDSCode" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="GLAcct" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="HMIS" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="HarmonizedCode" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="ExportLicenseNo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="Saleable" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="WtToLiquid" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="MfgLocation" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="PlanningFamily" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
         </EntityType>
         <EntityType Name="xxItemHeader">
           <Key>
@@ -276,6 +431,9 @@
           <Property Name="Purchased" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="PurchasedCountryOfMfg" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
           <Property Name="Customers" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="Saleable" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="HarmonizedCode" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="ExportLicenseNo" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
         </EntityType>
       </Schema>
     </edmx:ConceptualModels>
@@ -348,13 +506,89 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
+          <EntitySetMapping Name="gl_cmp_tbl">
+            <EntityTypeMapping TypeName="adage_45Model.gl_cmp_tbl">
+              <MappingFragment StoreEntitySet="gl_cmp_tbl">
+                <ScalarProperty Name="gl_cmp_mlotfrmt" ColumnName="gl_cmp_mlotfrmt" />
+                <ScalarProperty Name="gl_cmp_plotfrmt" ColumnName="gl_cmp_plotfrmt" />
+                <ScalarProperty Name="gl_cmp_dlotfrmt" ColumnName="gl_cmp_dlotfrmt" />
+                <ScalarProperty Name="gl_cmp_hazmatshipertitle" ColumnName="gl_cmp_hazmatshipertitle" />
+                <ScalarProperty Name="gl_cmp_hazmatshipername" ColumnName="gl_cmp_hazmatshipername" />
+                <ScalarProperty Name="gl_cmp_hazmattel" ColumnName="gl_cmp_hazmattel" />
+                <ScalarProperty Name="gl_cmp_csttoltyp" ColumnName="gl_cmp_csttoltyp" />
+                <ScalarProperty Name="gl_cmp_gln" ColumnName="gl_cmp_gln" />
+                <ScalarProperty Name="gl_cmp_adjreason" ColumnName="gl_cmp_adjreason" />
+                <ScalarProperty Name="gl_cmp_csttol" ColumnName="gl_cmp_csttol" />
+                <ScalarProperty Name="gl_cmp_adjlimit" ColumnName="gl_cmp_adjlimit" />
+                <ScalarProperty Name="gl_acct_cdvadj" ColumnName="gl_acct_cdvadj" />
+                <ScalarProperty Name="gl_acct_susp" ColumnName="gl_acct_susp" />
+                <ScalarProperty Name="gl_cmp_enhprcf" ColumnName="gl_cmp_enhprcf" />
+                <ScalarProperty Name="en_uom_key" ColumnName="en_uom_key" />
+                <ScalarProperty Name="gl_cmp_pcovrtol" ColumnName="gl_cmp_pcovrtol" />
+                <ScalarProperty Name="gl_cmp_pcundtol" ColumnName="gl_cmp_pcundtol" />
+                <ScalarProperty Name="gl_cmp_pctolbasis" ColumnName="gl_cmp_pctolbasis" />
+                <ScalarProperty Name="en_uom_vol" ColumnName="en_uom_vol" />
+                <ScalarProperty Name="en_uom_wgt" ColumnName="en_uom_wgt" />
+                <ScalarProperty Name="gl_bkcd_key" ColumnName="gl_bkcd_key" />
+                <ScalarProperty Name="gl_cmp_crdttolf" ColumnName="gl_cmp_crdttolf" />
+                <ScalarProperty Name="gl_cmp_crdttol" ColumnName="gl_cmp_crdttol" />
+                <ScalarProperty Name="en_mfrid_key" ColumnName="en_mfrid_key" />
+                <ScalarProperty Name="gl_cmp_ytdlmtc" ColumnName="gl_cmp_ytdlmtc" />
+                <ScalarProperty Name="gl_cmp_lmtdt" ColumnName="gl_cmp_lmtdt" />
+                <ScalarProperty Name="gl_cmp_lmtamtc" ColumnName="gl_cmp_lmtamtc" />
+                <ScalarProperty Name="gl_vatcd_key" ColumnName="gl_vatcd_key" />
+                <ScalarProperty Name="gl_vatcd_qlf" ColumnName="gl_vatcd_qlf" />
+                <ScalarProperty Name="gl_cmp_exon" ColumnName="gl_cmp_exon" />
+                <ScalarProperty Name="gl_cmp_vatreg" ColumnName="gl_cmp_vatreg" />
+                <ScalarProperty Name="gl_cmp_taxincl" ColumnName="gl_cmp_taxincl" />
+                <ScalarProperty Name="gl_cmp_recalc" ColumnName="gl_cmp_recalc" />
+                <ScalarProperty Name="gl_cmp_taxcalc" ColumnName="gl_cmp_taxcalc" />
+                <ScalarProperty Name="gl_cmp_cur3" ColumnName="gl_cmp_cur3" />
+                <ScalarProperty Name="gl_cmp_opt3" ColumnName="gl_cmp_opt3" />
+                <ScalarProperty Name="gl_cmp_taxenv" ColumnName="gl_cmp_taxenv" />
+                <ScalarProperty Name="gl_cmp_posttol" ColumnName="gl_cmp_posttol" />
+                <ScalarProperty Name="gl_cmp_wtmsf" ColumnName="gl_cmp_wtmsf" />
+                <ScalarProperty Name="gl_cmp_crtdt" ColumnName="gl_cmp_crtdt" />
+                <ScalarProperty Name="gl_cmp_chgdt" ColumnName="gl_cmp_chgdt" />
+                <ScalarProperty Name="sa_user_key" ColumnName="sa_user_key" />
+                <ScalarProperty Name="gl_cmp_upcnt" ColumnName="gl_cmp_upcnt" />
+                <ScalarProperty Name="gl_cmp_parnt" ColumnName="gl_cmp_parnt" />
+                <ScalarProperty Name="gl_cmp_onepl" ColumnName="gl_cmp_onepl" />
+                <ScalarProperty Name="gl_cmp_onebr" ColumnName="gl_cmp_onebr" />
+                <ScalarProperty Name="gl_cmp_defpl" ColumnName="gl_cmp_defpl" />
+                <ScalarProperty Name="gl_cmp_defbr" ColumnName="gl_cmp_defbr" />
+                <ScalarProperty Name="gl_cmp_taxfn" ColumnName="gl_cmp_taxfn" />
+                <ScalarProperty Name="gl_cmp_rndac" ColumnName="gl_cmp_rndac" />
+                <ScalarProperty Name="gl_cmp_ppsac" ColumnName="gl_cmp_ppsac" />
+                <ScalarProperty Name="gl_cmp_retac" ColumnName="gl_cmp_retac" />
+                <ScalarProperty Name="gl_crncy_key" ColumnName="gl_crncy_key" />
+                <ScalarProperty Name="gl_cmp_acnno" ColumnName="gl_cmp_acnno" />
+                <ScalarProperty Name="gl_cmp_posn3" ColumnName="gl_cmp_posn3" />
+                <ScalarProperty Name="gl_cmp_cont3" ColumnName="gl_cmp_cont3" />
+                <ScalarProperty Name="gl_cmp_posn2" ColumnName="gl_cmp_posn2" />
+                <ScalarProperty Name="gl_cmp_cont2" ColumnName="gl_cmp_cont2" />
+                <ScalarProperty Name="gl_cmp_posn1" ColumnName="gl_cmp_posn1" />
+                <ScalarProperty Name="gl_cmp_cont1" ColumnName="gl_cmp_cont1" />
+                <ScalarProperty Name="gl_cmp_telex" ColumnName="gl_cmp_telex" />
+                <ScalarProperty Name="gl_cmp_fax" ColumnName="gl_cmp_fax" />
+                <ScalarProperty Name="gl_cmp_tel" ColumnName="gl_cmp_tel" />
+                <ScalarProperty Name="en_cntry_key" ColumnName="en_cntry_key" />
+                <ScalarProperty Name="gl_cmp_postc" ColumnName="gl_cmp_postc" />
+                <ScalarProperty Name="gl_cmp_state" ColumnName="gl_cmp_state" />
+                <ScalarProperty Name="gl_cmp_city" ColumnName="gl_cmp_city" />
+                <ScalarProperty Name="gl_cmp_adr2" ColumnName="gl_cmp_adr2" />
+                <ScalarProperty Name="gl_cmp_adr1" ColumnName="gl_cmp_adr1" />
+                <ScalarProperty Name="gl_cmp_desc" ColumnName="gl_cmp_desc" />
+                <ScalarProperty Name="gl_cmp_key" ColumnName="gl_cmp_key" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
           <EntitySetMapping Name="xxItemForms">
             <EntityTypeMapping TypeName="adage_45Model.xxItemForm">
               <MappingFragment StoreEntitySet="xxItemForm">
+                <ScalarProperty Name="PlanningFamily" ColumnName="PlanningFamily" />
+                <ScalarProperty Name="MfgLocation" ColumnName="MfgLocation" />
                 <ScalarProperty Name="WtToLiquid" ColumnName="WtToLiquid" />
-                <ScalarProperty Name="Saleable" ColumnName="Saleable" />
-                <ScalarProperty Name="ExportLicenseNo" ColumnName="ExportLicenseNo" />
-                <ScalarProperty Name="HarmonizedCode" ColumnName="HarmonizedCode" />
                 <ScalarProperty Name="HMIS" ColumnName="HMIS" />
                 <ScalarProperty Name="GLAcct" ColumnName="GLAcct" />
                 <ScalarProperty Name="MSDSCode" ColumnName="MSDSCode" />
@@ -376,6 +610,9 @@
           <EntitySetMapping Name="xxItemHeaders">
             <EntityTypeMapping TypeName="adage_45Model.xxItemHeader">
               <MappingFragment StoreEntitySet="xxItemHeader">
+                <ScalarProperty Name="ExportLicenseNo" ColumnName="ExportLicenseNo" />
+                <ScalarProperty Name="HarmonizedCode" ColumnName="HarmonizedCode" />
+                <ScalarProperty Name="Saleable" ColumnName="Saleable" />
                 <ScalarProperty Name="Customers" ColumnName="Customers" />
                 <ScalarProperty Name="PurchasedCountryOfMfg" ColumnName="PurchasedCountryOfMfg" />
                 <ScalarProperty Name="Purchased" ColumnName="Purchased" />

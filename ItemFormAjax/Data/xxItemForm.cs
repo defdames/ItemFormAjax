@@ -29,9 +29,8 @@ namespace ItemFormAjax.Data
         public string MSDSCode { get; set; }
         public string GLAcct { get; set; }
         public string HMIS { get; set; }
-        public string HarmonizedCode { get; set; }
-        public string ExportLicenseNo { get; set; }
-        public string Saleable { get; set; }
         public string WtToLiquid { get; set; }
+        public string MfgLocation { get; set; }
+        public string PlanningFamily { get; set; }
     }
 }

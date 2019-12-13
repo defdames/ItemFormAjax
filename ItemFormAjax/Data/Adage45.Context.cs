@@ -34,6 +34,7 @@ namespace ItemFormAjax.Data
         public virtual DbSet<pmap_System> pmap_System { get; set; }
         public virtual DbSet<pmap_Type_Application> pmap_Type_Application { get; set; }
         public virtual DbSet<item_class_ext> item_class_ext { get; set; }
+        public virtual DbSet<gl_cmp_tbl> gl_cmp_tbl { get; set; }
         public virtual DbSet<xxItemForm> xxItemForms { get; set; }
         public virtual DbSet<xxItemHeader> xxItemHeaders { get; set; }
     }

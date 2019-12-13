@@ -8,7 +8,7 @@ using ItemFormAjax.Data;
 using Telerik.Web.UI;
 using System.Collections;
 using System.Reflection;
-
+using System.Text;
 
 namespace ItemFormAjax
 {
@@ -34,6 +34,12 @@ namespace ItemFormAjax
         protected void Page_Load(object sender, EventArgs e)
 
         {
+
+
+
+
+
+
             string LiD = Request.QueryString["id"];
             txtLnumber.Text = LiD.ToString();
 
@@ -50,9 +56,46 @@ namespace ItemFormAjax
                 else
                 { lblCountryAnswer.Text = "No"; }
 
+                //cbCopyDown.DataSource = i.gl_cmp_tbl.ToList();
+                //cbCopyDown.DataValueField = "gl_cmp_key";
+                //cbCopyDown.DataTextField = "gl_cmp_key";
+                //cbCopyDown.DataBind();
+
+
+
+                if (!IsPostBack)
+                {
+                    var copydown = (from c in i.xxItemHeaders
+                                where c.Lnumber == LiD
+                                select c.CopyDownToCompanies).FirstOrDefault();
+
+                List<string> result = copydown.Split(';').ToList();
+
+
+                foreach (RadComboBoxItem x in cbCopyDown.Items)
+                {
+
+                    if (result.Contains(x.Text))
+                    {
+                        x.Checked = true;
+                    }
+                }
+
+
+               
+
+
+                    txtExportLicenseNo.Text = SItem.ExportLicenseNo;
+                    txtHarmonizedCode.Text = SItem.HarmonizedCode;
+                }
             }
+
+           
             
-            
+
+
+
+
         }
 
 
@@ -127,6 +170,7 @@ namespace ItemFormAjax
                                 MSDSCode = g.MSDSCode,
                                 HMIS = g.HMIS,
                                 GLAcct = g.GLAcct
+                                
                             }).ToList();
 
                 return grid;
@@ -243,14 +287,6 @@ namespace ItemFormAjax
 
 
 
-
-
-
-
-
-
-
-
             int ellValue = Int32.Parse(UpdateGetItems(iindex).Rows[0]["ItemID"].ToString());
             
             
@@ -266,6 +302,7 @@ namespace ItemFormAjax
             string UMSDSCode = newValues["MSDSCode"].ToString();
             string UGLAcct= newValues["GLAcct"].ToString();
             string UHMIS = newValues["HMIS"].ToString();
+
 
             changedRows[0].BeginEdit();
             try
@@ -283,7 +320,7 @@ namespace ItemFormAjax
 
                    
                     var grid = (from g in a.xxItemForms
-                                where g.ItemID == ellValue
+                                where g.ItemID == iindex
                                 select g).SingleOrDefault();
                     grid.Formula = Uformula;
                     grid.PostTreated = UPostTreated;
@@ -297,6 +334,7 @@ namespace ItemFormAjax
                     grid.MSDSCode = UMSDSCode;
                     grid.GLAcct = UGLAcct;
                     grid.HMIS = UHMIS;
+
                     
 
 
@@ -348,6 +386,7 @@ namespace ItemFormAjax
             newValues["GLAcct"] = (userControl.FindControl("txtGLAcct") as TextBox).Text;
             newValues["HMIS"] = (userControl.FindControl("txtHMIS") as TextBox).Text;
 
+
             try
             {
 
@@ -382,6 +421,8 @@ namespace ItemFormAjax
                 string IMSDSCode = newValues["MSDSCode"].ToString();
                 string IGLAcct = newValues["GLAcct"].ToString();
                 string IHMIS = newValues["HMIS"].ToString();
+
+
                 using (adage_45Entities a = new adage_45Entities())
                 {
                     var headerinfo = (from g in a.xxItemHeaders
@@ -408,6 +449,7 @@ namespace ItemFormAjax
                     grid.MSDSCode = IMSDSCode;
                     grid.GLAcct = IGLAcct;
                     grid.HMIS = IHMIS;
+
 
 
 
@@ -470,9 +512,41 @@ namespace ItemFormAjax
         {
 
 
+            string LiD = Request.QueryString["id"];
+            txtLnumber.Text = LiD.ToString();
+            var cd = new StringBuilder();
+
+
+            var collection = cbCopyDown.CheckedItems;
+
+
+            using (adage_45Entities i = new adage_45Entities())
+
+            using (adage_45Entities context = new adage_45Entities())
+            {
+
+                var SItem = (from g in i.xxItemHeaders
+                             where g.Lnumber == LiD
+                             select g).FirstOrDefault();
+                
+                {
+
+                    foreach (var package in collection)
+                        cd.Append(package.Text + ";");
+                    SItem.CopyDownToCompanies = cd.ToString();
+
+
+                    SItem.HarmonizedCode = txtHarmonizedCode.Text;
+                    SItem.ExportLicenseNo = txtExportLicenseNo.Text;
+
+                    i.SaveChanges();
+
+                }
+
+
+            }
+
         }
-
-
 
 
     }
@@ -494,9 +568,8 @@ namespace ItemFormAjax
         public string MSDSCode { get; set; }
         public string GLAcct { get; set; }
         public string HMIS { get; set; }
-        public string HarmonizedCode { get; set; }
-        public string ExportLicenseNo { get; set; }
     }
+
 }
 
 

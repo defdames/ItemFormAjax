@@ -50,5 +50,8 @@ namespace ItemFormAjax.Data
         public string Purchased { get; set; }
         public string PurchasedCountryOfMfg { get; set; }
         public string Customers { get; set; }
+        public string Saleable { get; set; }
+        public string HarmonizedCode { get; set; }
+        public string ExportLicenseNo { get; set; }
     }
 }

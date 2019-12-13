@@ -342,6 +342,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Adage45.edmx</DependentUpon>
     </Compile>
+    <Compile Include="Data\gl_cmp_tbl.cs">
+      <DependentUpon>Adage45.tt</DependentUpon>
+    </Compile>
     <Compile Include="Data\item_class_ext.cs">
       <DependentUpon>Adage45.tt</DependentUpon>
     </Compile>

@@ -24,6 +24,15 @@ namespace ItemFormAjax
         protected global::Telerik.Web.UI.RadCodeBlock RadCodeBlock1;
 
         /// <summary>
+        /// lblCopyDown control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::Telerik.Web.UI.RadLabel lblCopyDown;
+
+        /// <summary>
         /// cbCopyDown control.
         /// </summary>
         /// <remarks>
@@ -49,6 +58,42 @@ namespace ItemFormAjax
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::Telerik.Web.UI.RadTextBox txtLnumber;
+
+        /// <summary>
+        /// lblHarmonizedCode control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::Telerik.Web.UI.RadLabel lblHarmonizedCode;
+
+        /// <summary>
+        /// txtHarmonizedCode control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::Telerik.Web.UI.RadTextBox txtHarmonizedCode;
+
+        /// <summary>
+        /// lblExportLicenseNo control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::Telerik.Web.UI.RadLabel lblExportLicenseNo;
+
+        /// <summary>
+        /// txtExportLicenseNo control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::Telerik.Web.UI.RadTextBox txtExportLicenseNo;
 
         /// <summary>
         /// lblCountryofManufactuer control.

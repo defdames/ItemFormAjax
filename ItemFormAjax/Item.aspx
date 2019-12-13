@@ -20,24 +20,30 @@
         <table class="minimalistBlack">
             <tr>
                 <td>
-                    <telerik:RadComboBox ID="cbCopyDown" runat="server" CheckBoxes="true" EmptyMessage="Copy Down To">
-
+                    <telerik:RadLabel ID="lblCopyDown" runat="server" Text="Copy Down To Companies:"></telerik:RadLabel><telerik:RadComboBox ID="cbCopyDown" runat="server" CheckBoxes="true" EmptyMessage="Copy Down To">
                         <Items>
+                            <telerik:RadComboBoxItem Text="SM" />
                             <telerik:RadComboBoxItem Text="SA" />
                             <telerik:RadComboBoxItem Text="SL" />
-                            <telerik:RadComboBoxItem Text="SM" />
-                            <telerik:RadComboBoxItem Text="SS" />
                             <telerik:RadComboBoxItem Text="SX" />
 
                         </Items>
+                       
                     </telerik:RadComboBox>
                 </td>
 
                 <td>
 
-                   <telerik:RadLabel ID="lbllabel" runat="server" Text="L Number Cross Reference"></telerik:RadLabel> <telerik:RadTextBox ID="txtLnumber" runat="server" ></telerik:RadTextBox>
+                   <telerik:RadLabel ID="lbllabel" runat="server" Text="L Number Cross Reference"></telerik:RadLabel> <telerik:RadTextBox ID="txtLnumber" runat="server" ReadOnly="true"></telerik:RadTextBox>
                 </td>
-              
+                <td>
+
+                   <telerik:RadLabel ID="lblHarmonizedCode" runat="server" Text="Harmonized Code"></telerik:RadLabel> <telerik:RadTextBox ID="txtHarmonizedCode" runat="server" ></telerik:RadTextBox>
+                </td>
+                  <td>
+
+                   <telerik:RadLabel ID="lblExportLicenseNo" runat="server" Text="Export License Number"></telerik:RadLabel> <telerik:RadTextBox ID="txtExportLicenseNo" runat="server" ></telerik:RadTextBox>
+                </td>
 
             </tr>
             <tr>
@@ -81,7 +87,9 @@
                                 </telerik:GridEditCommandColumn>
                                 <telerik:GridBoundColumn UniqueName="Formula" HeaderText="Formula" DataField="Formula">
                                 </telerik:GridBoundColumn>
-                                <telerik:GridBoundColumn UniqueName="HeaderID" HeaderText="Header ID" DataField="HeaderID" Visible="false">
+                                <telerik:GridBoundColumn UniqueName="HeaderID" HeaderText="Header ID" DataField="HeaderID" Visible="true">
+                                </telerik:GridBoundColumn>
+                                 <telerik:GridBoundColumn UniqueName="ItemID" HeaderText="Item ID" DataField="ItemID">
                                 </telerik:GridBoundColumn>
                                 <telerik:GridBoundColumn UniqueName="PostTreated" HeaderText="Post Treated" DataField="PostTreated">
                                 </telerik:GridBoundColumn>
