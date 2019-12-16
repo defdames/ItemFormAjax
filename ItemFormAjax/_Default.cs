@@ -5,6 +5,7 @@ using System.Web;
 using System.Web.UI;
 using ItemFormAjax.Data;
 using System.Text;
+using System.Security.Principal;
 
 namespace ItemFormAjax
 {
@@ -12,18 +13,38 @@ namespace ItemFormAjax
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            var user = System.Security.Principal.WindowsIdentity.GetCurrent().Groups;
+            string userName = System.Security.Principal.WindowsIdentity.GetCurrent().Name;
+            WindowsIdentity identity = WindowsIdentity.GetCurrent();
+            var idsb = new StringBuilder();
+
+
+            var id1 = WindowsIdentity.GetCurrent();
+
+            foreach (var groupId in id1.Groups)
+            {
+                var group = groupId.Translate(typeof(NTAccount));
+                idsb.Append(group.Value + ";");
+                txtasp.Text = idsb.ToString();
+
+            }
+
+
+            var groupNames = from id in identity.Groups
+                             select id.Translate(typeof(NTAccount)).Value;
+
 
             if (!IsPostBack)
             {
                 dpReqDate.SelectedDate = DateTime.Now.Date;
-
+                txtsample.Text = userName.Substring(11, userName.Length -11);
+                RadTextBox1.Text = user.ToString();
+                
                 Control_Load();
             }
 
 
-            var user = System.Security.Principal.WindowsIdentity.GetCurrent().Groups;
-            string userName = System.Security.Principal.WindowsIdentity.GetCurrent().Name;
-
+            
             
             StringBuilder grouplist = new StringBuilder ("");
             foreach (var u in System.Security.Principal.WindowsIdentity.GetCurrent().Groups)
@@ -87,6 +108,7 @@ namespace ItemFormAjax
                         item.ProductClassCharacteristic = cbClassCharacteristics.Text;
                         item.Carrier = cbCarrier.Text;
                         item.RequestedDate = dpReqDate.SelectedDate;
+                        
 
                     }
 

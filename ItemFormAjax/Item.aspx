@@ -63,6 +63,9 @@
                         </Items>
                     </telerik:RadComboBox>
                 </td>
+                <td>                <telerik:RadLabel ID="lblRequestedDate" runat="server" Text="Date"></telerik:RadLabel>
+                    <telerik:RadLabel ID="lblRequestedDateAnswer" runat="server" ></telerik:RadLabel>
+                    </td>
             </tr>
             <tr>
                 <td>

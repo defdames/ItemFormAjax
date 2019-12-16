@@ -43,6 +43,7 @@ namespace ItemFormAjax
             string LiD = Request.QueryString["id"];
             txtLnumber.Text = LiD.ToString();
 
+
             using (adage_45Entities i = new adage_45Entities())
             {
 
@@ -87,6 +88,7 @@ namespace ItemFormAjax
 
                     txtExportLicenseNo.Text = SItem.ExportLicenseNo;
                     txtHarmonizedCode.Text = SItem.HarmonizedCode;
+                    lblRequestedDateAnswer.Text = SItem.RequestedDate.Value.ToString("MM/dd/yyyy");
                 }
             }
 
