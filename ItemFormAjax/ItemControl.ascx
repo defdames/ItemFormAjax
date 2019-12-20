@@ -9,7 +9,7 @@
 </style>
 
 <table id="tblMGMT" runat="server" class="blueTable" >
-    <tr>
+   <%-- <tr>
         <td>
             Formula:
         </td>
@@ -22,7 +22,7 @@
                 </asp:ListItem>
             </asp:DropDownList>
         </td>
-    </tr>
+    </tr>--%>
     <tr>
         <td>
             Post Treated:

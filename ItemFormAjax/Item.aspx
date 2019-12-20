@@ -88,8 +88,8 @@
                             <Columns>
                                 <telerik:GridEditCommandColumn UniqueName="EditCommandColumn">
                                 </telerik:GridEditCommandColumn>
-                                <telerik:GridBoundColumn UniqueName="Formula" HeaderText="Formula" DataField="Formula">
-                                </telerik:GridBoundColumn>
+                               <%-- <telerik:GridBoundColumn UniqueName="Formula" HeaderText="Formula" DataField="Formula">
+                                </telerik:GridBoundColumn>--%>
                                 <telerik:GridBoundColumn UniqueName="HeaderID" HeaderText="Header ID" DataField="HeaderID" Visible="true">
                                 </telerik:GridBoundColumn>
                                  <telerik:GridBoundColumn UniqueName="ItemID" HeaderText="Item ID" DataField="ItemID">

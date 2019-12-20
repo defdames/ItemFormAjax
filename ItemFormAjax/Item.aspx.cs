@@ -69,20 +69,21 @@ namespace ItemFormAjax
                     var copydown = (from c in i.xxItemHeaders
                                 where c.Lnumber == LiD
                                 select c.CopyDownToCompanies).FirstOrDefault();
-
-                List<string> result = copydown.Split(';').ToList();
-
-
-                foreach (RadComboBoxItem x in cbCopyDown.Items)
-                {
-
-                    if (result.Contains(x.Text))
+                    if (copydown != null)
                     {
-                        x.Checked = true;
-                    }
-                }
+                        List<string> result = copydown.Split(';').ToList();
 
 
+                        foreach (RadComboBoxItem x in cbCopyDown.Items)
+                        {
+
+                            if (result.Contains(x.Text))
+                            {
+                                x.Checked = true;
+                            }
+                        }
+
+                    };
                
 
 
