@@ -1,0 +1,60 @@
+.RadToolTip_Combo {
+  background-color: #455A64;
+  color: #f8fafb;
+  border-color: #455A64;
+  font-family: "Roboto", "Noto", sans-serif;
+  font-size: 0.9285714286em;
+  opacity: 0.9; }
+  .RadToolTip_Combo .rtClose {
+    color: #f8fafb; }
+  .RadToolTip_Combo .rtCalloutTopRight,
+  .RadToolTip_Combo .rtCalloutTopCenter,
+  .RadToolTip_Combo .rtCalloutTopLeft {
+    border-bottom-color: #455A64; }
+  .RadToolTip_Combo .rtCalloutTopRight:before,
+  .RadToolTip_Combo .rtCalloutTopCenter:before,
+  .RadToolTip_Combo .rtCalloutTopLeft:before {
+    border-bottom-color: #455A64; }
+  .RadToolTip_Combo .rtCalloutMiddleRight {
+    border-left-color: #455A64; }
+  .RadToolTip_Combo .rtCalloutMiddleRight:before {
+    border-left-color: #455A64; }
+  .RadToolTip_Combo .rtCalloutMiddleLeft {
+    border-right-color: #455A64; }
+  .RadToolTip_Combo .rtCalloutMiddleLeft:before {
+    border-right-color: #455A64; }
+  .RadToolTip_Combo .rtCalloutBottomRight,
+  .RadToolTip_Combo .rtCalloutBottomCenter,
+  .RadToolTip_Combo .rtCalloutBottomLeft {
+    border-top-color: #455A64; }
+  .RadToolTip_Combo .rtCalloutBottomRight:before,
+  .RadToolTip_Combo .rtCalloutBottomCenter:before,
+  .RadToolTip_Combo .rtCalloutBottomLeft:before {
+    border-top-color: #455A64; }
+  .RadToolTip_Combo.rtLoading {
+    background-image: url('<%=WebResource("Telerik.Web.UI.Skins.Combo.Common.loading.gif")%>'); }
+  .RadToolTip_Combo .rtTitleWrapper .rtTitle {
+    font-size: 1.2357142857em; }
+  .RadToolTip_Combo .rtClose {
+    z-index: 1;
+    width: auto;
+    height: auto;
+    top: 0.7142857143em;
+    right: 0.7142857143em; }
+  .RadToolTip_Combo _:-ms-fullscreen, .RadToolTip_Combo .rtClose {
+    right: 0.6428571429em; }
+  .RadToolTip_Combo .rtCloseIcon:before {
+    font-size: 24px; }
+  .RadToolTip_Combo .rtRelativeWrapper {
+    padding: 0.5714285714em 1.1428571429em; }
+  .RadToolTip_Combo.rtRtl .rtClose {
+    left: 0.5714285714em;
+    left: 0.7142857143em \9; }
+  .RadToolTip_Combo _:-ms-fullscreen, .RadToolTip_Combo.rtRtl .rtClose {
+    left: 0.7142857143em; }
+  .RadToolTip_Combo .t-ripple-container {
+    top: -1px;
+    left: -2px; }
+  @media screen and (-webkit-min-device-pixel-ratio: 0) {
+    .RadToolTip_Combo .t-ripple-container {
+      top: -2px; } }

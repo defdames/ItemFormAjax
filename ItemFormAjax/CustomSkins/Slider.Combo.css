@@ -1,0 +1,150 @@
+.RadSlider_Combo {
+  font-family: "Roboto", "Noto", sans-serif; }
+  .RadSlider_Combo .rslTrack {
+    background-color: #CFD8DC; }
+  .RadSlider_Combo .rslSelectedregion {
+    background-color: #8BC34A; }
+  .RadSlider_Combo a.rslDraghandle {
+    background-color: #8BC34A;
+    border-color: #8BC34A; }
+  .RadSlider_Combo a.rslHandle,
+  .RadSlider_Combo a.rslHandle:before {
+    color: #607D8B; }
+  .RadSlider_Combo a.rslHandle:hover:before {
+    color: #263238; }
+  .RadSlider_Combo .rslItem,
+  .RadSlider_Combo .rslLargeTick span,
+  .RadSlider_Combo .rslItemsWrapper .rslItemSelected {
+    color: #607D8B; }
+  .RadSlider_Combo .rslHorizontal .rslItem {
+    background-image: url('<%=WebResource("Telerik.Web.UI.Skins.Combo.Slider.ItemHorizontalBgr.gif")%>'); }
+  .RadSlider_Combo .rslVertical .rslItem {
+    background-image: url('<%=WebResource("Telerik.Web.UI.Skins.Combo.Slider.ItemVerticalBgr.gif")%>'); }
+  .RadSlider_Combo .rslTop .rslSmallTick,
+  .RadSlider_Combo .rslBottom .rslSmallTick {
+    background-image: url('<%=WebResource("Telerik.Web.UI.Skins.Combo.Slider.SmallChangeHorizontal.gif")%>'); }
+  .RadSlider_Combo .rslTop .rslLargeTick,
+  .RadSlider_Combo .rslBottom .rslLargeTick {
+    background-image: url('<%=WebResource("Telerik.Web.UI.Skins.Combo.Slider.LargeChangeHorizontal.gif")%>'); }
+  .RadSlider_Combo .rslLeft .rslSmallTick,
+  .RadSlider_Combo .rslRight .rslSmallTick {
+    background-image: url('<%=WebResource("Telerik.Web.UI.Skins.Combo.Slider.SmallChangeVertical.gif")%>'); }
+  .RadSlider_Combo .rslLeft .rslLargeTick,
+  .RadSlider_Combo .rslRight .rslLargeTick {
+    background-image: url('<%=WebResource("Telerik.Web.UI.Skins.Combo.Slider.LargelChangeVertical.gif")%>'); }
+  .RadSlider_Combo .rslMiddle .rslSmallTick {
+    background-image: url('<%=WebResource("Telerik.Web.UI.Skins.Combo.Slider.SmallChangeMiddleHorizontal.gif")%>'); }
+  .RadSlider_Combo .rslLargeTick {
+    background-image: url('<%=WebResource("Telerik.Web.UI.Skins.Combo.Slider.LargeChangeMiddleHorizontal.gif")%>'); }
+  .RadSlider_Combo .rslCenter .rslSmallTick {
+    background-image: url('<%=WebResource("Telerik.Web.UI.Skins.Combo.Slider.SmallChangeCenterVertical.gif")%>'); }
+  .RadSlider_Combo .rslCenter .rslLargeTick {
+    background-image: url('<%=WebResource("Telerik.Web.UI.Skins.Combo.Slider.LargelChangeCenterVertical.gif")%>'); }
+  .RadSlider_Combo.RadSlider .rslTrack,
+  .RadSlider_Combo.RadSlider .rslSelectedregion {
+    border-radius: 0;
+    border-width: 0; }
+  .RadSlider_Combo a.rslHandle {
+    border: none; }
+  .RadSlider_Combo .rslBottom div.rslTrack {
+    bottom: 0.7707142857em; }
+  .RadSlider_Combo .rslTrack a.rslDraghandle {
+    width: 0.8571428571em;
+    height: 0.8571428571em;
+    border-radius: 3.2142857143em;
+    overflow: visible; }
+  .RadSlider_Combo .rslDraghandle:focus:before {
+    content: "";
+    display: inline-block;
+    width: 2.4285714286em;
+    height: 2.4285714286em;
+    background-color: rgba(139, 195, 74, 0.25);
+    position: absolute;
+    top: -0.7857142857em;
+    left: -0.7857142857em;
+    border-radius: 45px; }
+  .RadSlider_Combo .rslDraghandle:focus:active:before,
+  .RadSlider_Combo .rslDraghandle.rslDraghandleActive:before {
+    background-color: transparent; }
+  .RadSlider_Combo .rslTrack a.rslDraghandle:after {
+    border-radius: 3.21429em;
+    width: 0.8571428571em;
+    height: 0.8571428571em;
+    top: -0.0714285714em;
+    left: -0.0714285714em;
+    content: '';
+    background-color: #8BC34A;
+    display: inline-block;
+    position: absolute;
+    transition: all 0.2s; }
+  .RadSlider_Combo .rslTrack a.rslDraghandle:active:after,
+  .RadSlider_Combo .rslTrack a.rslDraghandleActive:after {
+    width: 1.4285714286em;
+    height: 1.4285714286em;
+    top: -0.3571428571em;
+    left: -0.2678571429em; }
+  .RadSlider_Combo .rslItem,
+  .RadSlider_Combo .rslLargeTick span {
+    font-size: 0.8571428571em;
+    font-family: "Roboto", "Noto", sans-serif;
+    font-weight: 500; }
+  .RadSlider_Combo .rslHorizontal .rslTrack {
+    height: 0.1428571429em !important;
+    margin: 0; }
+  .RadSlider_Combo .rslHorizontal .rslSelectedregion {
+    height: 0.1428571429em; }
+  .RadSlider_Combo .rslHorizontal.rslTop a.rslHandle {
+    top: .52em;
+    top: .9em\9; }
+  .RadSlider_Combo .rslHorizontal a.rslHandle {
+    margin-top: -.65em; }
+  .RadSlider_Combo .rslHorizontal _:-ms-fullscreen, :root .RadSlider_Combo .rslHorizontal.rslTop a.rslHandle {
+    top: .75em; }
+  .RadSlider_Combo .rslHorizontal.rslMiddle a.rslHandle {
+    top: 1.02em;
+    margin-top: -0.8571428571em \9; }
+  .RadSlider_Combo .rslHorizontal _:-ms-fullscreen, :root .RadSlider_Combo .rslHorizontal.rslMiddle a.rslHandle {
+    margin-top: -0.8571428571em;
+    top: 50%; }
+  .RadSlider_Combo .rslHorizontal.rslBottom a.rslHandle {
+    bottom: .1em;
+    bottom: .2em\9; }
+  .RadSlider_Combo .rslHorizontal _:-ms-fullscreen, :root .RadSlider_Combo .rslHorizontal.rslBottom a.rslHandle {
+    top: auto;
+    bottom: .20em; }
+  .RadSlider_Combo .rslHorizontal.rslBottom .rslItemsWrapper {
+    bottom: .9em; }
+  .RadSlider_Combo .rslHorizontal a.rslDecrease {
+    left: -0.2857142857em; }
+  .RadSlider_Combo .rslHorizontal a.rslIncrease {
+    right: -0.0714285714em; }
+  .RadSlider_Combo .rslHorizontal.rslTop .rslItemsWrapper {
+    top: .75em; }
+  .RadSlider_Combo .rslHorizontal.rslMiddle .rslItemsWrapper {
+    top: -0.2857142857em; }
+  .RadSlider_Combo .rslHorizontal .rslTrack a.rslDraghandle {
+    margin-top: auto;
+    top: -0.3571428571em; }
+  .RadSlider_Combo .rslVertical .rslTrack {
+    width: 0.1428571429em !important;
+    margin-left: -0.0714285714em; }
+  .RadSlider_Combo .rslVertical .rslSelectedregion {
+    width: 0.1428571429em; }
+  .RadSlider_Combo .rslVertical a.rslDraghandle {
+    margin-left: -0.3571428571em; }
+  .RadSlider_Combo .rslVertical .rslHandle.rslDecrease {
+    margin-top: -0.2857142857em; }
+  .RadSlider_Combo .rslVertical .rslHandle.rslIncrease {
+    bottom: -0.2857142857em; }
+  .RadSlider_Combo .rslVertical.rslLeft .rslItemsWrapper,
+  .RadSlider_Combo .rslVertical.rslLeft .rslLargeTick span,
+  .RadSlider_Combo .rslVertical.rslLeft .rslLargeTick span.rslBRItemText {
+    left: 1.9285714286em; }
+  .RadSlider_Combo .rslVertical.rslLeft a.rslHandle {
+    left: 1.45em; }
+  .RadSlider_Combo .rslVertical.rslRight a.rslHandle {
+    right: .25em; }
+  .RadSlider_Combo .rslHandle.t-ripple-effect-icon {
+    position: absolute !important; }
+  .RadSlider_Combo a.rslHandle.t-ripple-effect-icon span {
+    border-radius: 50%; }

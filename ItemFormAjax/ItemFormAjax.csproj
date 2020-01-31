@@ -222,6 +222,36 @@
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Site.css" />
+    <Content Include="CustomSkins\Button.Combo.css" />
+    <Content Include="CustomSkins\Calendar.Combo.css" />
+    <Content Include="CustomSkins\ComboBox.Combo.css" />
+    <Content Include="CustomSkins\DataForm.Combo.css" />
+    <Content Include="CustomSkins\DataPager.Combo.css" />
+    <Content Include="CustomSkins\Editor.Combo.css" />
+    <Content Include="CustomSkins\FormDecorator.Combo.css" />
+    <Content Include="CustomSkins\Grid.Combo.css" />
+    <Content Include="CustomSkins\ImageEditor.Combo.css" />
+    <Content Include="CustomSkins\ImageGallery.Combo.css" />
+    <Content Include="CustomSkins\Input.Combo.css" />
+    <Content Include="CustomSkins\LightBox.Combo.css" />
+    <Content Include="CustomSkins\Map.Combo.css" />
+    <Content Include="CustomSkins\Menu.Combo.css" />
+    <Content Include="CustomSkins\Navigation.Combo.css" />
+    <Content Include="CustomSkins\Notification.Combo.css" />
+    <Content Include="CustomSkins\OrgChart.Combo.css" />
+    <Content Include="CustomSkins\PanelBar.Combo.css" />
+    <Content Include="CustomSkins\ProgressArea.Combo.css" />
+    <Content Include="CustomSkins\Rotator.Combo.css" />
+    <Content Include="CustomSkins\Scheduler.Combo.css" />
+    <Content Include="CustomSkins\SearchBox.Combo.css" />
+    <Content Include="CustomSkins\Slider.Combo.css" />
+    <Content Include="CustomSkins\Splitter.Combo.css" />
+    <Content Include="CustomSkins\TileList.Combo.css" />
+    <Content Include="CustomSkins\ToolTip.Combo.css" />
+    <Content Include="CustomSkins\TreeList.Combo.css" />
+    <Content Include="CustomSkins\TreeView.Combo.css" />
+    <Content Include="CustomSkins\Upload.Combo.css" />
+    <Content Include="CustomSkins\Window.Combo.css" />
     <Content Include="Data\Adage45.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>Adage45.edmx</DependentUpon>
@@ -234,6 +264,8 @@
     </Content>
     <Content Include="Default.aspx" />
     <Content Include="favicon.ico" />
+    <Content Include="FormulaControl.ascx" />
+    <Content Include="FormulaSpecs.aspx" />
     <Content Include="Global.asax" />
     <EntityDeploy Include="Data\Adage45.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
@@ -372,11 +404,31 @@
     <Compile Include="Data\pmap_Type_Application.cs">
       <DependentUpon>Adage45.tt</DependentUpon>
     </Compile>
+    <Compile Include="Data\xxItemCodeFormulas.cs">
+      <DependentUpon>Adage45.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\xxItemCodeTests.cs">
+      <DependentUpon>Adage45.tt</DependentUpon>
+    </Compile>
     <Compile Include="Data\xxItemForm.cs">
       <DependentUpon>Adage45.tt</DependentUpon>
     </Compile>
     <Compile Include="Data\xxItemHeader.cs">
       <DependentUpon>Adage45.tt</DependentUpon>
+    </Compile>
+    <Compile Include="FormulaControl.ascx.cs">
+      <DependentUpon>FormulaControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FormulaControl.ascx.designer.cs">
+      <DependentUpon>FormulaControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="FormulaSpecs.aspx.cs">
+      <DependentUpon>FormulaSpecs.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FormulaSpecs.aspx.designer.cs">
+      <DependentUpon>FormulaSpecs.aspx</DependentUpon>
     </Compile>
     <Compile Include="_Default.cs">
       <DependentUpon>Default.aspx</DependentUpon>

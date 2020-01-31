@@ -15,6 +15,33 @@ namespace ItemFormAjax
     {
 
         /// <summary>
+        /// tblPlannig control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlTable tblPlannig;
+
+        /// <summary>
+        /// ddMfgLocation control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList ddMfgLocation;
+
+        /// <summary>
+        /// txtDesc30AN control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtDesc30AN;
+
+        /// <summary>
         /// tblMGMT control.
         /// </summary>
         /// <remarks>

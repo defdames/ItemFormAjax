@@ -67,8 +67,11 @@ namespace ItemFormAjax
                 if (!IsPostBack)
                 {
                     var copydown = (from c in i.xxItemHeaders
-                                where c.Lnumber == LiD
-                                select c.CopyDownToCompanies).FirstOrDefault();
+                                    where c.Lnumber == LiD
+                                    select c.CopyDownToCompanies).FirstOrDefault();
+                    var itemcodes = (from c in i.xxItemHeaders
+                                     where c.Lnumber == LiD
+                                     select c.ItemCodes).FirstOrDefault();
                     if (copydown != null)
                     {
                         List<string> result = copydown.Split(';').ToList();
@@ -84,12 +87,31 @@ namespace ItemFormAjax
                         }
 
                     };
-               
+
+                    if (itemcodes != null)
+                    {
+                        List<string> result = itemcodes.Split(';').ToList();
+
+
+                        foreach (RadComboBoxItem x in cbItemCodes.Items)
+                        {
+
+                            if (result.Contains(x.Text))
+                            {
+                                x.Checked = true;
+                            }
+                        }
+
+                    };
+
 
 
                     txtExportLicenseNo.Text = SItem.ExportLicenseNo;
                     txtHarmonizedCode.Text = SItem.HarmonizedCode;
                     lblRequestedDateAnswer.Text = SItem.RequestedDate.Value.ToString("MM/dd/yyyy");
+                    lblRequestedByAnswer.Text = SItem.CreatedBy;
+                    txtCntryPurchased.Text = SItem.PurchasedCountryOfMfg;
+                    cbPurchased.Text = SItem.Purchased;
                 }
             }
 
@@ -159,6 +181,8 @@ namespace ItemFormAjax
                             where g.ItemID == IID
                             select new ItemFormula
                             {
+                                MfgLocation = g.MfgLocation,
+                                Desc30AN = g.Description30AN,
                                 ItemID = g.ItemID,
                                 Formula = g.Formula,
                                 HeaderID = g.HeaderID,
@@ -172,7 +196,9 @@ namespace ItemFormAjax
                                 SampleHMIS = g.sampleHMIS,
                                 MSDSCode = g.MSDSCode,
                                 HMIS = g.HMIS,
-                                GLAcct = g.GLAcct
+                                GLAcct = g.GLAcct,
+                                Lnumber = g.Lnumber
+
                                 
                             }).ToList();
 
@@ -193,6 +219,8 @@ namespace ItemFormAjax
                             where g.Lnumber== LiD
                             select new ItemFormula
                             {
+                                MfgLocation = g.MfgLocation,
+                                Desc30AN = g.Description30AN,
                                 ItemID = g.ItemID,
                                 Formula = g.Formula,
                                 HeaderID = g.HeaderID,
@@ -206,7 +234,8 @@ namespace ItemFormAjax
                                 SampleHMIS = g.sampleHMIS,
                                 MSDSCode = g.MSDSCode,
                                 HMIS = g.HMIS,
-                                GLAcct = g.GLAcct
+                                GLAcct = g.GLAcct,
+                                Lnumber = g.Lnumber
                             }).ToList();
 
                 return grid;
@@ -275,7 +304,9 @@ namespace ItemFormAjax
             //Update new values
             Hashtable newValues = new Hashtable();
 
-            newValues["Formula"] = (userControl.FindControl("ddFormula") as DropDownList).SelectedItem.Value;
+            newValues["MfgLocation"] = (userControl.FindControl("ddMfgLocation") as DropDownList).SelectedItem.Value;
+            newValues["Desc30AN"] = (userControl.FindControl("txtDesc30AN") as TextBox).Text;
+            // newValues["Formula"] = (userControl.FindControl("ddFormula") as DropDownList).SelectedItem.Value;
             newValues["PostTreated"] = (userControl.FindControl("ddPostTreated") as DropDownList).SelectedItem.Value;
             newValues["Purity"] = (userControl.FindControl("ddPurity") as DropDownList).SelectedItem.Value;
             newValues["Metal"] = (userControl.FindControl("txtMetal") as TextBox).Text;
@@ -291,9 +322,10 @@ namespace ItemFormAjax
 
 
             int ellValue = Int32.Parse(UpdateGetItems(iindex).Rows[0]["ItemID"].ToString());
-            
-            
-            string Uformula = newValues["Formula"].ToString();
+
+            string UMfgLocation = newValues["MfgLocation"].ToString();
+            string UDesc30AN = newValues["Desc30AN"].ToString();
+            //string Uformula = newValues["Formula"].ToString();
             string UPostTreated = newValues["PostTreated"].ToString();
             string UPurity = newValues["Purity"].ToString();
             string UMetal = newValues["Metal"].ToString();
@@ -325,7 +357,9 @@ namespace ItemFormAjax
                     var grid = (from g in a.xxItemForms
                                 where g.ItemID == iindex
                                 select g).SingleOrDefault();
-                    grid.Formula = Uformula;
+                    grid.MfgLocation = UMfgLocation;
+                    grid.Description30AN = UDesc30AN;
+                    //grid.Formula = Uformula;
                     grid.PostTreated = UPostTreated;
                     grid.Purity = UPurity;
                     grid.Metal = UMetal;
@@ -375,8 +409,9 @@ namespace ItemFormAjax
 
             //Insert new values
             Hashtable newValues = new Hashtable();
-
-            newValues["Formula"] = (userControl.FindControl("ddFormula") as DropDownList).SelectedItem.Value;
+            newValues["MfgLocation"] = (userControl.FindControl("ddMfgLocation") as DropDownList).SelectedItem.Value;
+            newValues["Desc30AN"] = (userControl.FindControl("txtDesc30AN") as TextBox).Text;
+            //newValues["Formula"] = (userControl.FindControl("ddFormula") as DropDownList).SelectedItem.Value;
             newValues["PostTreated"] = (userControl.FindControl("ddPostTreated") as DropDownList).SelectedItem.Value;
             newValues["Purity"] = (userControl.FindControl("ddPurity") as DropDownList).SelectedItem.Value;
             newValues["Metal"] = (userControl.FindControl("txtMetal") as TextBox).Text;
@@ -412,7 +447,9 @@ namespace ItemFormAjax
                 this.NewGetItems().Rows.Add(newRow);
                 this.NewGetItems().AcceptChanges();
 
-                string Iformula = newValues["Formula"].ToString();
+                string IMfgLocation = newValues["MfgLocation"].ToString();
+                string IDesc30AN = newValues["Des30AN"].ToString();
+               // string Iformula = newValues["Formula"].ToString();
                 string Iposttreated = newValues["PostTreated"].ToString();
                 string IPurity = newValues["Purity"].ToString();
                 string IMetal = newValues["Metal"].ToString();
@@ -438,9 +475,12 @@ namespace ItemFormAjax
 
                                 select g).FirstOrDefault();
 
+
                     grid.HeaderID = headerinfo.ItemID;
                     grid.Lnumber = LiD;
-                    grid.Formula = Iformula;
+                    grid.MfgLocation = IMfgLocation;
+                    grid.Description30AN = IDesc30AN;
+                    //grid.Formula = Iformula;
                     grid.PostTreated = Iposttreated;
                     grid.Purity = IPurity;
                     grid.Metal = IMetal;
@@ -489,7 +529,7 @@ namespace ItemFormAjax
 
                 var grid = (from g in a.xxItemForms
                             where g.Lnumber == LiD
-                            select new { g.HeaderID, g.Formula, g.ItemID }).ToList();
+                            select new { g.HeaderID, g.Formula, g.ItemID, g.Lnumber }).ToList();
                 RadGrid1.DataSource = grid;
                
 
@@ -518,10 +558,11 @@ namespace ItemFormAjax
             string LiD = Request.QueryString["id"];
             txtLnumber.Text = LiD.ToString();
             var cd = new StringBuilder();
+            var ic = new StringBuilder();
 
 
             var collection = cbCopyDown.CheckedItems;
-
+            var codecollection = cbItemCodes.CheckedItems;
 
             using (adage_45Entities i = new adage_45Entities())
 
@@ -538,9 +579,17 @@ namespace ItemFormAjax
                         cd.Append(package.Text + ";");
                     SItem.CopyDownToCompanies = cd.ToString();
 
+                    foreach (var itemcodepackage in codecollection)
+                        ic.Append(itemcodepackage.Text + ";");
+                    SItem.ItemCodes = ic.ToString();
+
+
+
 
                     SItem.HarmonizedCode = txtHarmonizedCode.Text;
                     SItem.ExportLicenseNo = txtExportLicenseNo.Text;
+                    SItem.PurchasedCountryOfMfg = txtCntryPurchased.Text;
+                    SItem.Purchased = cbPurchased.Text;
 
                     i.SaveChanges();
 
@@ -571,6 +620,9 @@ namespace ItemFormAjax
         public string MSDSCode { get; set; }
         public string GLAcct { get; set; }
         public string HMIS { get; set; }
+        public string MfgLocation { get; set; }
+        public string Desc30AN { get; set; }
+        public string Lnumber { get; set; }
     }
 
 }

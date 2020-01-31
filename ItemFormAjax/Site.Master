@@ -16,6 +16,8 @@
     <webopt:bundlereference runat="server" path="~/Content/css" />
     <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
     <link href="CSS/StyleSheet.css" rel="stylesheet" type="text/css" runat="server"/>
+
+    <link href="CustomSkins/ComboBox.Combo.css" rel="stylesheet" />
    
 </head>
 <body>

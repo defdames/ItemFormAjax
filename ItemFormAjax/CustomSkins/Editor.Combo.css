@@ -1,0 +1,444 @@
+.RadEditor_Combo {
+  background-color: #f4f7f8;
+  border-color: #CFD8DC;
+  color: #455A64;
+  font-family: "Roboto", "Noto", sans-serif; }
+  .RadEditor_Combo .RadRibbonBar a.reDropdown {
+    height: auto;
+    padding: 8px 13px; }
+    .RadEditor_Combo .RadRibbonBar a.reDropdown:before {
+      margin-top: -0.6428571429em; }
+  .RadEditor_Combo .RadRibbonBar .reTool {
+    width: 2.3571428571em;
+    height: 2.3571428571em;
+    border-radius: 0;
+    border-width: 1px 0 1px 1px; }
+    .RadEditor_Combo .RadRibbonBar .reTool.rrbSmallButton {
+      width: 1.4285714286em;
+      height: 1.4285714286em; }
+    .RadEditor_Combo .RadRibbonBar .reTool:first-child {
+      border-radius: 0.2857142857em 0em 0em 0.2857142857em; }
+    .RadEditor_Combo .RadRibbonBar .reTool:last-child {
+      border-radius: 0em 0.2857142857em 0.2857142857em 0em;
+      border-width: 1px; }
+    .RadEditor_Combo .RadRibbonBar .reTool.reSplitButton {
+      min-width: 4em;
+      height: 2.1428571429em; }
+      .RadEditor_Combo .RadRibbonBar .reTool.reSplitButton .reSplitArrow:before {
+        margin: 9px auto auto; }
+  .RadEditor_Combo .RadRibbonBar .rrbImagePlaceholder.reToolIcon.reRibbonToolIcon {
+    width: 2.2857142857em;
+    height: 2.2857142857em; }
+    .RadEditor_Combo .RadRibbonBar .rrbImagePlaceholder.reToolIcon.reRibbonToolIcon:before {
+      font-size: 16px;
+      vertical-align: top; }
+  .RadEditor_Combo .RadRibbonBar .rrbMediumButton.reRibbonTool {
+    height: 1.3928571429em; }
+    .RadEditor_Combo .RadRibbonBar .rrbMediumButton.reRibbonTool .rrbImagePlaceholder.reToolIcon.reRibbonToolIcon {
+      margin-top: -0.7857142857em;
+      height: 1.7857142857em; }
+      .RadEditor_Combo .RadRibbonBar .rrbMediumButton.reRibbonTool .rrbImagePlaceholder.reToolIcon.reRibbonToolIcon:before {
+        vertical-align: text-top; }
+  .RadEditor_Combo .RadRibbonBar .rrbLargeButton {
+    width: inherit;
+    height: 4.6428571429em; }
+    .RadEditor_Combo .RadRibbonBar .rrbLargeButton .rrbImagePlaceholder.reToolIcon.reRibbonToolIcon {
+      height: 2.8571428571em; }
+      .RadEditor_Combo .RadRibbonBar .rrbLargeButton .rrbImagePlaceholder.reToolIcon.reRibbonToolIcon:before {
+        font-size: 32px;
+        vertical-align: text-top; }
+  .RadEditor_Combo.rePopupContainer,
+  .RadEditor_Combo .rePopupTitle,
+  .RadEditor_Combo .reCommentInfoPanel,
+  .RadEditor_Combo .reCommentView,
+  .RadEditor_Combo .reCommentViewText,
+  .RadEditor_Combo .reCommentEdit {
+    background-color: #f4f7f8;
+    border-color: #CFD8DC; }
+  .RadEditor_Combo.rePopupContainer,
+  .RadEditor_Combo .rePopupTitle,
+  .RadEditor_Combo .reCommentInfoPanel,
+  .RadEditor_Combo .reCommentView,
+  .RadEditor_Combo .reCommentViewText,
+  .RadEditor_Combo .reCommentEdit {
+    background-color: #8BC34A; }
+  .RadEditor_Combo .reTool {
+    color: #607D8B; }
+  .RadEditor_Combo .reTool:hover,
+  .RadEditor_Combo .reToolText:hover,
+  .RadEditor_Combo .reDropdown:hover,
+  .RadEditor_Combo.reInsertTable .reTool:hover:before,
+  .RadEditor_Combo .rePopupButton:hover,
+  .RadEditor_Combo .reCommentButton:hover,
+  .RadEditor_Combo .reAjaxSpellButton:hover {
+    background-color: #ECEFF1;
+    color: #455A64; }
+  .RadEditor_Combo .reTool:active,
+  .RadEditor_Combo .reTool:focus,
+  .RadEditor_Combo .reToolText:active,
+  .RadEditor_Combo .reToolText:focus,
+  .RadEditor_Combo .reToolSelected,
+  .RadEditor_Combo .reToolSelected:hover,
+  .RadEditor_Combo .reModes a:active,
+  .RadEditor_Combo .reDropdown:active,
+  .RadEditor_Combo .reDropdown:focus,
+  .RadEditor_Combo .rePopupButton:active,
+  .RadEditor_Combo .rePopupButton:focus,
+  .RadEditor_Combo .reCommentButton:active,
+  .RadEditor_Combo .reCommentButton:focus,
+  .RadEditor_Combo .reAjaxSpellButton:focus,
+  .RadEditor_Combo .reAjaxSpellButton:active {
+    background-color: #CFD8DC;
+    color: #455A64; }
+  .RadEditor_Combo .reTool:hover .reSplitArrow {
+    border-left-color: #90A4AE; }
+  .RadEditor_Combo .reTool:active .reSplitArrow,
+  .RadEditor_Combo .reTool:focus .reSplitArrow {
+    border-left-color: #8BC34A; }
+  .RadEditor_Combo .reSeparator {
+    border-right-color: #CFD8DC;
+    border-left-color: transparent; }
+  .RadEditor_Combo .reContent {
+    background-color: #ffffff;
+    border-color: #CFD8DC; }
+  .RadEditor_Combo.reToolBarLeft {
+    padding-left: 3.7857142857em; }
+  .RadEditor_Combo.reToolBarRight {
+    padding-right: 3.7857142857em; }
+  .RadEditor_Combo .reToolBarWrapperLeft,
+  .RadEditor_Combo .reToolBarWrapperRight {
+    width: 3.3em; }
+  .RadEditor_Combo .reToolBarWrapperLeft .reSplitButton,
+  .RadEditor_Combo .reToolBarWrapperRight .reSplitButton {
+    width: 3.7142857143em; }
+  .RadEditor_Combo .reToolBarWrapperLeft .reDropdown,
+  .RadEditor_Combo .reToolBarWrapperRight .reDropdown {
+    min-width: 3.5714285714em;
+    padding: 0.3571428571em 0em 0.3571428571em 0em; }
+  .RadEditor_Combo .reToolBarWrapperLeft .reSeparator,
+  .RadEditor_Combo .reToolBarWrapperRight .reSeparator {
+    border-top-color: transparent;
+    border-bottom-color: #CFD8DC; }
+  .RadEditor_Combo .reTableDiv .reModule,
+  .RadEditor_Combo .reTableDiv .reRow {
+    border-top-color: #CFD8DC; }
+  .RadEditor_Combo .reModes a {
+    background-color: #f4f7f8;
+    color: #455A64;
+    border-color: #CFD8DC;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.2); }
+  .RadEditor_Combo .reModes a:hover {
+    background-color: #ECEFF1;
+    color: #455A64;
+    border-color: #ECEFF1; }
+  .RadEditor_Combo .reModes a:focus,
+  .RadEditor_Combo .reModes .reSelectedMode,
+  .RadEditor_Combo .reModes .reSelectedMode:hover {
+    background-color: #CFD8DC;
+    color: #455A64;
+    border-color: #CFD8DC; }
+  .RadEditor_Combo .reDropdown,
+  .RadEditor_Combo .reDropdown.reToolDisabled,
+  .RadEditor_Combo .reDropdown.reToolDisabled:hover,
+  .RadEditor_Combo .reDropdown.reToolDisabled:active,
+  .RadEditor_Combo .reDropdown.reToolDisabled:focus {
+    background-color: #f4f7f8;
+    color: #455A64; }
+  .RadEditor_Combo .reDropdown:before,
+  .RadEditor_Combo .reDropdown.reToolDisabled:before,
+  .RadEditor_Combo .reDropdown.reToolDisabled:hover:before,
+  .RadEditor_Combo .reDropdown.reToolDisabled:active:before,
+  .RadEditor_Combo .reDropdown.reToolDisabled:focus:before {
+    color: #607D8B; }
+  .RadEditor_Combo .reDOMElement {
+    color: #8BC34A; }
+  .RadEditor_Combo .reRemoveDOMElement,
+  .RadEditor_Combo .reRemoveDOMElement:before {
+    color: #f34235; }
+  .RadEditor_Combo.reDropDownBody.reAjaxSpellCheck input[type="text"],
+  .RadEditor_Combo .reTableDiv input[type="text"] {
+    background-color: transparent;
+    color: #455A64;
+    border-color: #CFD8DC; }
+  .RadEditor_Combo.reDropDownBody.reAjaxSpellCheck input[type="text"]:hover,
+  .RadEditor_Combo .reTableDiv input[type="text"]:hover {
+    background-color: transparent;
+    color: #455A64;
+    border-color: #ECEFF1; }
+  .RadEditor_Combo.reDropDownBody.reAjaxSpellCheck input[type="text"]:focus,
+  .RadEditor_Combo .reTableDiv input[type="text"]:focus,
+  .RadEditor_Combo.reDropDownBody.reAjaxSpellCheck input[type="text"]:active,
+  .RadEditor_Combo .reTableDiv input[type="text"]:active {
+    background-color: transparent;
+    color: #455A64;
+    border-color: #8BC34A; }
+  .RadEditor_Combo.reInlineEditor:hover {
+    border-color: #ECEFF1; }
+  .RadEditor_Combo.RadWindow, .RadEditor_Combo.RadWindow.reInlineEditor:hover {
+    border-color: #CFD8DC; }
+  .RadEditor_Combo.reInlineEditorSelected, .RadEditor_Combo.reInlineEditorSelected:hover {
+    border-color: #8BC34A; }
+  .RadEditor_Combo.RadWindow,
+  .RadEditor_Combo.RadWindow .rwContent {
+    background-color: #f4f7f8; }
+  .RadEditor_Combo .reResize {
+    color: #607D8B; }
+  .RadEditor_Combo.reDropDownBody {
+    background-color: #ffffff; }
+  .RadEditor_Combo.reDropDownBody li:hover {
+    background-color: #ECEFF1; }
+  .RadEditor_Combo.reInsertTable td {
+    border-color: #CFD8DC; }
+  .RadEditor_Combo .reFormatSetsHeader,
+  .RadEditor_Combo.reInsertTable .reItemOver {
+    background-color: #ECEFF1;
+    color: #263238; }
+  .RadEditor_Combo {
+    padding: 0;
+    border-radius: 0.1428571429em; }
+  .RadEditor_Combo .reToolBarWrapper {
+    padding: 1px 0 0;
+    margin: 0; }
+  .RadEditor_Combo .reToolBar {
+    border-width: 0 0 1px;
+    border-radius: 0; }
+  .RadEditor_Combo .reTool {
+    margin: -1px 0 0;
+    width: 2.5714285714em;
+    height: 2.5714285714em;
+    border: 0;
+    border-radius: 0; }
+  .RadEditor_Combo .reDropdown {
+    min-width: 3.5714285714em;
+    margin: -1px 0 0;
+    padding: 0.0714285714em 0.7142857143em 0.0714285714em 1em;
+    height: 2.4285714286em;
+    line-height: 2.4285714286em;
+    border-width: 0;
+    border-radius: 0.1428571429em; }
+  .RadEditor_Combo .reDropdown:before {
+    right: 0em; }
+  .RadEditor_Combo .reSplitButton {
+    width: 4.2857142857em; }
+  .RadEditor_Combo .reSplitArrow {
+    width: 2.2857142857em;
+    height: 2.5714285714em;
+    border-left: 0; }
+  .RadEditor_Combo a.reToolIcon.reSplitButton:before {
+    margin: auto 0 auto .7142em; }
+  .RadEditor_Combo .reContent {
+    margin: -3px 0 0;
+    border-width: 1px 0 0; }
+  .RadEditor_Combo .reRow {
+    margin: 0; }
+  .RadEditor_Combo .reHTMLStructure {
+    width: auto; }
+  .RadEditor_Combo.reDropDownBody .reToolBar {
+    background-color: #ffffff; }
+  .RadEditor_Combo.reDropDownBody ul {
+    padding: 0; }
+  .RadEditor_Combo.reDropDownBody li {
+    padding: 0.3571428571em; }
+  .RadEditor_Combo.reDropDownBody .reTool {
+    height: auto; }
+  .RadEditor_Combo.reDropDownBody .reCustomLinks a {
+    color: #8BC34A; }
+  .RadEditor_Combo .reRow {
+    padding: 0.7142857143em 1em; }
+  .RadEditor_Combo .reModes a {
+    width: 8.5714285714em;
+    height: 2.5714285714em;
+    margin: 0;
+    padding: 0.5714285714em 0.3571428571em 0.8571428571em;
+    border-radius: 0;
+    text-transform: uppercase; }
+  .RadEditor_Combo .reModes a:first-child {
+    border-radius: 0.1428571429em 0em 0em 0.1428571429em; }
+  .RadEditor_Combo .reModes a:last-child {
+    border-radius: 0em 0.1428571429em 0.1428571429em 0em; }
+  .RadEditor_Combo .reResize:before {
+    margin: .85em 0 0 .15em; }
+  .RadEditor_Combo.reDropDownBody.reAjaxSpellCheck input[type="text"],
+  .RadEditor_Combo .reTableDiv input[type="text"] {
+    border-width: 0 0 1px;
+    padding: 0.6428571429em 0em;
+    vertical-align: middle; }
+  .RadEditor_Combo.reDropDownBody.reAjaxSpellCheck input[type="text"]:focus,
+  .RadEditor_Combo .reTableDiv input[type="text"]:focus,
+  .RadEditor_Combo.reDropDownBody.reAjaxSpellCheck input[type="text"]:active,
+  .RadEditor_Combo .reTableDiv input[type="text"]:active {
+    border-width: 0 0 2px;
+    padding: 0.6071428571em 0em; }
+  .RadEditor_Combo .reAltRow .reLabel {
+    padding: 0.1428571429em 0.7142857143em 0.3571428571em 0.4285714286em;
+    vertical-align: middle; }
+  .RadEditor_Combo .reRow .reSpinBoxButtons {
+    top: 0.7142857143em; }
+  .RadEditor_Combo .reTableDiv .reRow .reSpinBox {
+    width: 5em; }
+  .RadEditor_Combo .reTableDiv .reRow .reSpinBox input[type="text"] {
+    width: 5em;
+    padding: 0.6428571429em 0.6428571429em 0.6428571429em 0em;
+    text-align: left; }
+  .RadEditor_Combo .reLabel + span {
+    margin: 0em 1.4285714286em 0em 0em; }
+  .RadEditor_Combo.reDropDownBody.reColorPicker li {
+    width: 1.4285714286em;
+    height: 1.4285714286em;
+    margin: 0;
+    padding: 0;
+    border: 0; }
+  .RadEditor_Combo.reDropDownBody.reColorPicker li div {
+    width: 1.4285714286em;
+    height: 1.4285714286em; }
+  .RadEditor_Combo.reDropDownBody.reColorPicker .reClear {
+    margin: 0;
+    padding: 0;
+    width: 0;
+    height: 0;
+    line-height: 0;
+    overflow: hidden; }
+  .RadEditor_Combo .reCustomColor {
+    display: inline-block;
+    padding: 0.7142857143em;
+    color: #8BC34A; }
+  .RadEditor_Combo.reDropDownBody.reColorPicker .reColorPickerFooter {
+    height: 3.2142857143em;
+    border: 0;
+    border-radius: 0.1428571429em; }
+  .RadEditor_Combo.reDropDownBody.reColorPicker .reColorPickerFooter span {
+    height: 2.2857142857em;
+    line-height: 2.2857142857em;
+    border: 1px solid #CFD8DC;
+    box-sizing: border-box; }
+  .RadEditor_Combo .reTool.reToolText {
+    padding: 0 15px;
+    line-height: 2.5714285714em; }
+  .RadEditor_Combo .reToolIcon.reTool.reToolText:before {
+    margin: 0.1428571429em 0.2142857143em 0em 0em;
+    vertical-align: initial; }
+  .RadEditor_Combo .reTool.reToolIcon.reSplitButton.reToolText:before {
+    margin: 0em 0.2142857143em;
+    vertical-align: initial; }
+  .RadEditor_Combo .RadRibbonBar .reTool {
+    width: 2.3571428571em;
+    height: 2.3571428571em;
+    border-radius: 0;
+    border-width: 1px 0 1px 1px; }
+    .RadEditor_Combo .RadRibbonBar .reTool.rrbSmallButton {
+      width: 1.4285714286em;
+      height: 1.4285714286em; }
+    .RadEditor_Combo .RadRibbonBar .reTool:first-child {
+      border-radius: 0.1428571429em 0em 0em 0.1428571429em; }
+    .RadEditor_Combo .RadRibbonBar .reTool:last-child {
+      border-radius: 0em 0.1428571429em 0.1428571429em 0em;
+      border-width: 1px; }
+  .RadEditor_Combo .RadRibbonBar .rrbImagePlaceholder.reToolIcon.reRibbonToolIcon {
+    width: 2.2857142857em;
+    height: 2.2857142857em; }
+    .RadEditor_Combo .RadRibbonBar .rrbImagePlaceholder.reToolIcon.reRibbonToolIcon:before {
+      font-size: 1.3571428571em;
+      font-size: 1em \9;
+      vertical-align: top; }
+  .RadEditor_Combo .RadRibbonBar .rrbMediumButton.reRibbonTool {
+    height: 1.3928571429em; }
+    .RadEditor_Combo .RadRibbonBar .rrbMediumButton.reRibbonTool .rrbImagePlaceholder.reToolIcon.reRibbonToolIcon {
+      margin-top: -0.7857142857em;
+      height: 1.7857142857em; }
+      .RadEditor_Combo .RadRibbonBar .rrbMediumButton.reRibbonTool .rrbImagePlaceholder.reToolIcon.reRibbonToolIcon:before {
+        vertical-align: text-top; }
+  .RadEditor_Combo .RadRibbonBar .rrbLargeButton {
+    width: inherit;
+    height: 4.6428571429em; }
+    .RadEditor_Combo .RadRibbonBar .rrbLargeButton .rrbImagePlaceholder.reToolIcon.reRibbonToolIcon {
+      height: 2.8571428571em; }
+      .RadEditor_Combo .RadRibbonBar .rrbLargeButton .rrbImagePlaceholder.reToolIcon.reRibbonToolIcon:before {
+        font-size: 32px;
+        vertical-align: text-top; }
+  .RadEditor_Combo.reRtl .reDropdown {
+    padding: 0.0714285714em 1em 0.0714285714em 0.7142857143em; }
+  .RadEditor_Combo.reRtl .reDropdown:before {
+    right: auto;
+    left: 0;
+    padding: 0; }
+  .RadEditor_Combo.reRtl .reSplitArrow {
+    border-right: 0; }
+  .RadEditor_Combo.reRtl a.reToolIcon.reSplitButton:before {
+    margin: auto .7142em auto 0; }
+  .RadEditor_Combo.reRtl .reModule.reStatistic {
+    top: 0.9285714286em; }
+  .RadEditor_Combo .reModes a.t-ripple-effect {
+    border: 0px solid transparent; }
+
+.RadWindow_Combo .rwContent.rwExternalContent {
+  border-width: 0 1px 1px; }
+
+.RadWindow_Combo .reTablePropertyControlCell .lightTable {
+  margin: 3px 4px 0 4px; }
+
+.RadWindow_Combo .reControlsLayout {
+  margin: 5px 4px 0 4px; }
+
+.RadWindow_Combo .reDialogLabelLight[for="re1_ImageSrc"] span {
+  width: 82px; }
+
+.reTool .reNoAlignment {
+  color: #455A64; }
+
+/*Light dialogs CSS - should be reworked */
+.reInsertImageWrapper, .reInsertLinkWrapper, .reInsertTableLightWrapper {
+  padding: 20px 0 0 0; }
+
+.reInsertLinkWrapper .reControlsLayout td {
+  padding: 3px 0 3px 3px; }
+
+.reInsertImageWrapper .reControlsLayout td {
+  padding: 3px 0; }
+
+.reConfirmCancelButtonsTblLight button {
+  width: 75px; }
+
+.reControlsLayout {
+  width: 100%;
+  height: 100%; }
+
+.reControlsLayout .reControlCellLight input {
+  width: 215px; }
+
+.reControlsLayout .reControlCellLight select {
+  width: 220px; }
+
+.reControlsLayout .reConfirmCancelButtonsTblLight {
+  height: auto;
+  margin: 12px 0;
+  text-align: center;
+  width: 100%; }
+
+.reControlsLayout td,
+.reControlsLayout .reImgPropertyControlCell td,
+.reControlsLayout .reTablePropertyControlCell td {
+  padding: 2px; }
+
+.reControlsLayout .reTablePropertyControlCell td input[type="text"],
+.reControlsLayout .reTablePropertyControlCell td input[type="password"] {
+  padding: 2px 1px 0; }
+
+.reImgPropertyControlCell table {
+  width: 100%;
+  height: 100%; }
+
+.reControlsLayout td.reImgPropertyControlCell {
+  padding: 0 22px 0 38px; }
+
+.reInsertImageWrapper .reControlsLayout .reControlCellLight input {
+  width: 190px; }
+
+.reTablePropertyControlCell .short {
+  width: 80px; }
+
+.reTablePropertyControlCell .lightTable {
+  margin: -10px 4px 0 4px; }
+
+table.reControlsLayout .reTablePropertyControlCell input.rfdIgnore,
+table.reControlsLayout .reImgPropertyControlCell input.rfdIgnore {
+  width: 40px; }

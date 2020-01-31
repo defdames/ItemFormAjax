@@ -137,6 +137,51 @@
           </Key>
           <Property Name="pmap_Type_Application" Type="varchar" MaxLength="60" Nullable="false" />
         </EntityType>
+        <EntityType Name="xxItemCodeFormulas">
+          <Key>
+            <PropertyRef Name="FormulaID" />
+          </Key>
+          <Property Name="FormulaID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="FormulaDescription" Type="varchar(max)" />
+          <Property Name="PercentOfIngreds" Type="varchar(max)" />
+          <Property Name="INOUT" Type="varchar(max)" />
+          <Property Name="Ingredient" Type="varchar(max)" />
+          <Property Name="QTY" Type="float" />
+          <Property Name="UOM" Type="varchar(max)" />
+          <Property Name="NewIngredient" Type="varchar(max)" />
+          <Property Name="FCMadeLike" Type="varchar(max)" />
+          <Property Name="FCAvgPressFillHrs" Type="varchar(max)" />
+          <Property Name="FCTotalHoursMilled" Type="varchar(max)" />
+          <Property Name="FCExpectedYield" Type="varchar(max)" />
+          <Property Name="MMadeLike" Type="varchar(max)" />
+          <Property Name="MTimeToLoad" Type="varchar(max)" />
+          <Property Name="MTimeToMix" Type="varchar(max)" />
+          <Property Name="MTimeToDump" Type="varchar(max)" />
+          <Property Name="MTimeToTest" Type="varchar(max)" />
+          <Property Name="TMadeLike" Type="varchar(max)" />
+          <Property Name="TClassifiedHrs" Type="varchar(max)" />
+          <Property Name="TPressFillHrs" Type="varchar(max)" />
+          <Property Name="TT1Yield" Type="varchar(max)" />
+          <Property Name="TF1Yield" Type="varchar(max)" />
+          <Property Name="Specifications" Type="varchar(max)" />
+          <Property Name="GrindingMedia" Type="varchar(max)" />
+          <Property Name="LNumber" Type="varchar(max)" />
+        </EntityType>
+        <EntityType Name="xxItemCodeTests">
+          <Key>
+            <PropertyRef Name="TestID" />
+          </Key>
+          <Property Name="TestID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="QCTestID" Type="varchar(max)" />
+          <Property Name="Required" Type="varchar(max)" />
+          <Property Name="TestFrequency" Type="varchar(max)" />
+          <Property Name="MinValue" Type="varchar(max)" />
+          <Property Name="MaxValue" Type="varchar(max)" />
+          <Property Name="TargetValue" Type="varchar(max)" />
+          <Property Name="UOM" Type="varchar(max)" />
+          <Property Name="QualitativeValue" Type="varchar(max)" />
+          <Property Name="Comments" Type="varchar(max)" />
+        </EntityType>
         <EntityType Name="xxItemForm">
           <Key>
             <PropertyRef Name="ItemID" />
@@ -159,6 +204,7 @@
           <Property Name="WtToLiquid" Type="varchar" MaxLength="50" />
           <Property Name="MfgLocation" Type="varchar" MaxLength="50" />
           <Property Name="PlanningFamily" Type="varchar(max)" />
+          <Property Name="Description30AN" Type="varchar(max)" />
         </EntityType>
         <EntityType Name="xxItemHeader">
           <Key>
@@ -203,6 +249,7 @@
           <Property Name="Saleable" Type="varchar" MaxLength="50" />
           <Property Name="HarmonizedCode" Type="varchar(max)" />
           <Property Name="ExportLicenseNo" Type="varchar(max)" />
+          <Property Name="ItemCodes" Type="varchar(max)" />
         </EntityType>
         <EntityContainer Name="adage_45ModelStoreContainer">
           <EntitySet Name="gl_cmp_tbl" EntityType="Self.gl_cmp_tbl" Schema="dbo" store:Type="Tables" />
@@ -215,6 +262,8 @@
           <EntitySet Name="pmap_SurfaceTreatment" EntityType="Self.pmap_SurfaceTreatment" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="pmap_System" EntityType="Self.pmap_System" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="pmap_Type_Application" EntityType="Self.pmap_Type_Application" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="xxItemCodeFormulas" EntityType="Self.xxItemCodeFormulas" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="xxItemCodeTests" EntityType="Self.xxItemCodeTests" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="xxItemForm" EntityType="Self.xxItemForm" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="xxItemHeader" EntityType="Self.xxItemHeader" Schema="dbo" store:Type="Tables" />
         </EntityContainer>
@@ -235,6 +284,8 @@
           <EntitySet Name="gl_cmp_tbl" EntityType="adage_45Model.gl_cmp_tbl" />
           <EntitySet Name="xxItemForms" EntityType="adage_45Model.xxItemForm" />
           <EntitySet Name="xxItemHeaders" EntityType="adage_45Model.xxItemHeader" />
+          <EntitySet Name="xxItemCodeFormulas" EntityType="adage_45Model.xxItemCodeFormulas" />
+          <EntitySet Name="xxItemCodeTests" EntityType="adage_45Model.xxItemCodeTests" />
         </EntityContainer>
         <EntityType Name="pmap_Characteristic">
           <Key>
@@ -390,6 +441,7 @@
           <Property Name="WtToLiquid" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="MfgLocation" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="PlanningFamily" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="Description30AN" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
         </EntityType>
         <EntityType Name="xxItemHeader">
           <Key>
@@ -434,6 +486,52 @@
           <Property Name="Saleable" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="HarmonizedCode" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
           <Property Name="ExportLicenseNo" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="ItemCodes" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="xxItemCodeFormulas">
+          <Key>
+            <PropertyRef Name="FormulaID" />
+          </Key>
+          <Property Name="FormulaID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="FormulaDescription" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="PercentOfIngreds" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="INOUT" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="Ingredient" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="QTY" Type="Double" />
+          <Property Name="UOM" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="NewIngredient" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="FCMadeLike" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="FCAvgPressFillHrs" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="FCTotalHoursMilled" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="FCExpectedYield" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="MMadeLike" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="MTimeToLoad" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="MTimeToMix" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="MTimeToDump" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="MTimeToTest" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="TMadeLike" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="TClassifiedHrs" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="TPressFillHrs" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="TT1Yield" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="TF1Yield" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="Specifications" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="GrindingMedia" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="LNumber" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="xxItemCodeTests">
+          <Key>
+            <PropertyRef Name="TestID" />
+          </Key>
+          <Property Name="TestID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="QCTestID" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="Required" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="TestFrequency" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="MinValue" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="MaxValue" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="TargetValue" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="UOM" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="QualitativeValue" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="Comments" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
         </EntityType>
       </Schema>
     </edmx:ConceptualModels>
@@ -586,6 +684,7 @@
           <EntitySetMapping Name="xxItemForms">
             <EntityTypeMapping TypeName="adage_45Model.xxItemForm">
               <MappingFragment StoreEntitySet="xxItemForm">
+                <ScalarProperty Name="Description30AN" ColumnName="Description30AN" />
                 <ScalarProperty Name="PlanningFamily" ColumnName="PlanningFamily" />
                 <ScalarProperty Name="MfgLocation" ColumnName="MfgLocation" />
                 <ScalarProperty Name="WtToLiquid" ColumnName="WtToLiquid" />
@@ -610,6 +709,7 @@
           <EntitySetMapping Name="xxItemHeaders">
             <EntityTypeMapping TypeName="adage_45Model.xxItemHeader">
               <MappingFragment StoreEntitySet="xxItemHeader">
+                <ScalarProperty Name="ItemCodes" ColumnName="ItemCodes" />
                 <ScalarProperty Name="ExportLicenseNo" ColumnName="ExportLicenseNo" />
                 <ScalarProperty Name="HarmonizedCode" ColumnName="HarmonizedCode" />
                 <ScalarProperty Name="Saleable" ColumnName="Saleable" />
@@ -652,6 +752,53 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
+          <EntitySetMapping Name="xxItemCodeFormulas">
+            <EntityTypeMapping TypeName="adage_45Model.xxItemCodeFormulas">
+              <MappingFragment StoreEntitySet="xxItemCodeFormulas">
+                <ScalarProperty Name="LNumber" ColumnName="LNumber" />
+                <ScalarProperty Name="GrindingMedia" ColumnName="GrindingMedia" />
+                <ScalarProperty Name="Specifications" ColumnName="Specifications" />
+                <ScalarProperty Name="TF1Yield" ColumnName="TF1Yield" />
+                <ScalarProperty Name="TT1Yield" ColumnName="TT1Yield" />
+                <ScalarProperty Name="TPressFillHrs" ColumnName="TPressFillHrs" />
+                <ScalarProperty Name="TClassifiedHrs" ColumnName="TClassifiedHrs" />
+                <ScalarProperty Name="TMadeLike" ColumnName="TMadeLike" />
+                <ScalarProperty Name="MTimeToTest" ColumnName="MTimeToTest" />
+                <ScalarProperty Name="MTimeToDump" ColumnName="MTimeToDump" />
+                <ScalarProperty Name="MTimeToMix" ColumnName="MTimeToMix" />
+                <ScalarProperty Name="MTimeToLoad" ColumnName="MTimeToLoad" />
+                <ScalarProperty Name="MMadeLike" ColumnName="MMadeLike" />
+                <ScalarProperty Name="FCExpectedYield" ColumnName="FCExpectedYield" />
+                <ScalarProperty Name="FCTotalHoursMilled" ColumnName="FCTotalHoursMilled" />
+                <ScalarProperty Name="FCAvgPressFillHrs" ColumnName="FCAvgPressFillHrs" />
+                <ScalarProperty Name="FCMadeLike" ColumnName="FCMadeLike" />
+                <ScalarProperty Name="NewIngredient" ColumnName="NewIngredient" />
+                <ScalarProperty Name="UOM" ColumnName="UOM" />
+                <ScalarProperty Name="QTY" ColumnName="QTY" />
+                <ScalarProperty Name="Ingredient" ColumnName="Ingredient" />
+                <ScalarProperty Name="INOUT" ColumnName="INOUT" />
+                <ScalarProperty Name="PercentOfIngreds" ColumnName="PercentOfIngreds" />
+                <ScalarProperty Name="FormulaDescription" ColumnName="FormulaDescription" />
+                <ScalarProperty Name="FormulaID" ColumnName="FormulaID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="xxItemCodeTests">
+            <EntityTypeMapping TypeName="adage_45Model.xxItemCodeTests">
+              <MappingFragment StoreEntitySet="xxItemCodeTests">
+                <ScalarProperty Name="Comments" ColumnName="Comments" />
+                <ScalarProperty Name="QualitativeValue" ColumnName="QualitativeValue" />
+                <ScalarProperty Name="UOM" ColumnName="UOM" />
+                <ScalarProperty Name="TargetValue" ColumnName="TargetValue" />
+                <ScalarProperty Name="MaxValue" ColumnName="MaxValue" />
+                <ScalarProperty Name="MinValue" ColumnName="MinValue" />
+                <ScalarProperty Name="TestFrequency" ColumnName="TestFrequency" />
+                <ScalarProperty Name="Required" ColumnName="Required" />
+                <ScalarProperty Name="QCTestID" ColumnName="QCTestID" />
+                <ScalarProperty Name="TestID" ColumnName="TestID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
         </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>
@@ -666,7 +813,7 @@
     <Options>
       <DesignerInfoPropertySet>
         <DesignerProperty Name="ValidateOnBuild" Value="true" />
-        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="False" />
         <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
         <DesignerProperty Name="UseLegacyProvider" Value="false" />
         <DesignerProperty Name="CodeGenerationStrategy" Value="None" />

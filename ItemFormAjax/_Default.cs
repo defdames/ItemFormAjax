@@ -14,7 +14,7 @@ namespace ItemFormAjax
         protected void Page_Load(object sender, EventArgs e)
         {
             var user = System.Security.Principal.WindowsIdentity.GetCurrent().Groups;
-            string userName = System.Security.Principal.WindowsIdentity.GetCurrent().Name;
+           
             WindowsIdentity identity = WindowsIdentity.GetCurrent();
             var idsb = new StringBuilder();
 
@@ -37,7 +37,7 @@ namespace ItemFormAjax
             if (!IsPostBack)
             {
                 dpReqDate.SelectedDate = DateTime.Now.Date;
-                txtsample.Text = userName.Substring(11, userName.Length -11);
+              
                 RadTextBox1.Text = user.ToString();
                 
                 Control_Load();
@@ -63,6 +63,7 @@ namespace ItemFormAjax
             if (Page.IsValid)
                 
             {
+                string userName = System.Security.Principal.WindowsIdentity.GetCurrent().Name;
                 var ps = new StringBuilder();
                 var collection = cbPackage.CheckedItems;
                 using (adage_45Entities context = new adage_45Entities())
@@ -71,7 +72,7 @@ namespace ItemFormAjax
 
                     {
                         item.CreatedDate = DateTime.UtcNow;
-                        item.CreatedBy = "System";
+                        item.CreatedBy = userName.Substring(11, userName.Length - 11);
                         item.Market = txtMarket.Text;
                         item.ProductDesription = txtProductDescription.Text;
                         item.NewOrExisting = cbNorE.Text;

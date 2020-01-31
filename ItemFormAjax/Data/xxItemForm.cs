@@ -32,5 +32,6 @@ namespace ItemFormAjax.Data
         public string WtToLiquid { get; set; }
         public string MfgLocation { get; set; }
         public string PlanningFamily { get; set; }
+        public string Description30AN { get; set; }
     }
 }

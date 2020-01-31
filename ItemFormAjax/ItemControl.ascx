@@ -8,6 +8,39 @@
     }
 </style>
 
+
+<table id="tblPlannig" runat="server" class="blueTable">
+    <tr>
+    <td>
+        Mfg Location
+    </td>
+        <td>
+
+
+
+     <asp:DropDownList ID="ddMfgLocation" runat="server"  SelectedValue='<%# DataBinder.Eval(Container, "DataItem.MfgLocation") %>'
+                 DataSource='<%# (new string[] { "HOME", "TIDE", "SLL","SA"}) %>'
+                AppendDataBoundItems="True">
+                <asp:ListItem Selected="True" Text="MFG Location" Value="">
+                </asp:ListItem>
+            </asp:DropDownList>
+            </td>
+        </tr>
+    <tr>
+        <td>
+            Description 30 A/N
+
+        </td>
+        <td>
+             <asp:TextBox ID="txtDesc30AN" runat="server" Text='<%# DataBinder.Eval(Container, "DataItem.Desc30AN") %>'>' >
+                
+            </asp:TextBox>
+        </td>
+
+    </tr>
+</table>
+<p/>
+
 <table id="tblMGMT" runat="server" class="blueTable" >
    <%-- <tr>
         <td>

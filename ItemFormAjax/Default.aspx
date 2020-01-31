@@ -23,15 +23,16 @@
             <tr>
                 <td class="Itable">
                     <telerik:RadLabel runat="server" Text="Requested Date:" Width="195px" ID="dplabel" CssClass="dplabel"></telerik:RadLabel>
-                    <telerik:RadDatePicker RenderMode="Classic" ID="dpReqDate" runat="server" Calendar-EnableMultiSelect="false" DateInput-EmptyMessage="Select Date" AutoPostBack="true" Calendar-ShowRowHeaders="false"></telerik:RadDatePicker>
+                    <telerik:RadDatePicker ID="dpReqDate" runat="server" Calendar-EnableMultiSelect="false" DateInput-EmptyMessage="Select Date" AutoPostBack="true" Calendar-ShowRowHeaders="false" EnableEmbeddedSkins="false" Skin="Combo" RenderMode="Lightweight"></telerik:RadDatePicker>
                 </td>
 
             </tr>
             <tr>
-                <td class="Itable">
-                    <telerik:RadTextBox RenderMode="Classic" ID="txtMarket" LabelWidth="200px"
+                <td >
+                    
+                    <telerik:RadTextBox  ID="txtMarket" 
                         Label="Market:" EmptyMessage="Enter Market"
-                        runat="server" AutoPostBack="false" InvalidStyleDuration="100" Width="400px">
+                        runat="server" AutoPostBack="false"  Width="400px" EnableEmbeddedSkins="false" Skin="Combo" RenderMode="Lightweight" >
                     </telerik:RadTextBox>
                 </td>
             </tr>
@@ -46,7 +47,7 @@
             <tr>
                 <td class="Itable">
 
-                    <telerik:RadComboBox ID="cbNorE" runat="server" Label="New or Existing:" LabelCssClass="LWidth" AllowCustomText="false">
+                    <telerik:RadComboBox ID="cbNorE" runat="server" Label="New or Existing:" LabelCssClass="LWidth" Width="400px" AllowCustomText="false" EnableEmbeddedSkins="false" Skin="Combo" RenderMode="Lightweight">
                         <Items>
                             <telerik:RadComboBoxItem runat="server" Text="New" />
                             <telerik:RadComboBoxItem runat="server" Text="Existing" />
@@ -72,7 +73,7 @@
             <tr>
                 <td class="Itable">
 
-                    <telerik:RadComboBox ID="cbProductStatus" runat="server" Label="Product Status:" LabelCssClass="LWidth" Width="400px" AllowCustomText="false" EmptyMessage="Select a Status">
+                    <telerik:RadComboBox ID="cbProductStatus" runat="server" Label="Product Status:" LabelCssClass="LWidth" Width="400px" AllowCustomText="false" EmptyMessage="Select a Status" EnableEmbeddedSkins="false" Skin="Combo" RenderMode="Lightweight">
                         
                         <Items>
                             <telerik:RadComboBoxItem runat="server" Text="Make To Stock" />
@@ -97,7 +98,7 @@
             <tr>
                 <td class="Itable">
 
-                    <telerik:RadComboBox ID="cbCompany" runat="server" Label="Company of Manufactuer:" LabelCssClass="LWidth" AllowCustomText="false" EmptyMessage="Select a Company">
+                    <telerik:RadComboBox ID="cbCompany" runat="server" Label="Company of Manufacturer:" LabelCssClass="LWidth" Width="400px" AllowCustomText="false" EmptyMessage="Select a Company" EnableEmbeddedSkins="false" Skin="Combo" RenderMode="Lightweight">
                         
                         <Items>
                             <telerik:RadComboBoxItem runat="server" Text="SJ" />
@@ -112,7 +113,7 @@
                 <td class="Itable">
 
 
-                    <telerik:RadComboBox ID="cbWaterBorne" runat="server" Label="Is This a Waterborne Product:" LabelCssClass="LWidth" AllowCustomText="false">
+                    <telerik:RadComboBox ID="cbWaterBorne" runat="server" Label="Is This a Waterborne Product:" LabelCssClass="LWidth" Width="400px" AllowCustomText="false" EnableEmbeddedSkins="false" Skin="Combo" RenderMode="Lightweight">
                         <Items>
                             <telerik:RadComboBoxItem runat="server" Text="Yes" />
                             <telerik:RadComboBoxItem runat="server" Text="No" />
@@ -122,7 +123,7 @@
             </tr>
             <tr>
                 <td class="Itable">
-                    <telerik:RadComboBox ID="cbCharacteristics" runat="server" Label="Characteristics:" LabelCssClass="LWidth" Width="400px" AllowCustomText="false"  EmptyMessage="Select a Characteristic">
+                    <telerik:RadComboBox ID="cbCharacteristics" runat="server" Label="Characteristics:" LabelCssClass="LWidth" Width="400px" AllowCustomText="false"  EmptyMessage="Select a Characteristic" EnableEmbeddedSkins="false" Skin="Combo" RenderMode="Lightweight">
                        
                         
                     </telerik:RadComboBox>
@@ -135,7 +136,7 @@
             </tr>
             <tr>
                 <td class="Itable">
-                    <telerik:RadComboBox ID="cbGeometry" runat="server" Label="Geometry:" LabelCssClass="LWidth" AllowCustomText="false" Width="400px"   EmptyMessage="Select a Geometry">
+                    <telerik:RadComboBox ID="cbGeometry" runat="server" Label="Geometry:" LabelCssClass="LWidth" AllowCustomText="false" Width="400px"   EmptyMessage="Select a Geometry" EnableEmbeddedSkins="false" Skin="Combo" RenderMode="Lightweight">
                          
                        
                     </telerik:RadComboBox>
@@ -148,7 +149,7 @@
             </tr>
             <tr>
                 <td class="Itable">
-                    <telerik:RadComboBox ID="cbMicron" runat="server" Label="Micron:" LabelCssClass="LWidth" AllowCustomText="false"  Width="400px" EmptyMessage="Select a Micron">
+                    <telerik:RadComboBox ID="cbMicron" runat="server" Label="Micron:" LabelCssClass="LWidth" AllowCustomText="false"  Width="400px" EmptyMessage="Select a Micron" EnableEmbeddedSkins="false" Skin="Combo" RenderMode="Lightweight">
                      
                        
                     </telerik:RadComboBox>
@@ -161,7 +162,7 @@
             </tr>
             <tr>
                 <td class="Itable">
-                    <telerik:RadComboBox ID="cbPhysicalForm" runat="server" Label="Physical Form:" LabelCssClass="LWidth" AllowCustomText="false" Width="400px" EmptyMessage="Select a Physical Form">
+                    <telerik:RadComboBox ID="cbPhysicalForm" runat="server" Label="Physical Form:" LabelCssClass="LWidth" AllowCustomText="false" Width="400px" EmptyMessage="Select a Physical Form" EnableEmbeddedSkins="false" Skin="Combo" RenderMode="Lightweight">
                  
                        
                     </telerik:RadComboBox>
@@ -174,7 +175,7 @@
             </tr>
             <tr>
                 <td class="Itable">
-                    <telerik:RadComboBox ID="cbSolvent" runat="server" Label="Solvent:" LabelCssClass="LWidth" AllowCustomText="false" Width="400px" EmptyMessage="Select a Solvent">
+                    <telerik:RadComboBox ID="cbSolvent" runat="server" Label="Solvent:" LabelCssClass="LWidth" AllowCustomText="false" Width="400px" EmptyMessage="Select a Solvent" EnableEmbeddedSkins="false" Skin="Combo" RenderMode="Lightweight">
                       
                        
                     </telerik:RadComboBox>
@@ -187,7 +188,7 @@
             </tr>
             <tr>
                 <td class="Itable">
-                    <telerik:RadComboBox ID="cbSurfaceTreatment" runat="server" Label="Surface Treatment:" LabelCssClass="LWidth" AllowCustomText="false" Width="400px" EmptyMessage="Select a Surface Treatment">
+                    <telerik:RadComboBox ID="cbSurfaceTreatment" runat="server" Label="Surface Treatment:" LabelCssClass="LWidth" AllowCustomText="false" Width="400px" EmptyMessage="Select a Surface Treatment" EnableEmbeddedSkins="false" Skin="Combo" RenderMode="Lightweight">
                        
                         
                     </telerik:RadComboBox>
@@ -200,7 +201,7 @@
             </tr>
             <tr>
                 <td class="Itable">
-                    <telerik:RadComboBox ID="cbSystem" runat="server" Label="System:" LabelCssClass="LWidth" AllowCustomText="false" Width="400px" EmptyMessage="Select a System">
+                    <telerik:RadComboBox ID="cbSystem" runat="server" Label="System:" LabelCssClass="LWidth" AllowCustomText="false" Width="400px" EmptyMessage="Select a System" EnableEmbeddedSkins="false" Skin="Combo" RenderMode="Lightweight">
                         
                        
                     </telerik:RadComboBox>
@@ -213,7 +214,7 @@
             </tr>
             <tr>
                 <td class="Itable">
-                    <telerik:RadComboBox ID="cbTypeApplication" runat="server" Label="Type Application:" LabelCssClass="LWidth" AllowCustomText="false" Width="400px" EmptyMessage="Select a Application">
+                    <telerik:RadComboBox ID="cbTypeApplication" runat="server" Label="Type Application:" LabelCssClass="LWidth" AllowCustomText="false" Width="400px" EmptyMessage="Select a Application" EnableEmbeddedSkins="false" Skin="Combo" RenderMode="Lightweight">
                         
                     </telerik:RadComboBox>
                 </td>
@@ -238,7 +239,7 @@
             </tr>
             <tr>
                 <td class="Itable">
-                    <telerik:RadComboBox ID="cbPackage" runat="server" Label="Packages Select all that apply:" LabelCssClass="LWidth" AllowCustomText="true"  CheckBoxes="true" EmptyMessage="Select all that apply">
+                    <telerik:RadComboBox ID="cbPackage" runat="server" Label="Packages Select all that apply:" LabelCssClass="LWidth" Width="400px" AllowCustomText="true"  CheckBoxes="true" EmptyMessage="Select all that apply" EnableEmbeddedSkins="false" Skin="Combo" RenderMode="Lightweight">
                        
                         <Items>
                             <telerik:RadComboBoxItem Text="20 KG" />
@@ -255,7 +256,7 @@
                 <td class="Itable">
 
 
-                    <telerik:RadComboBox ID="cbLiner" runat="server" Label="Static Dissipative Liner:" LabelCssClass="LWidth" AllowCustomText="false">
+                    <telerik:RadComboBox ID="cbLiner" runat="server" Label="Static Dissipative Liner:" LabelCssClass="LWidth" Width="400px" AllowCustomText="false" EnableEmbeddedSkins="false" Skin="Combo" RenderMode="Lightweight">
                         <Items>
                             <telerik:RadComboBoxItem runat="server" Text="Yes" />
                             <telerik:RadComboBoxItem runat="server" Text="No" />
@@ -266,7 +267,7 @@
              <tr>
                 <td class="Itable">
 
-                    <telerik:RadComboBox ID="CbWhereUsed" runat="server" Label="Where will Product Be Used:" LabelCssClass="LWidth" AllowCustomText="false" EmptyMessage="Select a Company">
+                    <telerik:RadComboBox ID="CbWhereUsed" runat="server" Label="Where will Product Be Used:" LabelCssClass="LWidth" Width="400px" AllowCustomText="false" EmptyMessage="Select a Company" EnableEmbeddedSkins="false" Skin="Combo" RenderMode="Lightweight">
                         
                         <Items>
                             <telerik:RadComboBoxItem runat="server" Text="SJ" />
@@ -288,7 +289,7 @@
             </tr>
             <tr>
                 <td class="Itable">
-                    <telerik:RadComboBox ID="cbMarketSegment" runat="server" Label="Market Segment" LabelCssClass="LWidth"  Width="400px" EmptyMessage="Select a Market Segment">
+                    <telerik:RadComboBox ID="cbMarketSegment" runat="server" Label="Market Segment" LabelCssClass="LWidth"  Width="400px" EmptyMessage="Select a Market Segment" EnableEmbeddedSkins="false" Skin="Combo" RenderMode="Lightweight">
                     </telerik:RadComboBox>
 
                 </td>
@@ -301,7 +302,7 @@
             </tr>
             <tr>
                 <td class="Itable">
-                    <telerik:RadComboBox ID="cbTradeNameFirst" runat="server" Label="Trade Name First" LabelCssClass="LWidth" Width="400px" EmptyMessage="Select a Trade Name">
+                    <telerik:RadComboBox ID="cbTradeNameFirst" runat="server" Label="Trade Name First" LabelCssClass="LWidth" Width="400px" EmptyMessage="Select a Trade Name" EnableEmbeddedSkins="false" Skin="Combo" RenderMode="Lightweight">
                     </telerik:RadComboBox>
 
                 </td>
@@ -314,7 +315,7 @@
             </tr>
             <tr>
                 <td class="Itable">
-                    <telerik:RadComboBox ID="cbTradeNameSecond" runat="server" Label="Trade Name Second" LabelCssClass="LWidth" Width="400px" EmptyMessage="Select a Trade Name">
+                    <telerik:RadComboBox ID="cbTradeNameSecond" runat="server" Label="Trade Name Second" LabelCssClass="LWidth" Width="400px" EmptyMessage="Select a Trade Name" EnableEmbeddedSkins="false" Skin="Combo" RenderMode="Lightweight">
                     </telerik:RadComboBox>
 
                 </td>
@@ -327,7 +328,7 @@
             </tr>
             <tr>
                 <td class="Itable">
-                    <telerik:RadComboBox ID="cbLeafParticle" runat="server" Label="Leaf & Particle Size" LabelCssClass="LWidth" Width="400px" EmptyMessage="Select a Leaf and Particle Size">
+                    <telerik:RadComboBox ID="cbLeafParticle" runat="server" Label="Leaf & Particle Size" LabelCssClass="LWidth" Width="400px" EmptyMessage="Select a Leaf and Particle Size" EnableEmbeddedSkins="false" Skin="Combo" RenderMode="Lightweight">
                     </telerik:RadComboBox>
 
                 </td>
@@ -339,7 +340,7 @@
             </tr>
              <tr>
                 <td class="Itable">
-                    <telerik:RadComboBox ID="cbClassCharacteristics" runat="server" Label="Characteristics" LabelCssClass="LWidth" Width="400px" EmptyMessage="Select a Characteristic">
+                    <telerik:RadComboBox ID="cbClassCharacteristics" runat="server" Label="Characteristics" LabelCssClass="LWidth" Width="400px" EmptyMessage="Select a Characteristic" EnableEmbeddedSkins="false" Skin="Combo" RenderMode="Lightweight">
                     </telerik:RadComboBox>
 
                 </td>
@@ -351,7 +352,7 @@
             </tr>
              <tr>
                 <td class="Itable">
-                    <telerik:RadComboBox ID="cbCarrier" runat="server" Label="Carrier" LabelCssClass="LWidth" Width="400px" EmptyMessage="Select a Carrier">
+                    <telerik:RadComboBox ID="cbCarrier" runat="server" Label="Carrier" LabelCssClass="LWidth" Width="400px" EmptyMessage="Select a Carrier" EnableEmbeddedSkins="false" Skin="Combo" RenderMode="Lightweight">
                     </telerik:RadComboBox>
 
                 </td>
@@ -362,16 +363,14 @@
                 </td>
             </tr>
         </table>
-        <telerik:RadButton ID="btnSubmit" runat="server" Text="Submit" OnClick="Submit_Header" CausesValidation="true" ValidationGroup="NewItemInput"></telerik:RadButton>
-        <telerik:RadTextBox ID="txtsample" runat ="server"></telerik:RadTextBox>
-        <telerik:RadTextBox ID="RadTextBox1" runat="server"></telerik:RadTextBox>
-        <asp:TextBox ID="txtasp" runat="server"></asp:TextBox>
-        <table class="Itable">
-
-            <tr>
-                <td class="Itable">
-                    <telerik:RadGrid ID="RadGrid1" runat="server"  AllowPaging="True" AllowSorting="true" AllowAutomaticUpdates="True">
-                        <MasterTableView CommandItemDisplay="Top">
+        <telerik:RadButton ID="btnSubmit" runat="server" Text="Submit" OnClick="Submit_Header" CausesValidation="true" ValidationGroup="NewItemInput" EnableEmbeddedSkins="false" Skin="Combo" RenderMode="Lightweight"></telerik:RadButton>
+       
+        <telerik:RadTextBox ID="RadTextBox1" runat="server" Visible="false"></telerik:RadTextBox>
+        <asp:TextBox ID="txtasp" runat="server" Visible="false"></asp:TextBox>
+        <p/>
+   
+                    <telerik:RadGrid ID="RadGrid1" runat="server"  AllowPaging="True" AllowSorting="true" AllowAutomaticUpdates="True" EnableEmbeddedSkins="false" Skin="Combo" RenderMode="Lightweight">
+                        <MasterTableView TableLayout="Auto" >
                             <CommandItemSettings ShowAddNewRecordButton="false" />
 
                             <Columns>
@@ -383,13 +382,9 @@
                             </Columns>
                         </MasterTableView>
                     </telerik:RadGrid>
-                </td>
-            </tr>
-
-
-        </table>
+               
     </div>
 
-
+    
         
 </asp:Content>

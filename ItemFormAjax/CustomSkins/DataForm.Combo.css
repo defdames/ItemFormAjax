@@ -1,0 +1,10 @@
+.RadDataForm_Combo {
+  color: #455A64;
+  font-family: "Roboto", "Noto", sans-serif; }
+  .RadDataForm_Combo .rdfLegend,
+  .RadDataForm_Combo .rdfBorders {
+    border-color: #CFD8DC; }
+  .RadDataForm_Combo .rdfHr {
+    color: #CFD8DC; }
+  .RadDataForm_Combo .rdfFieldHint {
+    color: #ccd7dc; }

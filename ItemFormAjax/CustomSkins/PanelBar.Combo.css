@@ -1,0 +1,72 @@
+.RadPanelBar_Combo {
+  border-color: #CFD8DC;
+  color: #455A64;
+  background-color: #ffffff;
+  font-family: "Roboto", "Noto", sans-serif; }
+  .RadPanelBar_Combo .rpRootLink,
+  .RadPanelBar_Combo .rpHeaderTemplate {
+    margin: 0;
+    border: 0;
+    padding: 13px;
+    font-size: 1.1428571429em;
+    border-top: 1px solid transparent; }
+  .RadPanelBar_Combo .rpGroup {
+    box-sizing: border-box; }
+    .RadPanelBar_Combo .rpGroup .rpItem,
+    .RadPanelBar_Combo .rpGroup .rpItem.rpFirst,
+    .RadPanelBar_Combo .rpGroup .rpItem.rpLast {
+      padding: 0; }
+    .RadPanelBar_Combo .rpGroup .rpItem + .rpItem {
+      margin: 0; }
+    .RadPanelBar_Combo .rpGroup .rpLink,
+    .RadPanelBar_Combo .rpGroup .rpHeaderTemplate {
+      border: 0;
+      padding-top: 6px;
+      padding-bottom: 6px; }
+    .RadPanelBar_Combo .rpGroup.rpFirst, .RadPanelBar_Combo .rpGroup.rpLast {
+      padding: 0; }
+  .RadPanelBar_Combo .rpGroup .rpGroup .rpItem .rpLink,
+  .RadPanelBar_Combo .rpGroup .rpGroup .rpItem .rpHeaderTemplate {
+    padding-left: 30px; }
+  .RadPanelBar_Combo .rpExpandable .rpExpandHandle {
+    display: table;
+    top: 6px;
+    width: calc(1.25em + 16px);
+    height: calc(1.25em + 16px);
+    border: 0;
+    color: #607D8B; }
+  .RadPanelBar_Combo .rpGroup .rpExpandable .rpExpandHandle {
+    width: calc(1.42857143em + 14px);
+    height: calc(1.42857143em + 14px);
+    top: 0;
+    right: 4px; }
+  .RadPanelBar_Combo .p-icon {
+    width: 100%; }
+  .RadPanelBar_Combo .p-icon:before {
+    font-size: 18px;
+    font-family: "Material Icons"; }
+  .RadPanelBar_Combo .p-i-arrow-chevron-down:before {
+    content: "\e313"; }
+  .RadPanelBar_Combo .p-i-arrow-chevron-up:before {
+    content: "\e316"; }
+  .RadPanelBar_Combo .rpHovered.rpLink,
+  .RadPanelBar_Combo .rpHovered.rpHeaderTemplate {
+    color: #455A64;
+    background-color: #ECEFF1; }
+  .RadPanelBar_Combo .rpHovered.rpExpandHandle {
+    color: #263238; }
+  .RadPanelBar_Combo .rpFocused {
+    box-shadow: 0 0 0 1px rgba(178, 192, 198, 0.5) inset; }
+  .RadPanelBar_Combo .rpExpanded {
+    color: #263238; }
+  .RadPanelBar_Combo .rpExpanded.rpRootLink {
+    border-color: #CFD8DC; }
+    .RadPanelBar_Combo .rpExpanded.rpRootLink + .rpSlide > .rpGroup {
+      border-bottom: 1px solid #CFD8DC; }
+  .RadPanelBar_Combo .rpExpanded .rpExpandHandle {
+    color: #263238; }
+  .RadPanelBar_Combo .rpSelected.rpLink {
+    color: #03A9F4;
+    background-color: transparent; }
+  .RadPanelBar_Combo .rpSelected .rpExpandHandle {
+    color: #263238; }

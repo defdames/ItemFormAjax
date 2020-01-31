@@ -37,5 +37,7 @@ namespace ItemFormAjax.Data
         public virtual DbSet<gl_cmp_tbl> gl_cmp_tbl { get; set; }
         public virtual DbSet<xxItemForm> xxItemForms { get; set; }
         public virtual DbSet<xxItemHeader> xxItemHeaders { get; set; }
+        public virtual DbSet<xxItemCodeFormulas> xxItemCodeFormulas { get; set; }
+        public virtual DbSet<xxItemCodeTests> xxItemCodeTests { get; set; }
     }
 }

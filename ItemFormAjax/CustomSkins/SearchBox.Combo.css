@@ -1,0 +1,112 @@
+.RadSearchBox_Combo {
+  color: #455A64;
+  font-family: "Roboto", "Noto", sans-serif; }
+  .RadSearchBox_Combo .rsbInner {
+    border-color: #CFD8DC;
+    color: #455A64;
+    background-color: transparent;
+    background: #ffffff;
+    padding: 8px 0;
+    border: 0;
+    border-radius: 2px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.2); }
+    .RadSearchBox_Combo .rsbInner.rsbHovered {
+      border-color: #90A4AE;
+      color: #455A64;
+      background-color: transparent; }
+    .RadSearchBox_Combo .rsbInner.rsbFocused {
+      border-color: #8BC34A;
+      color: #455A64;
+      background-color: transparent; }
+  .RadSearchBox_Combo .rsbInput {
+    margin: 0 12px; }
+  .RadSearchBox_Combo .rsbButton {
+    padding: 8px;
+    margin: -8px 0;
+    transition: all 0.2s ease-in-out; }
+  .RadSearchBox_Combo .rsbButtonSearch {
+    top: 0;
+    right: 0;
+    bottom: 0;
+    margin: 0;
+    border-width: 0 0 0 1px;
+    border-radius: 0 2px 2px 0;
+    box-sizing: content-box; }
+  .RadSearchBox_Combo .rsbLabel {
+    font-weight: 500;
+    font-size: 0.857em;
+    color: #607D8B; }
+  .RadSearchBox_Combo .rsbSearchContext {
+    margin: -8px 0; }
+  .RadSearchBox_Combo .rsbSCInner {
+    line-height: inherit;
+    height: 1.4285714286em;
+    padding: 8px 20px 8px 8px;
+    border: 0;
+    border-radius: 2px 0 0 2px;
+    box-sizing: content-box;
+    border-right: 1px solid #CFD8DC;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out; }
+  .RadSearchBox_Combo .rsbLoadingIcon {
+    background-image: url('<%=WebResource("Telerik.Web.UI.Skins.Combo.Common.loading_small.gif")%>'); }
+  .RadSearchBox_Combo .rsbSCIcon,
+  .RadSearchBox_Combo .rsbButton .rsbIcon {
+    font-size: 18px;
+    width: 1em;
+    height: 1em;
+    line-height: 1em;
+    margin-top: -0.5em; }
+    .RadSearchBox_Combo .rsbSCIcon:before,
+    .RadSearchBox_Combo .rsbButton .rsbIcon:before {
+      font-family: "Material Icons"; }
+  .RadSearchBox_Combo .rsbSCIcon:before {
+    content: "\e5c5"; }
+  .RadSearchBox_Combo .rsbButton .rsbIconSearch:before {
+    content: "\e8b6"; }
+  .RadSearchBox_Combo .rsbHovered .rsbSCInner, .RadSearchBox_Combo .rsbHovered .rsbSCInner.rsbHovered,
+  .RadSearchBox_Combo .rsbHovered .rsbButtonSearch,
+  .RadSearchBox_Combo .rsbHovered .rsbButtonSearch.rsbHovered {
+    border-color: #ECEFF1;
+    color: #455A64;
+    background-color: #ECEFF1;
+    border-color: #CFD8DC; }
+  .RadSearchBox_Combo .rsbFocused .rsbSCInner,
+  .RadSearchBox_Combo .rsbFocused .rsbButton {
+    border-color: #CFD8DC;
+    color: #455A64;
+    background-color: transparent;
+    border-color: #CFD8DC; }
+  .RadSearchBox_Combo .rsbSelected.rsbButton {
+    border-color: #CFD8DC;
+    color: #455A64;
+    background-color: #CFD8DC; }
+  .RadSearchBox_Combo .rsbSCDisabled .rsbSCInner {
+    background: #ffffff; }
+
+.rsbPopup_Combo {
+  border-color: #CFD8DC;
+  color: #455A64;
+  background-color: #ffffff;
+  font-family: "Roboto", "Noto", sans-serif;
+  border-width: 1px 0 0;
+  border-radius: 0 0 2px 2px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.2);
+  overflow: hidden; }
+  .rsbPopup_Combo .rsbShowAll {
+    margin: 0;
+    padding: 6px 13px;
+    border: 0; }
+  .rsbPopup_Combo .rsbList {
+    padding: 10px 0; }
+  .rsbPopup_Combo .rsbListItem {
+    padding: 6px 13px; }
+  .rsbPopup_Combo .rsbListItemHovered {
+    color: #455A64;
+    background-color: #ECEFF1; }
+  .rsbPopup_Combo .rsbListItemSelected {
+    color: #03A9F4;
+    background-color: transparent; }
+  .rsbPopup_Combo .rsbListItemLoading {
+    color: #455A64;
+    background-color: #ECEFF1; }
