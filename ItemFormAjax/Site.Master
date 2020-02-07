@@ -23,7 +23,7 @@
 <body>
     <form runat="server">
         <telerik:RadScriptManager runat="server" ID="RadScriptManager1" />
-        <telerik:RadSkinManager ID="RadSkinManager1" runat="server" ShowChooser="false" />
+      
         <telerik:RadAjaxManager ID="RadAjaxManager1" runat="server" DefaultLoadingPanelID="RadAjaxLoadingPanel1">
             <AjaxSettings>
                 <telerik:AjaxSetting AjaxControlID="ConfiguratorPanel1">

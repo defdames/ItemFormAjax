@@ -22,25 +22,28 @@
 
             <tr>
                 <td class="Itable">
-                    <telerik:RadLabel runat="server" Text="Requested Date:" Width="195px" ID="dplabel" CssClass="dplabel"></telerik:RadLabel>
-                    <telerik:RadDatePicker ID="dpReqDate" runat="server" Calendar-EnableMultiSelect="false" DateInput-EmptyMessage="Select Date" AutoPostBack="true" Calendar-ShowRowHeaders="false" EnableEmbeddedSkins="false" Skin="Combo" RenderMode="Lightweight"></telerik:RadDatePicker>
+
+                    <telerik:RadLabel runat="server" Text="Requested Date:" Width="200px" ID="dplabel" CssClass="cslabel"></telerik:RadLabel>
+                    <telerik:RadDatePicker ID="dpReqDate" runat="server" Calendar-EnableMultiSelect="false" DateInput-EmptyMessage="Select Date" AutoPostBack="true" Calendar-ShowRowHeaders="false"></telerik:RadDatePicker>
                 </td>
 
             </tr>
             <tr>
-                <td >
+                <td class="Itable" >
+                    <telerik:RadLabel runat="server" Text="Market:" Width="200px" ID="RadLabel1" CssClass="cslabel"></telerik:RadLabel>
                     
                     <telerik:RadTextBox  ID="txtMarket" 
-                        Label="Market:" EmptyMessage="Enter Market"
-                        runat="server" AutoPostBack="false"  Width="400px" EnableEmbeddedSkins="false" Skin="Combo" RenderMode="Lightweight" >
+                        EmptyMessage="Enter Market"
+                        runat="server" AutoPostBack="false" Width="200px"    RenderMode="Lightweight" CssClass="cstext">
                     </telerik:RadTextBox>
                 </td>
             </tr>
             <tr>
                 <td class="Itable">
-                    <telerik:RadTextBox RenderMode="Classic" ID="txtProductDescription" LabelWidth="200px"
-                        Label="Product Description:" EmptyMessage="Enter Product Descripition" TextMode="MultiLine"
-                        runat="server" AutoPostBack="False" InvalidStyleDuration="100" Resize="Both" Width="400px">
+                    <telerik:RadLabel runat="server" Text="Product Description:" ID="RadLabel2" CssClass="cslabel"></telerik:RadLabel>
+                    <telerik:RadTextBox RenderMode="Lightweight" ID="txtProductDescription" 
+                        EmptyMessage="Enter Product Descripition" TextMode="MultiLine"
+                        runat="server" AutoPostBack="False" InvalidStyleDuration="100" Resize="Both" Width="200px" CssClass="cstext">
                     </telerik:RadTextBox>
                 </td>
             </tr>
@@ -58,16 +61,14 @@
             </tr>
             <tr>
                 <td class="Itable">
-                    <telerik:RadTextBox RenderMode="Classic" ID="txtShelfLife" LabelWidth="200px"
-                        Label="Shelf Life:" EmptyMessage="Enter Shelf Life"
-                        runat="server" AutoPostBack="False" InvalidStyleDuration="100" Width="400px" ValidationGroup="NewItemInput">
+                    <telerik:RadLabel runat="server" Text="Shelf Life:" ID="RadLabel3" CssClass="cslabel"></telerik:RadLabel>
+                    <telerik:RadTextBox RenderMode="Lightweight" ID="txtShelfLife" EmptyMessage="Enter Shelf Life"
+                        runat="server" AutoPostBack="False" InvalidStyleDuration="100" Width="200px" ValidationGroup="NewItemInput" CssClass="cstext">
                     </telerik:RadTextBox>
-
-                </td>
-                <td class="Itable">
-                    <asp:RequiredFieldValidator ID="RqShelfLife" runat="server" ErrorMessage="Shelf life required" Display="Dynamic" ControlToValidate="txtShelfLife" Font-Bold="true" ValidationGroup="NewItemInput" CssClass="dperror">
+                     <asp:RequiredFieldValidator ID="RqShelfLife" runat="server" ErrorMessage="Shelf life required" Display="Dynamic" ControlToValidate="txtShelfLife" Font-Bold="true" ValidationGroup="NewItemInput" CssClass="dperror">
 
                     </asp:RequiredFieldValidator>
+
                 </td>
             </tr>
             <tr>
@@ -89,10 +90,14 @@
             </tr>
             <tr>
                 <td class="Itable">
-                    <telerik:RadTextBox RenderMode="Classic" ID="txtLnumber" LabelWidth="200"
-                        Label="L-Number:" EmptyMessage="Enter LNumber"
-                        runat="server" AutoPostBack="False" InvalidStyleDuration="100" Width="400px">
+                      <telerik:RadLabel runat="server" Text="L-Number::" ID="RadLabel4" CssClass="cslabel"></telerik:RadLabel>
+                    <telerik:RadTextBox RenderMode="Lightweight" ID="txtLnumber" LabelWidth="200"
+                         EmptyMessage="Enter L-Number"
+                        runat="server" AutoPostBack="False" InvalidStyleDuration="100" Width="200px" CssClass="cstext">
                     </telerik:RadTextBox>
+                      <asp:RequiredFieldValidator ID="RqLnumber" runat="server" ErrorMessage="L-Number required" Display="Dynamic" ControlToValidate="txtLnumber" Font-Bold="true" ValidationGroup="NewItemInput" CssClass="dperror">
+
+                    </asp:RequiredFieldValidator>
                 </td>
             </tr>
             <tr>
@@ -123,16 +128,13 @@
             </tr>
             <tr>
                 <td class="Itable">
-                    <telerik:RadComboBox ID="cbCharacteristics" runat="server" Label="Characteristics:" LabelCssClass="LWidth" Width="400px" AllowCustomText="false"  EmptyMessage="Select a Characteristic" EnableEmbeddedSkins="false" Skin="Combo" RenderMode="Lightweight">
-                       
-                        
+                    <telerik:RadComboBox ID="cbCharacteristics" runat="server" Label="Characteristics:" LabelCssClass="LWidth" Width="400px" AllowCustomText="false" EmptyMessage="Select a Characteristic" EnableEmbeddedSkins="false" Skin="Combo" RenderMode="Lightweight">
                     </telerik:RadComboBox>
-                </td>
-                  <td class="Itable">
                     <asp:RequiredFieldValidator ID="RqCharacteristic" runat="server" ErrorMessage="Characteristic required" Display="Dynamic" ControlToValidate="cbCharacteristics" Font-Bold="true" ValidationGroup="NewItemInput" CssClass="dperror">
 
                     </asp:RequiredFieldValidator>
                 </td>
+                 
             </tr>
             <tr>
                 <td class="Itable">
@@ -140,12 +142,11 @@
                          
                        
                     </telerik:RadComboBox>
-                </td>
-                <td class="Itable">
                     <asp:RequiredFieldValidator ID="RqGeometry" runat="server" ErrorMessage="Geometry required" Display="Dynamic" ControlToValidate="cbGeometry" Font-Bold="true" ValidationGroup="NewItemInput" CssClass="dperror">
 
                     </asp:RequiredFieldValidator>
                 </td>
+               
             </tr>
             <tr>
                 <td class="Itable">
@@ -153,12 +154,11 @@
                      
                        
                     </telerik:RadComboBox>
-                </td>
-                <td class="Itable">
                     <asp:RequiredFieldValidator ID="RqMicron" runat="server" ErrorMessage="Micron required" Display="Dynamic" ControlToValidate="cbMicron" Font-Bold="true" ValidationGroup="NewItemInput" CssClass="dperror">
 
                     </asp:RequiredFieldValidator>
                 </td>
+              
             </tr>
             <tr>
                 <td class="Itable">
@@ -166,12 +166,11 @@
                  
                        
                     </telerik:RadComboBox>
-                </td>
-                 <td class="Itable">
-                    <asp:RequiredFieldValidator ID="RqPhysicalForm" runat="server" ErrorMessage="Physical Form required" Display="Dynamic" ControlToValidate="cbPhysicalForm" Font-Bold="true" ValidationGroup="NewItemInput" CssClass="dperror">
+                     <asp:RequiredFieldValidator ID="RqPhysicalForm" runat="server" ErrorMessage="Physical Form required" Display="Dynamic" ControlToValidate="cbPhysicalForm" Font-Bold="true" ValidationGroup="NewItemInput" CssClass="dperror">
 
                     </asp:RequiredFieldValidator>
                 </td>
+               
             </tr>
             <tr>
                 <td class="Itable">
@@ -179,12 +178,11 @@
                       
                        
                     </telerik:RadComboBox>
-                </td>
-                <td class="Itable">
-                    <asp:RequiredFieldValidator ID="RqSolvent" runat="server" ErrorMessage="Solvent required" Display="Dynamic" ControlToValidate="cbSolvent" Font-Bold="true" ValidationGroup="NewItemInput" CssClass="dperror">
+                     <asp:RequiredFieldValidator ID="RqSolvent" runat="server" ErrorMessage="Solvent required" Display="Dynamic" ControlToValidate="cbSolvent" Font-Bold="true" ValidationGroup="NewItemInput" CssClass="dperror">
 
                     </asp:RequiredFieldValidator>
                 </td>
+              
             </tr>
             <tr>
                 <td class="Itable">
@@ -192,12 +190,10 @@
                        
                         
                     </telerik:RadComboBox>
+
                 </td>
                 <td class="Itable">
-                    <asp:RequiredFieldValidator ID="RqSurfaceTreatment" runat="server" ErrorMessage="Surface Treatement required" Display="Dynamic" ControlToValidate="cbSurfaceTreatment" Font-Bold="true" ValidationGroup="NewItemInput" CssClass="dperror">
-
-                    </asp:RequiredFieldValidator>
-                </td>
+                   
             </tr>
             <tr>
                 <td class="Itable">
@@ -205,37 +201,35 @@
                         
                        
                     </telerik:RadComboBox>
-                </td>
-                  <td class="Itable">
-                    <asp:RequiredFieldValidator ID="RqSystem" runat="server" ErrorMessage="System required" Display="Dynamic" ControlToValidate="cbSystem" Font-Bold="true" ValidationGroup="NewItemInput" CssClass="dperror">
+                     <asp:RequiredFieldValidator ID="RqSystem" runat="server" ErrorMessage="System required" Display="Dynamic" ControlToValidate="cbSystem" Font-Bold="true" ValidationGroup="NewItemInput" CssClass="dperror">
 
                     </asp:RequiredFieldValidator>
                 </td>
+                 
             </tr>
             <tr>
                 <td class="Itable">
                     <telerik:RadComboBox ID="cbTypeApplication" runat="server" Label="Type Application:" LabelCssClass="LWidth" AllowCustomText="false" Width="400px" EmptyMessage="Select a Application" EnableEmbeddedSkins="false" Skin="Combo" RenderMode="Lightweight">
                         
                     </telerik:RadComboBox>
-                </td>
-                <td class="Itable">
-                    <asp:RequiredFieldValidator ID="RqTypeApp" runat="server" ErrorMessage="Type Application required" Display="Dynamic" ControlToValidate="cbTypeApplication" Font-Bold="true" ValidationGroup="NewItemInput" CssClass="dperror">
+                     <asp:RequiredFieldValidator ID="RqTypeApp" runat="server" ErrorMessage="Type Application required" Display="Dynamic" ControlToValidate="cbTypeApplication" Font-Bold="true" ValidationGroup="NewItemInput" CssClass="dperror">
 
                     </asp:RequiredFieldValidator>
                 </td>
+               
             </tr>
              <tr>
                 <td class="Itable">
-                    <telerik:RadTextBox RenderMode="Classic" ID="txtTruckPrice" LabelWidth="200"
-                        Label="SMC Truck Price" EmptyMessage="Enter Truck Price per Pound"
-                        runat="server" AutoPostBack="False" InvalidStyleDuration="100" Width="400px">
+                      <telerik:RadLabel runat="server" Text="SMC Truck Price:" ID="RadLabel5" CssClass="cslabel"></telerik:RadLabel>
+                    <telerik:RadTextBox RenderMode="Lightweight" ID="txtTruckPrice" 
+                         EmptyMessage="Enter Truck Price per LB"
+                        runat="server" AutoPostBack="False" InvalidStyleDuration="100" Width="200px" CssClass="cstext">
                     </telerik:RadTextBox>
-                </td>
-                  <td class="Itable">
-                    <asp:RequiredFieldValidator ID="RqTruckPrice" runat="server" ErrorMessage="Truck Price required" Display="Dynamic" ControlToValidate="txtTruckPrice" Font-Bold="true" ValidationGroup="NewItemInput" CssClass="dperror">
+                      <asp:RequiredFieldValidator ID="RqTruckPrice" runat="server" ErrorMessage="Truck Price required" Display="Dynamic" ControlToValidate="txtTruckPrice" Font-Bold="true" ValidationGroup="NewItemInput" CssClass="dperror">
 
                     </asp:RequiredFieldValidator>
                 </td>
+                 
             </tr>
             <tr>
                 <td class="Itable">
@@ -291,76 +285,69 @@
                 <td class="Itable">
                     <telerik:RadComboBox ID="cbMarketSegment" runat="server" Label="Market Segment" LabelCssClass="LWidth"  Width="400px" EmptyMessage="Select a Market Segment" EnableEmbeddedSkins="false" Skin="Combo" RenderMode="Lightweight">
                     </telerik:RadComboBox>
-
-                </td>
-                 <td class="Itable">
-                    <asp:RequiredFieldValidator ID="RQMarketSegment" runat="server" ErrorMessage="Market Segment Required" Display="Dynamic" ControlToValidate="cbMarketSegment" Font-Bold="true" ValidationGroup="NewItemInput" CssClass="dperror">
+                                        <asp:RequiredFieldValidator ID="RQMarketSegment" runat="server" ErrorMessage="Market Segment Required" Display="Dynamic" ControlToValidate="cbMarketSegment" Font-Bold="true" ValidationGroup="NewItemInput" CssClass="dperror">
 
                     </asp:RequiredFieldValidator>
+
                 </td>
+               
 
             </tr>
             <tr>
                 <td class="Itable">
                     <telerik:RadComboBox ID="cbTradeNameFirst" runat="server" Label="Trade Name First" LabelCssClass="LWidth" Width="400px" EmptyMessage="Select a Trade Name" EnableEmbeddedSkins="false" Skin="Combo" RenderMode="Lightweight">
                     </telerik:RadComboBox>
-
-                </td>
-                 <td class="Itable">
-                    <asp:RequiredFieldValidator ID="rqTradeNameFirst" runat="server" ErrorMessage="Trade Name Required" Display="Dynamic" ControlToValidate="cbTradeNameFirst" Font-Bold="true" ValidationGroup="NewItemInput" CssClass="dperror">
+                     <asp:RequiredFieldValidator ID="rqTradeNameFirst" runat="server" ErrorMessage="Trade Name Required" Display="Dynamic" ControlToValidate="cbTradeNameFirst" Font-Bold="true" ValidationGroup="NewItemInput" CssClass="dperror">
 
                     </asp:RequiredFieldValidator>
-                </td>
 
+                </td>
+                 
             </tr>
             <tr>
                 <td class="Itable">
                     <telerik:RadComboBox ID="cbTradeNameSecond" runat="server" Label="Trade Name Second" LabelCssClass="LWidth" Width="400px" EmptyMessage="Select a Trade Name" EnableEmbeddedSkins="false" Skin="Combo" RenderMode="Lightweight">
                     </telerik:RadComboBox>
-
-                </td>
-                 <td class="Itable">
-                    <asp:RequiredFieldValidator ID="rqTradeNameSecond" runat="server" ErrorMessage="Trade Name required" Display="Dynamic" ControlToValidate="cbTradeNameSecond" Font-Bold="true" ValidationGroup="NewItemInput" CssClass="dperror">
+                     <asp:RequiredFieldValidator ID="rqTradeNameSecond" runat="server" ErrorMessage="Trade Name required" Display="Dynamic" ControlToValidate="cbTradeNameSecond" Font-Bold="true" ValidationGroup="NewItemInput" CssClass="dperror">
 
                     </asp:RequiredFieldValidator>
+
                 </td>
+                
 
             </tr>
             <tr>
                 <td class="Itable">
                     <telerik:RadComboBox ID="cbLeafParticle" runat="server" Label="Leaf & Particle Size" LabelCssClass="LWidth" Width="400px" EmptyMessage="Select a Leaf and Particle Size" EnableEmbeddedSkins="false" Skin="Combo" RenderMode="Lightweight">
                     </telerik:RadComboBox>
-
-                </td>
-                 <td class="Itable">
-                    <asp:RequiredFieldValidator ID="rqLeafParticle" runat="server" ErrorMessage="Leaf & Particle required" Display="Dynamic" ControlToValidate="cbLeafParticle" Font-Bold="true" ValidationGroup="NewItemInput" CssClass="dperror">
+                      <asp:RequiredFieldValidator ID="rqLeafParticle" runat="server" ErrorMessage="Leaf & Particle required" Display="Dynamic" ControlToValidate="cbLeafParticle" Font-Bold="true" ValidationGroup="NewItemInput" CssClass="dperror">
 
                     </asp:RequiredFieldValidator>
+
                 </td>
+             
             </tr>
              <tr>
                 <td class="Itable">
                     <telerik:RadComboBox ID="cbClassCharacteristics" runat="server" Label="Characteristics" LabelCssClass="LWidth" Width="400px" EmptyMessage="Select a Characteristic" EnableEmbeddedSkins="false" Skin="Combo" RenderMode="Lightweight">
                     </telerik:RadComboBox>
-
-                </td>
-                  <td class="Itable">
-                    <asp:RequiredFieldValidator ID="rqClassCharacteristics" runat="server" ErrorMessage="Class Characteristics required" Display="Dynamic" ControlToValidate="cbClassCharacteristics" Font-Bold="true" ValidationGroup="NewItemInput" CssClass="dperror">
+                     <asp:RequiredFieldValidator ID="rqClassCharacteristics" runat="server" ErrorMessage="Class Characteristics required" Display="Dynamic" ControlToValidate="cbClassCharacteristics" Font-Bold="true" ValidationGroup="NewItemInput" CssClass="dperror">
 
                     </asp:RequiredFieldValidator>
+
                 </td>
+                  
             </tr>
              <tr>
                 <td class="Itable">
                     <telerik:RadComboBox ID="cbCarrier" runat="server" Label="Carrier" LabelCssClass="LWidth" Width="400px" EmptyMessage="Select a Carrier" EnableEmbeddedSkins="false" Skin="Combo" RenderMode="Lightweight">
                     </telerik:RadComboBox>
-
-                </td>
-                  <td class="Itable">
                     <asp:RequiredFieldValidator ID="rqCarrier" runat="server" ErrorMessage="Carrier required" Display="Dynamic" ControlToValidate="cbCarrier" Font-Bold="true" ValidationGroup="NewItemInput" CssClass="dperror">
 
                     </asp:RequiredFieldValidator>
+
                 </td>
+                  
             </tr>
         </table>
         <telerik:RadButton ID="btnSubmit" runat="server" Text="Submit" OnClick="Submit_Header" CausesValidation="true" ValidationGroup="NewItemInput" EnableEmbeddedSkins="false" Skin="Combo" RenderMode="Lightweight"></telerik:RadButton>

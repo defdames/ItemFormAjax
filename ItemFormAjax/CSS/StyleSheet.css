@@ -8,6 +8,7 @@ table.Itable {
     border-collapse: collapse;
     border-spacing: 8px;
     padding: 4px;
+    width:100%;
 
 
 }
@@ -25,15 +26,34 @@ tr.Itable {
 }
 div.Entry{
 
-    width: auto;
+    width: 100%;
     /*border: 1px solid black;*/
 }
-.dplabel {
-    font-family: "segoe ui", arial, sans-serif;
-    font-size: 12px;
-    font-weight: 700;
+.cslabel {
+    padding-top: 10px;
+    font-weight: 500;
+    font-size: 0.857em;
+    color: #607D8B !important;
+    font-family: "Roboto", "Noto", sans-serif;
+    width: 200px;
+    background: transparent;
+    border-color: transparent;
+    border-bottom-color: #CFD8DC;
+    outline: none;
 }
 
+.cstext {
+    color: #607D8B !important;
+    font-family: "Roboto", "Noto", sans-serif !important;
+    font-size: 16px !important;
+    font-weight: 400 !important;
+    line-height: 22.843px !important;
+    border-bottom-color: rgb(207, 216, 220) !important;
+    border-top-color: rgb(207, 216, 220) !important;
+    border-left-color: rgb(207, 216, 220) !important;
+    border-right-color: rgb(207, 216, 220) !important;
+
+}
 .dperror {
     font-family: "segoe ui", arial, sans-serif;
     font-size: 12px;
@@ -209,8 +229,16 @@ table.minimalistBlack {
             font-size: 14px;
         }
 
-.radInput .riLabel {
+/*.radInput .riLabel {
     display: inline-block;
     width: 50%;
     overflow: hidden;
+}*/
+
+label.RadLabel {
+    font-family: "Roboto", "Noto", sans-serif !important;
+}
+
+tr.border_bottom td {
+    border-bottom: 1pt solid black !important;
 }

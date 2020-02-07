@@ -41,7 +41,7 @@ namespace ItemFormAjax
 
 
             string LiD = Request.QueryString["id"];
-            txtLnumber.Text = LiD.ToString();
+            lblLNumberAnswer.Text = LiD.ToString();
 
 
             using (adage_45Entities i = new adage_45Entities())
@@ -53,9 +53,9 @@ namespace ItemFormAjax
 
 
                 if (SItem.Company == "SMC")
-                { lblCountryAnswer.Text = "Yes"; }
+                { lblCountryorManufactuerAnswer.Text = "Yes"; }
                 else
-                { lblCountryAnswer.Text = "No"; }
+                { lblCountryorManufactuerAnswer.Text = "No"; }
 
                 //cbCopyDown.DataSource = i.gl_cmp_tbl.ToList();
                 //cbCopyDown.DataValueField = "gl_cmp_key";
@@ -112,6 +112,39 @@ namespace ItemFormAjax
                     lblRequestedByAnswer.Text = SItem.CreatedBy;
                     txtCntryPurchased.Text = SItem.PurchasedCountryOfMfg;
                     cbPurchased.Text = SItem.Purchased;
+
+
+                    lblCarrierAnswer.Text = SItem.Carrier;
+                    lblCharateristicsAnswer.Text = SItem.Characteristics;
+                    lblClassCharacteristicsAnswer.Text = SItem.ProductClassCharacteristic;
+                    lblCmpManufactuerAnswer.Text = SItem.Company;
+                    lblGeometryAnswer.Text = SItem.Geometry;
+                    lblLinerAnswer.Text = SItem.StaticDissipativeLiner;
+                    lblLPSizeAnswer.Text = SItem.ProductClassLeaf;
+                    lblMarketAnswer.Text = SItem.Market;
+                    lblMicronAnswer.Text = SItem.Micron;
+                    lblNorEanswer.Text = SItem.NewOrExisting;
+                    lblPackagesAnswer.Text = SItem.Packages;
+                    lblPhysicalFormAnswer.Text = SItem.PhysicalForm;
+                    lblProdDescAnswer.Text = SItem.ProductDesription;
+                    lblproductStatusAnswer.Text = SItem.ProductStatus;
+                    lblSegmentAnswer.Text = SItem.MarketSegment;
+                    lblShelfLifeAnswer.Text = SItem.ShelfLife;
+                    lblSolventAnswer.Text = SItem.Solvent;
+                    lblSurfaceTreatmentAnswer.Text = SItem.SurfaceTreatment;
+                    lblSystemAnswer.Text = SItem.System;
+                    lblTradeNameFirstAnswer.Text = SItem.TradeNameFirst;
+                    lblTradeNameSecondAnswer.Text = SItem.TradeNameSecond;
+                    lblTruckPriceAnswer.Text = SItem.SMCTruckPricePerLB;
+                    lblTypeApplicationAnswer.Text = SItem.TypeApplication;
+                    lblWaterBorneAnswer.Text = SItem.Waterborne;
+                    lblWhereUsedAnswer.Text = SItem.WhereWillProductBeUsed;
+
+                    
+
+
+
+
                 }
             }
 
@@ -212,7 +245,7 @@ namespace ItemFormAjax
         public List<ItemFormula> AFORM()
         {
             string LiD = Request.QueryString["id"];
-            txtLnumber.Text = LiD.ToString();
+            lblLNumberAnswer.Text = LiD.ToString();
             using (adage_45Entities a = new adage_45Entities())
             {
                 var grid = (from g in a.xxItemForms
@@ -519,7 +552,7 @@ namespace ItemFormAjax
 
         {
             string LiD = Request.QueryString["id"];
-            txtLnumber.Text = LiD.ToString();
+            lblLNumberAnswer.Text = LiD.ToString();
             using (adage_45Entities a = new adage_45Entities())
             {
 
@@ -556,7 +589,7 @@ namespace ItemFormAjax
 
 
             string LiD = Request.QueryString["id"];
-            txtLnumber.Text = LiD.ToString();
+            lblLNumberAnswer.Text = LiD.ToString();
             var cd = new StringBuilder();
             var ic = new StringBuilder();
 

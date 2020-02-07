@@ -33,6 +33,15 @@ namespace ItemFormAjax
         protected global::Telerik.Web.UI.RadDatePicker dpReqDate;
 
         /// <summary>
+        /// RadLabel1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::Telerik.Web.UI.RadLabel RadLabel1;
+
+        /// <summary>
         /// txtMarket control.
         /// </summary>
         /// <remarks>
@@ -40,6 +49,15 @@ namespace ItemFormAjax
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::Telerik.Web.UI.RadTextBox txtMarket;
+
+        /// <summary>
+        /// RadLabel2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::Telerik.Web.UI.RadLabel RadLabel2;
 
         /// <summary>
         /// txtProductDescription control.
@@ -58,6 +76,15 @@ namespace ItemFormAjax
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::Telerik.Web.UI.RadComboBox cbNorE;
+
+        /// <summary>
+        /// RadLabel3 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::Telerik.Web.UI.RadLabel RadLabel3;
 
         /// <summary>
         /// txtShelfLife control.
@@ -87,6 +114,15 @@ namespace ItemFormAjax
         protected global::Telerik.Web.UI.RadComboBox cbProductStatus;
 
         /// <summary>
+        /// RadLabel4 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::Telerik.Web.UI.RadLabel RadLabel4;
+
+        /// <summary>
         /// txtLnumber control.
         /// </summary>
         /// <remarks>
@@ -94,6 +130,15 @@ namespace ItemFormAjax
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::Telerik.Web.UI.RadTextBox txtLnumber;
+
+        /// <summary>
+        /// RqLnumber control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RqLnumber;
 
         /// <summary>
         /// cbCompany control.
@@ -213,15 +258,6 @@ namespace ItemFormAjax
         protected global::Telerik.Web.UI.RadComboBox cbSurfaceTreatment;
 
         /// <summary>
-        /// RqSurfaceTreatment control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator RqSurfaceTreatment;
-
-        /// <summary>
         /// cbSystem control.
         /// </summary>
         /// <remarks>
@@ -256,6 +292,15 @@ namespace ItemFormAjax
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RequiredFieldValidator RqTypeApp;
+
+        /// <summary>
+        /// RadLabel5 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::Telerik.Web.UI.RadLabel RadLabel5;
 
         /// <summary>
         /// txtTruckPrice control.

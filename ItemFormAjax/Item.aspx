@@ -17,6 +17,159 @@
 
     <div>
 
+        <table>
+            <tr class="border_bottom">
+                <td>
+                     <telerik:RadLabel ID="lblMarket" runat="server" Text="Market:" CssClass="cslabel"></telerik:RadLabel>
+                    <telerik:RadLabel ID="lblMarketAnswer" runat="server" CssClass="cslabel"></telerik:RadLabel>
+
+                </td>
+
+                <td>
+                     <telerik:RadLabel ID="lblProdDesc" runat="server" Text="Product Description:" CssClass="cslabel" ></telerik:RadLabel>
+                    <telerik:RadLabel ID="lblProdDescAnswer" runat="server" CssClass="cslabel"  Width="200" ></telerik:RadLabel>
+
+                </td>
+                <td>
+                     <telerik:RadLabel ID="lblNorE" runat="server" Text="New Or Exicting:" CssClass="cslabel" ></telerik:RadLabel>
+                    <telerik:RadLabel ID="lblNorEanswer" runat="server" CssClass="cslabel"  Width="200" ></telerik:RadLabel>
+
+                </td>
+                <td>
+                     <telerik:RadLabel ID="lblShelfLife" runat="server" Text="Shelf Life:" CssClass="cslabel" ></telerik:RadLabel>
+                    <telerik:RadLabel ID="lblShelfLifeAnswer" runat="server" CssClass="cslabel"  Width="200" ></telerik:RadLabel>
+
+                </td>
+                </tr>
+            <tr class="border_bottom">
+                <td>
+                     <telerik:RadLabel ID="lblProductStatus" runat="server" Text="Product Status:" CssClass="cslabel" ></telerik:RadLabel>
+                    <telerik:RadLabel ID="lblproductStatusAnswer" runat="server" CssClass="cslabel"  Width="200" ></telerik:RadLabel>
+
+                </td>
+                 <td>
+
+                   <telerik:RadLabel ID="lblLNumber" runat="server" Text="L Number Cross Reference"  CssClass="cslabel"></telerik:RadLabel>
+                   <telerik:RadLabel ID="lblLNumberAnswer" runat="server" CssClass="cslabel"  Width="200" ></telerik:RadLabel>
+                </td>
+                 <td>
+                     <telerik:RadLabel ID="lblCmpManufactuer" runat="server" Text="Company of Manufactuer:" CssClass="cslabel" ></telerik:RadLabel>
+                    <telerik:RadLabel ID="lblCmpManufactuerAnswer" runat="server" CssClass="cslabel"  Width="200" ></telerik:RadLabel>
+
+                </td>
+                 <td>
+                     <telerik:RadLabel ID="lblWaterBorne" runat="server" Text="Waterborne:" CssClass="cslabel" ></telerik:RadLabel>
+                    <telerik:RadLabel ID="lblWaterBorneAnswer" runat="server" CssClass="cslabel"  Width="200"></telerik:RadLabel>
+
+                </td>
+            </tr>
+            <tr class="border_bottom">
+                 <td>
+                     <telerik:RadLabel ID="lblCharateristics" runat="server" Text="Characteristics:" CssClass="cslabel" ></telerik:RadLabel>
+                    <telerik:RadLabel ID="lblCharateristicsAnswer" runat="server" CssClass="cslabel"  Width="200" ></telerik:RadLabel>
+
+                </td>
+                 <td>
+                     <telerik:RadLabel ID="lblGeometry" runat="server" Text="Geometry:" CssClass="cslabel" ></telerik:RadLabel>
+                    <telerik:RadLabel ID="lblGeometryAnswer" runat="server" CssClass="cslabel"  Width="200" ></telerik:RadLabel>
+
+                </td>
+                 <td>
+                     <telerik:RadLabel ID="lblMicron" runat="server" Text="Micron:" CssClass="cslabel" ></telerik:RadLabel>
+                    <telerik:RadLabel ID="lblMicronAnswer" runat="server" CssClass="cslabel"  Width="200" ></telerik:RadLabel>
+
+                </td>
+                 <td>
+                     <telerik:RadLabel ID="lblPhysicalForm" runat="server" Text="Physical Form:" CssClass="cslabel" ></telerik:RadLabel>
+                    <telerik:RadLabel ID="lblPhysicalFormAnswer" runat="server" CssClass="cslabel"  Width="200" ></telerik:RadLabel>
+
+                </td>
+            </tr>
+            <tr class="border_bottom">
+                 <td>
+                     <telerik:RadLabel ID="lblSolvent" runat="server" Text="Solvent:" CssClass="cslabel" ></telerik:RadLabel>
+                    <telerik:RadLabel ID="lblSolventAnswer" runat="server" CssClass="cslabel"  Width="200" ></telerik:RadLabel>
+
+                </td>
+                 <td>
+                     <telerik:RadLabel ID="lblSurfaceTreatment" runat="server" Text="Surface Treatment:" CssClass="cslabel" ></telerik:RadLabel>
+                    <telerik:RadLabel ID="lblSurfaceTreatmentAnswer" runat="server" CssClass="cslabel"  Width="200" ></telerik:RadLabel>
+
+                </td>
+                 <td>
+                     <telerik:RadLabel ID="lblSystem" runat="server" Text="System:" CssClass="cslabel" ></telerik:RadLabel>
+                    <telerik:RadLabel ID="lblSystemAnswer" runat="server" CssClass="cslabel"  Width="200" ></telerik:RadLabel>
+
+                </td>
+                 <td>
+                     <telerik:RadLabel ID="lblTypeApplication" runat="server" Text="Type Application:" CssClass="cslabel" ></telerik:RadLabel>
+                    <telerik:RadLabel ID="lblTypeApplicationAnswer" runat="server" CssClass="cslabel"  Width="200" ></telerik:RadLabel>
+
+                </td>
+            </tr>
+            <tr class="border_bottom">
+                 <td>
+                     <telerik:RadLabel ID="lblTruckPrice" runat="server" Text="SMC Truck Price:" CssClass="cslabel" ></telerik:RadLabel>
+                    <telerik:RadLabel ID="lblTruckPriceAnswer" runat="server" CssClass="cslabel"  Width="200" ></telerik:RadLabel>
+
+                </td>
+                 <td>
+                     <telerik:RadLabel ID="lblPackages" runat="server" Text="Packages:" CssClass="cslabel" ></telerik:RadLabel>
+                    <telerik:RadLabel ID="lblPackagesAnswer" runat="server" CssClass="cslabel"  Width="200" ></telerik:RadLabel>
+
+                </td>
+                 <td>
+                     <telerik:RadLabel ID="lblLiner" runat="server" Text="Static Liner:" CssClass="cslabel" ></telerik:RadLabel>
+                    <telerik:RadLabel ID="lblLinerAnswer" runat="server" CssClass="cslabel"  Width="200" ></telerik:RadLabel>
+
+                </td>
+                 <td>
+                     <telerik:RadLabel ID="lblWhereUsed" runat="server" Text="Where Will Product Be used:" CssClass="cslabel" ></telerik:RadLabel>
+                    <telerik:RadLabel ID="lblWhereUsedAnswer" runat="server" CssClass="cslabel"  Width="200" ></telerik:RadLabel>
+
+                </td>
+            </tr>
+            <tr class="border_bottom">
+                 <td>
+                     <telerik:RadLabel ID="lblSegment" runat="server" Text="Market Segment:" CssClass="cslabel" ></telerik:RadLabel>
+                    <telerik:RadLabel ID="lblSegmentAnswer" runat="server" CssClass="cslabel"  Width="200" ></telerik:RadLabel>
+
+                </td>
+                 <td>
+                     <telerik:RadLabel ID="lblTradNameFirst" runat="server" Text="Trade Name First:" CssClass="cslabel" ></telerik:RadLabel>
+                    <telerik:RadLabel ID="lblTradeNameFirstAnswer" runat="server" CssClass="cslabel"  Width="200" ></telerik:RadLabel>
+
+                </td>
+                <td>
+                     <telerik:RadLabel ID="lblTradeNameSecond" runat="server" Text="Trade Name Second:" CssClass="cslabel" ></telerik:RadLabel>
+                    <telerik:RadLabel ID="lblTradeNameSecondAnswer" runat="server" CssClass="cslabel"  Width="200" ></telerik:RadLabel>
+
+                </td>
+                <td>
+                     <telerik:RadLabel ID="lblLPSize" runat="server" Text="Leaf & Particle Size:" CssClass="cslabel" ></telerik:RadLabel>
+                    <telerik:RadLabel ID="lblLPSizeAnswer" runat="server" CssClass="cslabel"  Width="200" ></telerik:RadLabel>
+
+                </td>
+
+            </tr>
+            <tr class="border_bottom">
+                <td>
+                     <telerik:RadLabel ID="lblClassCharacteristics" runat="server" Text="Class Characteristics:" CssClass="cslabel" ></telerik:RadLabel>
+                    <telerik:RadLabel ID="lblClassCharacteristicsAnswer" runat="server" CssClass="cslabel"  Width="200"></telerik:RadLabel>
+
+                </td>
+                 <td>
+                     <telerik:RadLabel ID="lblCarrier" runat="server" Text="Carrier:" CssClass="cslabel" ></telerik:RadLabel>
+                    <telerik:RadLabel ID="lblCarrierAnswer" runat="server" CssClass="cslabel"  Width="200" ></telerik:RadLabel>
+
+                </td>
+            </tr>
+
+
+
+        </table>
+        <br>
+
         <table >
             <tr>
                 <td>
@@ -33,24 +186,21 @@
                     </telerik:RadComboBox>
                 </td>
 
+               
                 <td>
 
-                   <telerik:RadLabel ID="lbllabel" runat="server" Text="L Number Cross Reference" EnableEmbeddedSkins="false" Skin="Combo" RenderMode="Lightweight"></telerik:RadLabel> <telerik:RadTextBox RenderMode="Lightweight"  ID="txtLnumber" runat="server" ReadOnly="true" EnableEmbeddedSkins="false" Skin="Combo" ></telerik:RadTextBox>
-                </td>
-                <td>
-
-                   <telerik:RadLabel ID="lblHarmonizedCode" runat="server" Text="Harmonized Code"></telerik:RadLabel> <telerik:RadTextBox ID="txtHarmonizedCode" runat="server" ></telerik:RadTextBox>
+                   <telerik:RadLabel ID="lblHarmonizedCode" runat="server" Text="Harmonized Code" CssClass="cslabel"></telerik:RadLabel> <telerik:RadTextBox ID="txtHarmonizedCode" runat="server" CssClass="cstext" ></telerik:RadTextBox>
                 </td>
                   <td>
 
-                   <telerik:RadLabel ID="lblExportLicenseNo" runat="server" Text="Export License Number"></telerik:RadLabel> <telerik:RadTextBox ID="txtExportLicenseNo" runat="server" ></telerik:RadTextBox>
+                   <telerik:RadLabel ID="lblExportLicenseNo" runat="server" Text="Export License Number" CssClass="cslabel"></telerik:RadLabel> <telerik:RadTextBox ID="txtExportLicenseNo" runat="server" CssClass="cstext" ></telerik:RadTextBox>
                 </td>
 
             </tr>
             <tr>
                 <td>
-                    <telerik:RadLabel ID="lblCountryofManufactuer" runat="server" Text="Is this Item Produced in the USA:"></telerik:RadLabel>
-                    <telerik:RadLabel ID="lblCountryAnswer" runat="server"></telerik:RadLabel>
+                    <telerik:RadLabel ID="lblCountryofManufactuer" runat="server" Text="Is this Item Produced in the USA:" CssClass="cslabel"></telerik:RadLabel>
+                    <telerik:RadLabel ID="lblCountryorManufactuerAnswer" runat="server" CssClass="cslabel"></telerik:RadLabel>
                 </td>
                 <td>
                     <telerik:RadComboBox Label="Location of Manufactuer:" ID="cbPlantManufactuer" runat="server"  CheckBoxes="true" EmptyMessage="Mfg.Location" EnableEmbeddedSkins="false" Skin="Combo" RenderMode="Lightweight">
@@ -65,11 +215,11 @@
                     </telerik:RadComboBox>
                 </td>
                 <td>
-                   <telerik:RadLabel ID="lblRequestedBy" runat="server" Text="Requested By"></telerik:RadLabel>
-                    <telerik:RadLabel ID="lblRequestedByAnswer" runat="server"></telerik:RadLabel>
+                   <telerik:RadLabel ID="lblRequestedBy" runat="server" Text="Requested By" CssClass="cslabel"></telerik:RadLabel>
+                    <telerik:RadLabel ID="lblRequestedByAnswer" runat="server" CssClass=" cslabel"></telerik:RadLabel>
                 </td>
-                <td>                <telerik:RadLabel ID="lblRequestedDate" runat="server" Text="Date"></telerik:RadLabel>
-                    <telerik:RadLabel ID="lblRequestedDateAnswer" runat="server" ></telerik:RadLabel>
+                <td>                <telerik:RadLabel ID="lblRequestedDate" runat="server" Text="Date" CssClass="cslabel"></telerik:RadLabel>
+                    <telerik:RadLabel ID="lblRequestedDateAnswer" runat="server" CssClass="cslabel" ></telerik:RadLabel>
                     </td>
             </tr>
             <tr>
@@ -85,7 +235,7 @@
                                                                                                            </telerik:RadComboBox>
                 </td>
                 <td>
-                    <telerik:RadLabel ID="lblCntryPurchased" runat="server" Text="If Purchased Country of Mfg"></telerik:RadLabel><telerik:RadTextBox ID="txtCntryPurchased" runat="server" ></telerik:RadTextBox>
+                    <telerik:RadLabel ID="lblCntryPurchased" runat="server" Text="If Purchased Country of Mfg" CssClass="cslabel"></telerik:RadLabel><telerik:RadTextBox ID="txtCntryPurchased" runat="server" CssClass="cstext"></telerik:RadTextBox>
                 </td>
                 <td>
                     <%--<telerik:RadLabel ID="lblItemCodes" runat="server" Text="Item Codes:"></telerik:RadLabel>--%>
